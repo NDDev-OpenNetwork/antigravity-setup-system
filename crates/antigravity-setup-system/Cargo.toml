@@ -1,0 +1,22 @@
+[package]
+name = "antigravity-setup-system"
+version = "0.1.0"
+description = "Installs, reselects, restores and removes a complete Antigravity CLI harness configuration in a caller-named target directory."
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "antigravity-setup-system"
+path = "src/main.rs"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+provider-v3 = { workspace = true }
+harness-runtime = { workspace = true }
+
+[lints]
+workspace = true

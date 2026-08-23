@@ -1,0 +1,79 @@
+schema_version: 1
+
+repository:
+  id: "repo_01087WAK3BVPW6TMPGXBNDJ2MC"
+  display_name: "antigravity-setup-system"
+  roles:
+    - "project"
+  lifecycle: "active"
+
+provider:
+  type: "github"
+  installation: "installation:github-opennetwork"
+  repository_id: 1344237383
+  owner: "NDDev-OpenNetwork"
+  name: "antigravity-setup-system"
+
+classification:
+  portfolios:
+    - "portfolio:opennetwork-projects"
+  visibility_contract: "public"
+  data_classification: "public"
+
+product:
+  purpose: >-
+    An ai-stp provider-protocol v3 setup system for Antigravity CLI: it
+    installs, reselects, restores and removes a complete harness configuration
+    in a caller-named target directory, and owns the program lifecycle as well as the configuration.
+  capabilities:
+    - "install, reinstall and reselect a complete harness setup"
+    - "restore the last backup or a chosen one by reference"
+    - "recover an interrupted mutation from its durable journal"
+  entrypoints:
+    - change: "the shared lock, journal, backup and atomic-apply kernel"
+      path: "crates/setup-core"
+    - change: "the ai-stp provider protocol v3 wire boundary"
+      path: "crates/provider-v3"
+    - change: "the provider command runtime every setup system shares"
+      path: "crates/harness-runtime"
+    - change: "this harness's verified facts"
+      path: "crates/antigravity-setup-system"
+    - change: "the setup catalog"
+      path: "setups"
+
+policy:
+  profiles:
+    - "repository-default"
+    - "opennetwork-default"
+  rollout_ring: "standard"
+
+git:
+  default_branch: "main"
+  integration: "pull-request"
+  branch_model: "task-branches"
+  handoff_pr: "preferred"
+  cleanup: "merged-only"
+
+verification:
+  commands:
+    build:
+      - "cargo build --locked --all-targets"
+    test:
+      - "cargo test --locked --all-targets"
+    lint:
+      - "cargo clippy --locked --all-targets -- -D warnings"
+      - "cargo fmt --all --check"
+  required:
+    - "test"
+    - "lint"
+
+agent:
+  context_profile: "public-module"
+  generated_agents: false
+  serena:
+    enabled: false
+    provenance_required: false
+
+release:
+  mode: "github-release"
+  tag_style: "semver"

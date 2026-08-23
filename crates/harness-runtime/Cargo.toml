@@ -1,0 +1,18 @@
+[package]
+name = "harness-runtime"
+version = "0.1.0"
+description = "The provider command runtime every NDDev setup system shares, parameterized by one harness's verified facts."
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+setup-core = { workspace = true }
+provider-v3 = { workspace = true }
+
+[lints]
+workspace = true
