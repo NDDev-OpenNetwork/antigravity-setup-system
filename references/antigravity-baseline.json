@@ -129,5 +129,6 @@
     "precedence": "deny > ask > allow",
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
-  }
+  },
+  "verified_at": "2026-08-25T12:00:42+00:00"
 }
