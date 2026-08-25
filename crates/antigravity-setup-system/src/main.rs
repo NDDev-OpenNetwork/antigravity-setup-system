@@ -42,6 +42,7 @@ pub const ANTIGRAVITY: Harness = Harness {
     config_home_env: "",
     control_directory: ".antigravity-setup-system",
     state_file: "NDDEV-ANTIGRAVITY-PROVIDER.json",
+    predecessor_state_file: "NDDEV-ANTIGRAVITY-CLI-SETUP.json",
     profile_id: "antigravity/native-files/1",
     // Everything outside this list is a sibling overlay preserved verbatim --
     // which here includes another product's entire configuration.
