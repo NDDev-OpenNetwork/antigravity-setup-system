@@ -1,0 +1,12 @@
+{
+  "name": "nddev-builder",
+  "version": "0.1.0",
+  "description": "Where Antigravity CLI's configuration lives, and whose files sit beside it.",
+  "author": {
+    "name": "NDDev"
+  },
+  "homepage": "https://github.com/NDDev-OpenNetwork/antigravity-setup-system",
+  "repository": "https://github.com/NDDev-OpenNetwork/antigravity-setup-system",
+  "skills": "./skills",
+  "rules": "./rules"
+}
