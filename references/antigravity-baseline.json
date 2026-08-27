@@ -196,7 +196,18 @@
         "source": "https://antigravity.google/docs/mcp"
       }
     ],
-    "declined": [],
+    "declined": [
+      {
+        "path": "NDDEV-ANTIGRAVITY-PROVIDER.json",
+        "reason": "This provider's own state file: which setup is applied, the identity it recorded, and which slot reverses the last operation. Written by every operation and excluded from target identity, because counting it would leave a target different from the identity the operation just wrote. Not a projection surface and never ownable as one.",
+        "source": "this provider's own contract; no vendor page is involved"
+      },
+      {
+        "path": ".antigravity-setup-system",
+        "reason": "This provider's own control directory: the target lock, the backup slots and their payloads. Kept out of the declaration for the same reason as the state file, and recorded here because the declined list is where a reader looks before opening a file to find out what it is.",
+        "source": "this provider's own contract; no vendor page is involved"
+      }
+    ],
     "scoped": [
       {
         "target_scope": "project",
@@ -265,7 +276,9 @@
           }
         ]
       }
-    ]
+    ],
+    "config_home_env": "",
+    "config_home_env_note": "Empty on purpose. The product documents no variable for its configuration home, so a launch could not point it at the target every command here takes -- which is why this build installs software and does not declare `launch`."
   },
   "software_artifacts": {
     "command": "agy",
