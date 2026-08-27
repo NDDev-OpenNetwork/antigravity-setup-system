@@ -2,8 +2,8 @@
   "schema_version": 3,
   "verified_version_ref": "build/version.json:antigravity_cli_tested",
   "release": {
-    "tag": "1.1.21",
-    "url": "https://github.com/google-antigravity/antigravity-cli/releases/tag/1.1.21"
+    "tag": "1.1.22",
+    "url": "https://github.com/google-antigravity/antigravity-cli/releases/tag/1.1.22"
   },
   "install_script": {
     "url": "https://antigravity.google/cli/install.sh",
@@ -16,7 +16,7 @@
   "software_install": {
     "mechanism": "official-antigravity-install-manifest",
     "managed_command": "bin/agy",
-    "version": "1.1.21",
+    "version": "1.1.22",
     "manifest_url_template": "https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/manifests/{platform}.json",
     "manifest_fields": [
       "version",
@@ -28,24 +28,24 @@
   },
   "platform_manifests": {
     "darwin_amd64": {
-      "version": "1.1.21",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-x64/cli_mac_x64.tar.gz",
-      "sha512": "75f9464559a2459f3f80b0b6c25ee8eacba0aac548d54b530626350e8d12689b844010bd5709437d9e06f011e1bdf87b4f9e7ddbd2eb47752f2d30d20c2157cf"
+      "version": "1.1.22",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/darwin-x64/cli_mac_x64.tar.gz",
+      "sha512": "fc2e178dd084fba19a7673a24c92a60b0cac3f87539bc7313f2f028b632cf93e08b497d973d64705b9591a5aed978126b7cfcb0a304220bfda18cf10615c3644"
     },
     "darwin_arm64": {
-      "version": "1.1.21",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-arm/cli_mac_arm64.tar.gz",
-      "sha512": "0fd2eaa1fc69d9ff51c9e57398683e800d1ad3a3173a433c328999a2b48955598fdcb21d2547c05f9d853a240acf422a1798b2d704607415b7b1eb8fa51f46ab"
+      "version": "1.1.22",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/darwin-arm/cli_mac_arm64.tar.gz",
+      "sha512": "a8121185bd1c3455410ad41e88e2030ea237d496b8e40ccde313bf611c0551840fddf450b45c8e1a2575d9863c990b3324f19eef0f479936df8bfc6e4e80d30b"
     },
     "linux_amd64": {
-      "version": "1.1.21",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-x64/cli_linux_x64.tar.gz",
-      "sha512": "3de7552ef089c136c0f570cdc9c04652278e02c1d41ed3911ad5f9f1b8c3bd567643aa401a1916060ea32a1b17fbaf90cbb417071db33f467880fcd848868d92"
+      "version": "1.1.22",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-x64/cli_linux_x64.tar.gz",
+      "sha512": "40225d4b1f009412e905f0a234ba3d51487038d1ad1b8fa19331c84be55610a01f5b0ad9916fb871151cc45456c6bc30cc0b1ea5dab6c0616bc8fb262bcdd7a9"
     },
     "linux_arm64": {
-      "version": "1.1.21",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-arm/cli_linux_arm64.tar.gz",
-      "sha512": "1d0a673c838f3235187be1292c20d41bf3be01c45d9d745d5fb6873e20283607dc354fa20b77aaf7c68145e902d4b0df6ab171d99e916bd52691c77a43cd3742"
+      "version": "1.1.22",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-arm/cli_linux_arm64.tar.gz",
+      "sha512": "b37a718330eb5e270e1ca70135bf964a407ba626fbff7537ac58e094ea31bc623e6d216ef197188fe8b5c46e6f57aee64a3b7c9e23fc855cefee43fe434179d3"
     }
   },
   "release_assets": {
@@ -130,41 +130,177 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-08-26T23:02:46+00:00",
+  "verified_at": "2026-08-27T15:04:27+00:00",
+  "native_surfaces": {
+    "verified_at": "2026-08-27",
+    "config_home": "~/.gemini",
+    "surfaces": [
+      {
+        "path": "antigravity-cli/settings.json",
+        "kinds": [
+          "setting"
+        ],
+        "shape": "file",
+        "source": "https://antigravity.google/docs/settings"
+      },
+      {
+        "path": "antigravity-cli/keybindings.json",
+        "kinds": [],
+        "shape": "file",
+        "source": "https://antigravity.google/docs/settings"
+      },
+      {
+        "path": "antigravity-cli/plugins",
+        "kinds": [
+          "plugin"
+        ],
+        "shape": "directory",
+        "source": "https://antigravity.google/docs/plugins"
+      },
+      {
+        "path": "config/plugins",
+        "kinds": [],
+        "shape": "directory",
+        "source": "https://antigravity.google/docs/plugins"
+      },
+      {
+        "path": "config/skills",
+        "kinds": [
+          "skill"
+        ],
+        "shape": "directory",
+        "source": "https://antigravity.google/docs/skills"
+      },
+      {
+        "path": "config/agents",
+        "kinds": [
+          "agent"
+        ],
+        "shape": "directory",
+        "source": "https://antigravity.google/docs/agents"
+      },
+      {
+        "path": "config/hooks.json",
+        "kinds": [
+          "hook"
+        ],
+        "shape": "file",
+        "source": "https://antigravity.google/docs/hooks"
+      },
+      {
+        "path": "config/mcp_config.json",
+        "kinds": [
+          "mcp"
+        ],
+        "shape": "file",
+        "source": "https://antigravity.google/docs/mcp"
+      }
+    ],
+    "declined": [],
+    "scoped": [
+      {
+        "target_scope": "project",
+        "root": ".agents",
+        "surfaces": [
+          {
+            "path": ".agents/skills",
+            "kinds": [
+              "skill"
+            ],
+            "shape": "directory",
+            "source": "https://antigravity.google/docs/skills",
+            "note": "\"Create a directory named .agents/skills/ at your project root\"; the product still reads the legacy .agent/skills, which is not owned"
+          },
+          {
+            "path": ".agents/agents",
+            "kinds": [
+              "agent"
+            ],
+            "shape": "directory",
+            "source": "https://antigravity.google/blog/introducing-custom-agents",
+            "note": "\"place it inside that workspace's .agents/agents/ directory\""
+          },
+          {
+            "path": ".agents/plugins",
+            "kinds": [
+              "plugin"
+            ],
+            "shape": "directory",
+            "source": "https://antigravity.google/docs/plugins"
+          },
+          {
+            "path": ".agents/hooks.json",
+            "kinds": [
+              "hook"
+            ],
+            "shape": "file",
+            "source": "https://antigravity.google/docs/hooks",
+            "note": "\"a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)\""
+          },
+          {
+            "path": ".agents/mcp_config.json",
+            "kinds": [
+              "mcp"
+            ],
+            "shape": "file",
+            "source": "https://antigravity.google/docs/mcp",
+            "note": "\"globally at ~/.gemini/config/mcp_config.json (or locally in your workspace under .agents/mcp_config.json)\""
+          }
+        ],
+        "declined": [
+          {
+            "path": ".agents/commands",
+            "reason": "ai_stp#424 asks for a project-scoped command route. No Antigravity page names a commands directory at any scope: the slash commands the CLI documents are its own built-ins (/skills, /mcp, /agents), not user-authored files. Declared the day a vendor page names the path and not before -- a declared kind is a promise of a rollback.",
+            "source": "https://antigravity.google/docs/cli/features/"
+          },
+          {
+            "path": ".agents/AGENTS.md",
+            "reason": "ai_stp#425 asks for a project-scoped instruction route. No page names an instruction file under .agents/, and guessing one would have this provider claim to own a path the product never reads.",
+            "source": "https://antigravity.google/docs/cli/features/"
+          },
+          {
+            "path": ".agent/skills",
+            "reason": "The legacy spelling the product still reads for backward compatibility. Owning both would let one workspace hold two skill trees with the product reading one and this provider reporting the other; owning the documented default keeps the answer single.",
+            "source": "https://antigravity.google/docs/skills"
+          }
+        ]
+      }
+    ]
+  },
   "software_artifacts": {
     "command": "agy",
     "shape": "gzip-tar",
     "platforms": {
       "linux/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-arm/cli_linux_arm64.tar.gz",
-        "bytes": 52833725,
-        "sha256": "sha256:8626b97aec1ef96abdabd234c0b8259a2fdf2a3f3918c927641f8c821342d5e4",
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-arm/cli_linux_arm64.tar.gz",
+        "bytes": 52908254,
+        "sha256": "sha256:a68925bc7336eb0b90de1e1aefd44d535f5487b7cf606a76fdb982207aef9a2e",
         "member": "antigravity"
       },
       "linux/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-x64/cli_linux_x64.tar.gz",
-        "bytes": 56329878,
-        "sha256": "sha256:4806a347119d36be6d8ab5cc3f03319bc6aa8407a8d9203de7976a42954cabde",
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-x64/cli_linux_x64.tar.gz",
+        "bytes": 56399106,
+        "sha256": "sha256:1e1a219a86e75d7c6351f96d182ca2105302d5c34d8fa9c31265dc0adf24145f",
         "member": "antigravity"
       },
       "macos/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-arm/cli_mac_arm64.tar.gz",
-        "bytes": 49955537,
-        "sha256": "sha256:2f187c5d2135cb4f7ecb178c25801a2b94e2aaa0e9f2dadacff84a68c66f5700",
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/darwin-arm/cli_mac_arm64.tar.gz",
+        "bytes": 50015897,
+        "sha256": "sha256:ac0e961957f4a6cd67f9170b82edae15e92f107fe333e56d71aa01613ea547bd",
         "member": "antigravity"
       },
       "macos/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-x64/cli_mac_x64.tar.gz",
-        "bytes": 54784179,
-        "sha256": "sha256:d866d427f8cd9381ff826ee8a96cf248ccdbee08ac5cad1653ac775066a4ffca",
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/darwin-x64/cli_mac_x64.tar.gz",
+        "bytes": 54851982,
+        "sha256": "sha256:d19eb95666b949c76b2dd51c4a7a7202d12e38f348e1512ed35251eac804dcb1",
         "member": "antigravity"
       }
     },
-    "version": "1.1.21",
+    "version": "1.1.22",
     "unpublished": [
       "windows/arm64",
       "windows/x86_64"
     ],
-    "verified_at": "2026-08-26T23:02:46+00:00"
+    "verified_at": "2026-08-27T15:04:27+00:00"
   }
 }

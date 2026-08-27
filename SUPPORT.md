@@ -38,6 +38,29 @@ All five core operations do work: `backup`, `restore`, `remove`, `install` and
 `replace`, both from the local setup catalog and from an `ai-stp-bundle/1`
 arriving over the wire.
 
+## What this build owns inside a target
+
+Everything else in the target is a sibling overlay and is preserved
+verbatim. Each row cites the vendor page it was read from, and the same
+table is bound to the declaration by a test, so this cannot drift from
+what `provider-info` publishes.
+
+Configuration home as the product documents it: `~/.gemini`.
+
+| Path | Component kinds routed here | Decided by |
+| --- | --- | --- |
+| `antigravity-cli/settings.json` | `setting` | [source](https://antigravity.google/docs/settings) |
+| `antigravity-cli/keybindings.json` | -- | [source](https://antigravity.google/docs/settings) |
+| `antigravity-cli/plugins` | `plugin` | [source](https://antigravity.google/docs/plugins) |
+| `config/plugins` | -- | [source](https://antigravity.google/docs/plugins) |
+| `config/skills` | `skill` | [source](https://antigravity.google/docs/skills) |
+| `config/agents` | `agent` | [source](https://antigravity.google/docs/agents) |
+| `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) |
+| `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp) |
+
+A path routing no component kind is owned so a setup can carry it;
+nothing compiles a component to it.
+
 ## Response
 
 One maintainer. Defects are triaged as time allows; security reports are

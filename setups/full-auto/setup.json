@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "full-auto",
+  "description": "Full auto: `toolPermission` is always-proceed and the terminal sandbox is off. This product documents no global instruction file. This is a setup posture -- keys in this product's own configuration file. It is not an execution profile and it grants no environment: what it changes is what the product asks you, not what anyone is permitted to run.",
+  "sources": [
+    "https://antigravity.google/docs/cli/reference/",
+    "https://antigravity.google/docs/cli/permissions/"
+  ]
+}
