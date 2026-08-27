@@ -65,6 +65,9 @@ pub const ANTIGRAVITY: Harness = Harness {
         "google_accounts.json",
         "tmp",
     ],
+    // No near neighbour measured for this product. A marker listed here is a
+    // refusal waiting to happen, so nothing is listed without evidence.
+    foreign_homes: &[],
     permission_profiles: &["default"],
     // No instruction and no command: the product documents both only at
     // workspace scope, under a project's `.agents/`, and this provider
