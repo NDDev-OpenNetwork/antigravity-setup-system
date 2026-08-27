@@ -1,5 +1,9 @@
 {
   "schema_version": 1,
   "id": "baseline",
-  "description": "A working floor: a conservative tool-permission posture. This product documents no global instruction file, so the floor is settings."
+  "description": "A working floor: a conservative tool-permission posture and two refusals. This product documents no global instruction file, so the floor is settings.",
+  "sources": [
+    "https://antigravity.google/docs/cli/reference/",
+    "https://antigravity.google/docs/cli/permissions/"
+  ]
 }

@@ -1,3 +1,9 @@
 {
-  "toolPermissions": "ask"
+  "toolPermission": "request-review",
+  "permissions": {
+    "deny": [
+      "command(sudo)",
+      "command(rm -rf)"
+    ]
+  }
 }
