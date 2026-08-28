@@ -335,7 +335,14 @@
       }
     ],
     "config_home_env": "",
-    "config_home_env_note": "Empty on purpose. The product documents no variable for its configuration home, so a launch could not point it at the target every command here takes -- which is why this build installs software and does not declare `launch`."
+    "config_home_env_note": "Empty on purpose. The product documents no variable for its configuration home, so a launch could not point it at the target every command here takes -- which is why this build installs software and does not declare `launch`.",
+    "configuration_format": {
+      "file": "antigravity-cli/settings.json",
+      "grammar": "json",
+      "accepts_comments": false,
+      "note": "Plain JSON per the vendor's settings page. No schema published, searched 2026-08-28.",
+      "measured_at": "2026-08-28"
+    }
   },
   "software_artifacts": {
     "command": "agy",
