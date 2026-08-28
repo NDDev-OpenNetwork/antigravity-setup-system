@@ -25,7 +25,7 @@ Plain JSON per the vendor's settings page. No schema published, searched 2026-08
 | `antigravity-cli/plugins` | *(routes no kind)* | directory | <https://antigravity.google/docs/cli/plugins/> |
 | `config/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> |
 | `config/skills` | skill | directory | <https://antigravity.google/docs/skills> |
-| `config/agents` | agent | directory | <https://antigravity.google/docs/agents> |
+| `config/agents` | agent | directory | <https://antigravity.google/docs/subagents/> |
 | `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> |
 | `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> |
 | `config/global_workflows` | command | directory | <https://antigravity.google/docs/rules-workflows/> |

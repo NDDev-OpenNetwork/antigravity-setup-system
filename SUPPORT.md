@@ -166,7 +166,7 @@ Configuration home as the product documents it: `~/.gemini`.
 | `antigravity-cli/plugins` | -- | [source](https://antigravity.google/docs/cli/plugins/) |
 | `config/plugins` | `plugin` | [source](https://antigravity.google/docs/plugins) |
 | `config/skills` | `skill` | [source](https://antigravity.google/docs/skills) |
-| `config/agents` | `agent` | [source](https://antigravity.google/docs/agents) |
+| `config/agents` | `agent` | [source](https://antigravity.google/docs/subagents/) |
 | `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) |
 | `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp) |
 | `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary) |
