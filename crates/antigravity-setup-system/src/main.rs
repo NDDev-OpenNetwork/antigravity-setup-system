@@ -40,6 +40,8 @@ pub const ANTIGRAVITY: Harness = Harness {
     // Empty on purpose: the product documents no override for its home. An
     // invented variable name would read as a fact and be one nothing honours.
     config_home_env: "",
+    // One home, one variable: nothing here is conditional.
+    config_home_note: "",
     control_directory: ".antigravity-setup-system",
     state_file: "NDDEV-ANTIGRAVITY-PROVIDER.json",
     predecessor_state_file: "NDDEV-ANTIGRAVITY-CLI-SETUP.json",
