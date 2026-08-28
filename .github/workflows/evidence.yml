@@ -57,4 +57,4 @@ jobs:
           suffix=""
           [ "$RUNNER_OS" = "Windows" ] && suffix=".exe"
           exe="target/release/antigravity-setup-system$suffix"
-          "$py" scripts/evidence.py --binary "$exe" --harness antigravity
+          "$py" scripts/evidence.py --binary "$exe" --harness antigravity --writes-absent "it declares no launch, so no product can be driven through this build at all"
