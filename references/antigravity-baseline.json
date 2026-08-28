@@ -130,7 +130,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-08-28T03:48:25+00:00",
+  "verified_at": "2026-08-28T04:46:39+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-27",
     "config_home": "~/.gemini",
@@ -151,17 +151,19 @@
       },
       {
         "path": "antigravity-cli/plugins",
+        "kinds": [],
+        "shape": "directory",
+        "source": "https://antigravity.google/docs/cli/plugins/",
+        "note": "The page above says the CLI stages an installed plugin at ~/.gemini/antigravity-cli/plugins/<name>/. The product disagrees with its own page. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), in a contained HOME: `antigravity plugin install` on this provider's own nddev-builder plugin created ~/.gemini/config/plugins/nddev-builder and no antigravity-cli/plugins directory at all, and the string `antigravity-cli/plugins` does not appear anywhere in the binary -- while `~/.gemini/antigravity-cli/settings.json`, `hooks.json` and `cache/` all do. So the plugin kind routes to config/plugins and this path routes nothing. Still owned rather than dropped: published consumer corpus objects were compiled against a table naming this path, and narrowing a declaration the consumer matches by exact membership would refuse every one of them. The window closes when those versions are retired, not before."
+      },
+      {
+        "path": "config/plugins",
         "kinds": [
           "plugin"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/plugins"
-      },
-      {
-        "path": "config/plugins",
-        "kinds": [],
-        "shape": "directory",
-        "source": "https://antigravity.google/docs/plugins"
+        "source": "https://antigravity.google/docs/plugins",
+        "note": "Where the product's own installer puts a plugin, measured rather than read: `antigravity plugin install` against pinned 1.1.22 created exactly this path. The page agrees -- ~/.gemini/config/plugins/ is the global plugin directory -- and this provider has shipped nddev-builder here all along. The kind sat on the neighbouring row until the run said otherwise."
       },
       {
         "path": "config/skills",
@@ -206,6 +208,36 @@
         "path": ".antigravity-setup-system",
         "reason": "This provider's own control directory: the target lock, the backup slots and their payloads. Kept out of the declaration for the same reason as the state file, and recorded here because the declined list is where a reader looks before opening a file to find out what it is.",
         "source": "this provider's own contract; no vendor page is involved"
+      },
+      {
+        "path": "config/import_manifest.json",
+        "reason": "Written by the product's own plugin installer. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), verified before running and executed in a contained HOME so nothing of the owner's was touched: `antigravity plugin install` created this file beside config/plugins. It is the installer's bookkeeping about what it imported, not a projection surface, and owning it would let this provider's `remove` erase the product's record of plugins a person installed by hand.",
+        "source": "measured from the product; https://antigravity.google/docs/cli/plugins/"
+      },
+      {
+        "path": "antigravity-cli/hooks.json",
+        "reason": "A second hooks file, beside the owned config/hooks.json. Both appear as path literals in the pinned binary and the string appears as a path literal in the pinned 1.1.22 binary. Which one the product prefers when both exist is not documented and has not been measured, so nothing here owns it: a hook file this provider wrote and the product ignored would be a silently inert setup, and one it removed would be somebody else's configuration.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
+        "path": "antigravity-cli/cache",
+        "reason": "The CLI's own cache, holding cache/projects.json. Runtime state with a lifetime the product owns -- the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never captured into a backup slot: a backup of a cache is a stale answer with a signature on it.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
+        "path": "config/projects",
+        "reason": "Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
+        "path": "config/workflows",
+        "reason": "Named in the binary alongside config/workflows.json and config/global_workflows/<name>.md. This provider's declaration says the product documents commands only at workspace scope, and a *global* workflow directory is the first evidence against that sentence. Not owned on the strength of a string: the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Raised rather than declared, because a declared kind is a promise of a rollback.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
+        "path": "antigravity/transcript.jsonl",
+        "reason": "The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
       }
     ],
     "scoped": [
@@ -314,7 +346,7 @@
       "windows/arm64",
       "windows/x86_64"
     ],
-    "verified_at": "2026-08-28T03:48:25+00:00"
+    "verified_at": "2026-08-28T04:46:39+00:00"
   },
   "setup_catalogue_digest": "sha256:a1b10500891cad52f5842742156570e4742e4742d53b4e4b26aad8a8f3a25558"
 }

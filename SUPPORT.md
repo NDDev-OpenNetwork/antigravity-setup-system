@@ -163,8 +163,8 @@ Configuration home as the product documents it: `~/.gemini`.
 | --- | --- | --- |
 | `antigravity-cli/settings.json` | `setting` | [source](https://antigravity.google/docs/settings) |
 | `antigravity-cli/keybindings.json` | -- | [source](https://antigravity.google/docs/settings) |
-| `antigravity-cli/plugins` | `plugin` | [source](https://antigravity.google/docs/plugins) |
-| `config/plugins` | -- | [source](https://antigravity.google/docs/plugins) |
+| `antigravity-cli/plugins` | -- | [source](https://antigravity.google/docs/cli/plugins/) |
+| `config/plugins` | `plugin` | [source](https://antigravity.google/docs/plugins) |
 | `config/skills` | `skill` | [source](https://antigravity.google/docs/skills) |
 | `config/agents` | `agent` | [source](https://antigravity.google/docs/agents) |
 | `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) |
@@ -181,6 +181,18 @@ other file beside a target.
 **`NDDEV-ANTIGRAVITY-PROVIDER.json`** -- This provider's own state file: which setup is applied, the identity it recorded, and which slot reverses the last operation. Written by every operation and excluded from target identity, because counting it would leave a target different from the identity the operation just wrote. Not a projection surface and never ownable as one. ([source](this provider's own contract; no vendor page is involved))
 
 **`.antigravity-setup-system`** -- This provider's own control directory: the target lock, the backup slots and their payloads. Kept out of the declaration for the same reason as the state file, and recorded here because the declined list is where a reader looks before opening a file to find out what it is. ([source](this provider's own contract; no vendor page is involved))
+
+**`config/import_manifest.json`** -- Written by the product's own plugin installer. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), verified before running and executed in a contained HOME so nothing of the owner's was touched: `antigravity plugin install` created this file beside config/plugins. It is the installer's bookkeeping about what it imported, not a projection surface, and owning it would let this provider's `remove` erase the product's record of plugins a person installed by hand. ([source](measured from the product; https://antigravity.google/docs/cli/plugins/))
+
+**`antigravity-cli/hooks.json`** -- A second hooks file, beside the owned config/hooks.json. Both appear as path literals in the pinned binary and the string appears as a path literal in the pinned 1.1.22 binary. Which one the product prefers when both exist is not documented and has not been measured, so nothing here owns it: a hook file this provider wrote and the product ignored would be a silently inert setup, and one it removed would be somebody else's configuration. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
+
+**`antigravity-cli/cache`** -- The CLI's own cache, holding cache/projects.json. Runtime state with a lifetime the product owns -- the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never captured into a backup slot: a backup of a cache is a stale answer with a signature on it. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
+
+**`config/projects`** -- Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
+
+**`config/workflows`** -- Named in the binary alongside config/workflows.json and config/global_workflows/<name>.md. This provider's declaration says the product documents commands only at workspace scope, and a *global* workflow directory is the first evidence against that sentence. Not owned on the strength of a string: the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Raised rather than declared, because a declared kind is a promise of a rollback. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
+
+**`antigravity/transcript.jsonl`** -- The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
 
 ## Response
 
