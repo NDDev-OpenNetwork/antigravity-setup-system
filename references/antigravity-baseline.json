@@ -220,49 +220,14 @@
     ],
     "declined": [
       {
-        "path": "NDDEV-ANTIGRAVITY-PROVIDER.json",
-        "reason": "This provider's own state file: which setup is applied, the identity it recorded, and which slot reverses the last operation. Written by every operation and excluded from target identity, because counting it would leave a target different from the identity the operation just wrote. Not a projection surface and never ownable as one.",
-        "source": "this provider's own contract; no vendor page is involved"
-      },
-      {
         "path": ".antigravity-setup-system",
         "reason": "This provider's own control directory: the target lock, the backup slots and their payloads. Kept out of the declaration for the same reason as the state file, and recorded here because the declined list is where a reader looks before opening a file to find out what it is.",
         "source": "this provider's own contract; no vendor page is involved"
       },
       {
-        "path": "config/import_manifest.json",
-        "reason": "Written by the product's own plugin installer. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), verified before running and executed in a contained HOME so nothing of the owner's was touched: `antigravity plugin install` created this file beside config/plugins. It is the installer's bookkeeping about what it imported, not a projection surface, and owning it would let this provider's `remove` erase the product's record of plugins a person installed by hand.",
-        "source": "measured from the product; https://antigravity.google/docs/cli/plugins/"
-      },
-      {
-        "path": "antigravity-cli/hooks.json",
-        "reason": "A second hooks file, beside the owned config/hooks.json. Both appear as path literals in the pinned binary and the string appears as a path literal in the pinned 1.1.22 binary. Which one the product prefers when both exist is not documented and has not been measured, so nothing here owns it: a hook file this provider wrote and the product ignored would be a silently inert setup, and one it removed would be somebody else's configuration.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
-      },
-      {
-        "path": "antigravity-cli/cache",
-        "reason": "The CLI's own cache, holding cache/projects.json. Runtime state with a lifetime the product owns -- the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never captured into a backup slot: a backup of a cache is a stale answer with a signature on it.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
-      },
-      {
-        "path": "config/projects",
-        "reason": "Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
-      },
-      {
-        "path": "antigravity/transcript.jsonl",
-        "reason": "The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
-      },
-      {
-        "path": "config/config.json",
-        "reason": "The product's own user settings, created on first run: it held `{\"userSettings\": {\"remoteControlHostname\": \"<this machine's hostname>\"}}`. Distinct from the owned `antigravity-cli/settings.json`, which is where the documented posture keys live. Not owned: no vendor page names it, it carries machine identity rather than configuration a setup would choose, and owning it would put a hostname into every backup slot.",
-        "source": "measured: created by a single run of the pinned 1.1.22 in a contained HOME"
-      },
-      {
-        "path": "config/.migrated",
-        "reason": "An empty marker the product writes beside its config. It records that a layout migration ran, which is the product's bookkeeping about its own history and never a projection surface.",
-        "source": "measured: created by a single run of the pinned 1.1.22 in a contained HOME"
+        "path": "NDDEV-ANTIGRAVITY-PROVIDER.json",
+        "reason": "This provider's own state file: which setup is applied, the identity it recorded, and which slot reverses the last operation. Written by every operation and excluded from target identity, because counting it would leave a target different from the identity the operation just wrote. Not a projection surface and never ownable as one.",
+        "source": "this provider's own contract; no vendor page is involved"
       },
       {
         "path": "antigravity-cli/builtin",
@@ -270,9 +235,44 @@
         "source": "measured from a run of the pinned 1.1.22"
       },
       {
+        "path": "antigravity-cli/cache",
+        "reason": "The CLI's own cache, holding cache/projects.json. Runtime state with a lifetime the product owns -- the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never captured into a backup slot: a backup of a cache is a stale answer with a signature on it.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
+        "path": "antigravity-cli/hooks.json",
+        "reason": "A second hooks file, beside the owned config/hooks.json. Both appear as path literals in the pinned binary and the string appears as a path literal in the pinned 1.1.22 binary. Which one the product prefers when both exist is not documented and has not been measured, so nothing here owns it: a hook file this provider wrote and the product ignored would be a silently inert setup, and one it removed would be somebody else's configuration.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
         "path": "antigravity-cli/runtime-state",
         "reason": "One row for a whole subtree, because listing eleven siblings would suggest each was weighed separately. A single run created `bin/`, `brain/`, `cache/`, `cli.log`, `conversations/`, `conversation_summaries.db` with its `-shm` and `-wal`, `crashes/`, `installation_id`, `jetski_state.pbtxt`, `knowledge/`, `last_check.timestamp`, `log/` and `updater/`. All are the product's own lifetime. None is configuration and none is ownable. The same run also wrote **outside the configuration home entirely** -- `~/.cache/ms-playwright-go`, under the user's cache directory. That has no row of its own because every recorded path here is relative to the target, and this one is relative to a root this provider never evaluates against; the guard that enforces it refused the row, correctly. It is recorded in this sentence instead, so a reader looking for everything the product writes does not stop at `~/.gemini`.",
         "source": "measured from a run of the pinned 1.1.22"
+      },
+      {
+        "path": "antigravity/transcript.jsonl",
+        "reason": "The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+      },
+      {
+        "path": "config/.migrated",
+        "reason": "An empty marker the product writes beside its config. It records that a layout migration ran, which is the product's bookkeeping about its own history and never a projection surface.",
+        "source": "measured: created by a single run of the pinned 1.1.22 in a contained HOME"
+      },
+      {
+        "path": "config/config.json",
+        "reason": "The product's own user settings, created on first run: it held `{\"userSettings\": {\"remoteControlHostname\": \"<this machine's hostname>\"}}`. Distinct from the owned `antigravity-cli/settings.json`, which is where the documented posture keys live. Not owned: no vendor page names it, it carries machine identity rather than configuration a setup would choose, and owning it would put a hostname into every backup slot.",
+        "source": "measured: created by a single run of the pinned 1.1.22 in a contained HOME"
+      },
+      {
+        "path": "config/import_manifest.json",
+        "reason": "Written by the product's own plugin installer. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), verified before running and executed in a contained HOME so nothing of the owner's was touched: `antigravity plugin install` created this file beside config/plugins. It is the installer's bookkeeping about what it imported, not a projection surface, and owning it would let this provider's `remove` erase the product's record of plugins a person installed by hand.",
+        "source": "measured from the product; https://antigravity.google/docs/cli/plugins/"
+      },
+      {
+        "path": "config/projects",
+        "reason": "Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood.",
+        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
       },
       {
         "path": "config/workflows",
@@ -283,6 +283,11 @@
         "path": "config/workflows.json",
         "reason": "The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.",
         "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
+      },
+      {
+        "path": "managed-config",
+        "reason": "Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.\n\nMeasured 2026-08-29 against the pinned 1.1.22 binary, whose bytes match this baseline's own sha256. Searched for `/etc/<product>`, `%ProgramData%\\\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.\n\nIts settings-key registry names `enterprisePreferences`, and that is the closest thing to a managed layer here. It is not a file: it sits beside `userStatus`, `oauthTokenInfo` and `useAICredits` -- account state this product receives, not an administrator's policy on disk. Nothing this provider writes can be overridden by a file it does not own, because no such file is named.\n\nAbsence of a literal is not proof a path cannot exist. This row says what was searched.",
+        "source": "measured in the pinned 1.1.22 artifact"
       }
     ],
     "scoped": [
@@ -400,5 +405,5 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:d177facaee144e35553d94c194143c63d525350bcd887a07601ee8f09d7c7229"
+  "setup_catalogue_digest": "sha256:34ef35baed254d03cf35906c946c8553cd34f0dd5b2acee8fa73cb03b5a02698"
 }
