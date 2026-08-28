@@ -20,19 +20,19 @@ Plain JSON per the vendor's settings page. No schema published, searched 2026-08
 
 | path | kinds | shape | decided by | exercised by |
 |---|---|---|---|---|
-| `antigravity-cli/settings.json` | setting | file | <https://antigravity.google/docs/settings> | *nothing — a page* |
+| `antigravity-cli/settings.json` | setting | file | <https://antigravity.google/docs/settings> | read its bytes |
 | `antigravity-cli/keybindings.json` | *(routes no kind)* | file | <https://antigravity.google/docs/settings> | *nothing — a page* |
 | `antigravity-cli/plugins` | *(routes no kind)* | directory | <https://antigravity.google/docs/cli/plugins/> | *nothing — a page* |
 | `config/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> | *nothing — a page* |
-| `config/skills` | skill | directory | <https://antigravity.google/docs/skills> | *nothing — a page* |
+| `config/skills` | skill | directory | <https://antigravity.google/docs/skills> | read its bytes |
 | `config/agents` | agent | directory | <https://antigravity.google/docs/subagents/> | *nothing — a page* |
-| `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> | *nothing — a page* |
-| `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> | *nothing — a page* |
+| `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> | read its bytes |
+| `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> | read its bytes |
 | `config/global_workflows` | command | directory | <https://antigravity.google/docs/rules-workflows/> | read its bytes |
 
 **A citation is not a measurement.** `decided by` says where a row came from; `exercised by` says whether anybody made the product demonstrate it. Where a row records no method the answer is a page and nothing else, because absence of a record of measurement is not evidence of measurement.
 
-Here that is **0 run**, **1 read from the product's own bytes**, and **8 resting on a page alone**. The last number is the one worth acting on: a row in it is not wrong, it is untested, and the two are indistinguishable from here.
+Here that is **0 run**, **5 read from the product's own bytes**, and **4 resting on a page alone**. The last number is the one worth acting on: a row in it is not wrong, it is untested, and the two are indistinguishable from here.
 
 A surface that routes no kind is owned deliberately: a backup captures
 it and a restore returns it, and no component is routed there because
@@ -42,7 +42,7 @@ surfaces makes a consumer's route ambiguous, and the guard in
 
 ## Considered and not owned
 
-11 rows. Each records what was searched, so the next reader does not repeat the search:
+13 rows. Each records what was searched, so the next reader does not repeat the search:
 
 - **`NDDEV-ANTIGRAVITY-PROVIDER.json`** — This provider's own state file: which setup is applied, the identity it recorded, and which slot reverses the last operation. Written by every operation and excluded from target identity, because counting it would leave a target different from the identity the operation just wrote. Not a projection surface and never ownable as one.
 - **`.antigravity-setup-system`** — This provider's own control directory: the target lock, the backup slots and their payloads. Kept out of the declaration for the same reason as the state file, and recorded here because the declined list is where a reader looks before opening a file to find out what it is.
@@ -55,3 +55,5 @@ surfaces makes a consumer's route ambiguous, and the guard in
 - **`config/.migrated`** — An empty marker the product writes beside its config. It records that a layout migration ran, which is the product's bookkeeping about its own history and never a projection surface.
 - **`antigravity-cli/builtin`** — The product's own bundled skills and resources, including `builtin/skills` and a `.checksum`. Shipped with the program, replaced by an update, and never a person's to configure -- so never this provider's to own or restore.
 - **`antigravity-cli/runtime-state`** — One row for a whole subtree, because listing eleven siblings would suggest each was weighed separately. A single run created `bin/`, `brain/`, `cache/`, `cli.log`, `conversations/`, `conversation_summaries.db` with its `-shm` and `-wal`, `crashes/`, `installation_id`, `jetski_state.pbtxt`, `knowledge/`, `last_check.timestamp`, `log/` and `updater/`. All are the product's own lifetime. None is configuration and none is ownable. The same run also wrote **outside the configuration home entirely** -- `~/.cache/ms-playwright-go`, under the user's cache directory. That has no row of its own because every recorded path here is relative to the target, and this one is relative to a root this provider never evaluates against; the guard that enforces it refused the row, correctly. It is recorded in this sentence instead, so a reader looking for everything the product writes does not stop at `~/.gemini`.
+- **`config/workflows`** — The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.
+- **`config/workflows.json`** — The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.

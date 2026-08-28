@@ -161,15 +161,15 @@ Configuration home as the product documents it: `~/.gemini`.
 
 | Path | Component kinds routed here | Decided by |
 | --- | --- | --- |
-| `antigravity-cli/settings.json` | `setting` | [source](https://antigravity.google/docs/settings) |
+| `antigravity-cli/settings.json` | `setting` | [source](https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
 | `antigravity-cli/keybindings.json` | -- | [source](https://antigravity.google/docs/settings) |
 | `antigravity-cli/plugins` | -- | [source](https://antigravity.google/docs/cli/plugins/) |
 | `config/plugins` | `plugin` | [source](https://antigravity.google/docs/plugins) |
-| `config/skills` | `skill` | [source](https://antigravity.google/docs/skills) |
+| `config/skills` | `skill` | [source](https://antigravity.google/docs/skills; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
 | `config/agents` | `agent` | [source](https://antigravity.google/docs/subagents/) |
-| `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) |
-| `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp) |
-| `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary) |
+| `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
+| `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
+| `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
 
 A path routing no component kind is owned so a setup can carry it;
 nothing compiles a component to it.
@@ -200,6 +200,10 @@ other file beside a target.
 **`antigravity-cli/builtin`** -- The product's own bundled skills and resources, including `builtin/skills` and a `.checksum`. Shipped with the program, replaced by an update, and never a person's to configure -- so never this provider's to own or restore. ([source](measured from a run of the pinned 1.1.22))
 
 **`antigravity-cli/runtime-state`** -- One row for a whole subtree, because listing eleven siblings would suggest each was weighed separately. A single run created `bin/`, `brain/`, `cache/`, `cli.log`, `conversations/`, `conversation_summaries.db` with its `-shm` and `-wal`, `crashes/`, `installation_id`, `jetski_state.pbtxt`, `knowledge/`, `last_check.timestamp`, `log/` and `updater/`. All are the product's own lifetime. None is configuration and none is ownable. The same run also wrote **outside the configuration home entirely** -- `~/.cache/ms-playwright-go`, under the user's cache directory. That has no row of its own because every recorded path here is relative to the target, and this one is relative to a root this provider never evaluates against; the guard that enforces it refused the row, correctly. It is recorded in this sentence instead, so a reader looking for everything the product writes does not stop at `~/.gemini`. ([source](measured from a run of the pinned 1.1.22))
+
+**`config/workflows`** -- The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is. ([source](measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256))
+
+**`config/workflows.json`** -- The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is. ([source](measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256))
 
 ## Response
 
