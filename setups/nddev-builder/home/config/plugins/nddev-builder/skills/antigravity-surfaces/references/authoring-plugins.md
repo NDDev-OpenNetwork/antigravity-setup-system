@@ -25,13 +25,16 @@ Generated from the same rows as the section above, for every harness in this est
 
 | field | `grok` | `antigravity` |
 |---|---|---|
+| `name` | yes | yes |
+| `description` | yes | — |
 | `skills` | yes | — |
 | `commands` | yes | — |
 | `agents` | yes | — |
 | `mcpServers` | yes | — |
 | `hooks` | yes | — |
 | `lspServers` | yes | — |
-| `name` | — | yes |
+
+**The part that travels**: `name`. Everything else is a bet on one product.
 
 **The part that does not, and says nothing when it does not**: a field absent from a column is not rejected there -- it is read past. Nothing warns, no run fails, and the component behaves differently with the same bytes. Where the field was carrying a restriction, the restriction is simply gone. Check the column before relying on one.
 
