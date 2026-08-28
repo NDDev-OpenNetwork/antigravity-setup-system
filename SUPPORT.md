@@ -169,6 +169,7 @@ Configuration home as the product documents it: `~/.gemini`.
 | `config/agents` | `agent` | [source](https://antigravity.google/docs/agents) |
 | `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) |
 | `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp) |
+| `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary) |
 
 A path routing no component kind is owned so a setup can carry it;
 nothing compiles a component to it.
@@ -190,9 +191,15 @@ other file beside a target.
 
 **`config/projects`** -- Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
 
-**`config/workflows`** -- Named in the binary alongside config/workflows.json and config/global_workflows/<name>.md. This provider's declaration says the product documents commands only at workspace scope, and a *global* workflow directory is the first evidence against that sentence. Not owned on the strength of a string: the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Raised rather than declared, because a declared kind is a promise of a rollback. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
-
 **`antigravity/transcript.jsonl`** -- The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
+
+**`config/config.json`** -- The product's own user settings, created on first run: it held `{"userSettings": {"remoteControlHostname": "<this machine's hostname>"}}`. Distinct from the owned `antigravity-cli/settings.json`, which is where the documented posture keys live. Not owned: no vendor page names it, it carries machine identity rather than configuration a setup would choose, and owning it would put a hostname into every backup slot. ([source](measured: created by a single run of the pinned 1.1.22 in a contained HOME))
+
+**`config/.migrated`** -- An empty marker the product writes beside its config. It records that a layout migration ran, which is the product's bookkeeping about its own history and never a projection surface. ([source](measured: created by a single run of the pinned 1.1.22 in a contained HOME))
+
+**`antigravity-cli/builtin`** -- The product's own bundled skills and resources, including `builtin/skills` and a `.checksum`. Shipped with the program, replaced by an update, and never a person's to configure -- so never this provider's to own or restore. ([source](measured from a run of the pinned 1.1.22))
+
+**`antigravity-cli/runtime-state`** -- One row for a whole subtree, because listing eleven siblings would suggest each was weighed separately. A single run created `bin/`, `brain/`, `cache/`, `cli.log`, `conversations/`, `conversation_summaries.db` with its `-shm` and `-wal`, `crashes/`, `installation_id`, `jetski_state.pbtxt`, `knowledge/`, `last_check.timestamp`, `log/` and `updater/`. All are the product's own lifetime. None is configuration and none is ownable. The same run also wrote **outside the configuration home entirely** -- `~/.cache/ms-playwright-go`, under the user's cache directory. That has no row of its own because every recorded path here is relative to the target, and this one is relative to a root this provider never evaluates against; the guard that enforces it refused the row, correctly. It is recorded in this sentence instead, so a reader looking for everything the product writes does not stop at `~/.gemini`. ([source](measured from a run of the pinned 1.1.22))
 
 ## Response
 
