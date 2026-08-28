@@ -141,8 +141,8 @@
           "setting"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/settings",
-        "evidence": "page"
+        "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "evidence": "bytes"
       },
       {
         "path": "antigravity-cli/keybindings.json",
@@ -176,8 +176,8 @@
           "skill"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/skills",
-        "evidence": "page"
+        "source": "https://antigravity.google/docs/skills; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "evidence": "bytes"
       },
       {
         "path": "config/agents",
@@ -195,8 +195,8 @@
           "hook"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/hooks",
-        "evidence": "page"
+        "source": "https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "evidence": "bytes"
       },
       {
         "path": "config/mcp_config.json",
@@ -204,8 +204,8 @@
           "mcp"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/mcp",
-        "evidence": "page"
+        "source": "https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "evidence": "bytes"
       },
       {
         "path": "config/global_workflows",
@@ -213,7 +213,7 @@
           "command"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary",
+        "source": "https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes",
         "note": "Global workflows, as Markdown files, invoked as `/workflow-name` -- which is what makes them commands rather than a fourth kind of instruction. The binary carries `.gemini/config/global_workflows/<name>.md` as a path literal and the vendor describes the *+ Global* button that creates one *accessible across all your workspaces*.\n\nDeclared 2026-08-28. This declaration's own comment had said the product documents commands only at workspace scope, and a global workflow directory is the evidence against it. `config/workflows/` and `config/workflows.json` are the workspace tier and stay unowned -- this provider configures a home, not a checkout."
       }
@@ -273,6 +273,16 @@
         "path": "antigravity-cli/runtime-state",
         "reason": "One row for a whole subtree, because listing eleven siblings would suggest each was weighed separately. A single run created `bin/`, `brain/`, `cache/`, `cli.log`, `conversations/`, `conversation_summaries.db` with its `-shm` and `-wal`, `crashes/`, `installation_id`, `jetski_state.pbtxt`, `knowledge/`, `last_check.timestamp`, `log/` and `updater/`. All are the product's own lifetime. None is configuration and none is ownable. The same run also wrote **outside the configuration home entirely** -- `~/.cache/ms-playwright-go`, under the user's cache directory. That has no row of its own because every recorded path here is relative to the target, and this one is relative to a root this provider never evaluates against; the guard that enforces it refused the row, correctly. It is recorded in this sentence instead, so a reader looking for everything the product writes does not stop at `~/.gemini`.",
         "source": "measured from a run of the pinned 1.1.22"
+      },
+      {
+        "path": "config/workflows",
+        "reason": "The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.",
+        "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
+      },
+      {
+        "path": "config/workflows.json",
+        "reason": "The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.",
+        "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
       }
     ],
     "scoped": [
@@ -390,5 +400,5 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:b8bb53893cc40e1205d139b59228378f2e11a58ed0723387d91289c6569c5faf"
+  "setup_catalogue_digest": "sha256:a59931206519514b4050446c7da6c3148df2f9ccab740e217868f65c93954805"
 }
