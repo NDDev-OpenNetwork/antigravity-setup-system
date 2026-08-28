@@ -55,6 +55,13 @@ pub const ANTIGRAVITY: Harness = Harness {
         "config/agents",
         "config/hooks.json",
         "config/mcp_config.json",
+        // Added 2026-08-28. Global workflows are Markdown files invoked as
+        // `/workflow-name`, which makes them commands; the binary carries
+        // `.gemini/config/global_workflows/<name>.md` and the vendor describes
+        // the button that creates one across all workspaces. The comment below
+        // said this product documents commands only at workspace scope, and
+        // this is the evidence against it.
+        "config/global_workflows",
     ],
     // Gemini CLI's own, not this product's. Never read, never written, and
     // never copied into a backup slot: a backup of someone else's credentials
@@ -69,10 +76,15 @@ pub const ANTIGRAVITY: Harness = Harness {
     // refusal waiting to happen, so nothing is listed without evidence.
     foreign_homes: &[],
     permission_profiles: &["default"],
-    // No instruction and no command: the product documents both only at
-    // workspace scope, under a project's `.agents/`, and this provider
-    // configures a home rather than a checkout. Declaring either would offer a
-    // route that resolves nowhere.
+    // No instruction: the product documents it only at workspace scope, under a
+    // project's `.agents/`, and this provider configures a home rather than a
+    // checkout. Declaring it would offer a route that resolves nowhere.
+    //
+    // `Command` was in that sentence until 2026-08-28, and the sentence was
+    // wrong about it: `~/.gemini/config/global_workflows/` holds Markdown
+    // workflows invoked as `/workflow-name`, across all workspaces. The
+    // workspace tier -- `config/workflows/` and `config/workflows.json` --
+    // stays unowned for the reason the instruction half still gives.
     component_kinds: &[
         ComponentKind::Skill,
         ComponentKind::Agent,
@@ -80,6 +92,7 @@ pub const ANTIGRAVITY: Harness = Harness {
         ComponentKind::Mcp,
         ComponentKind::Plugin,
         ComponentKind::Setting,
+        ComponentKind::Command,
     ],
     projection_kinds: &[ProjectionKind::NativeFiles, ProjectionKind::Plugin],
     // Antigravity is the one product of the seven that keeps a workspace copy
