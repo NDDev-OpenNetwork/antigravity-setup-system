@@ -18,17 +18,17 @@ Plain JSON per the vendor's settings page. No schema published, searched 2026-08
 
 ## Owned surfaces
 
-| path | kinds | shape |
-|---|---|---|
-| `antigravity-cli/settings.json` | setting | file |
-| `antigravity-cli/keybindings.json` | *(routes no kind)* | file |
-| `antigravity-cli/plugins` | *(routes no kind)* | directory |
-| `config/plugins` | plugin | directory |
-| `config/skills` | skill | directory |
-| `config/agents` | agent | directory |
-| `config/hooks.json` | hook | file |
-| `config/mcp_config.json` | mcp | file |
-| `config/global_workflows` | command | directory |
+| path | kinds | shape | decided by |
+|---|---|---|---|
+| `antigravity-cli/settings.json` | setting | file | <https://antigravity.google/docs/settings> |
+| `antigravity-cli/keybindings.json` | *(routes no kind)* | file | <https://antigravity.google/docs/settings> |
+| `antigravity-cli/plugins` | *(routes no kind)* | directory | <https://antigravity.google/docs/cli/plugins/> |
+| `config/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> |
+| `config/skills` | skill | directory | <https://antigravity.google/docs/skills> |
+| `config/agents` | agent | directory | <https://antigravity.google/docs/agents> |
+| `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> |
+| `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> |
+| `config/global_workflows` | command | directory | <https://antigravity.google/docs/rules-workflows/> |
 
 A surface that routes no kind is owned deliberately: a backup captures
 it and a restore returns it, and no component is routed there because
