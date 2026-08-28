@@ -130,7 +130,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-08-27T15:04:27+00:00",
+  "verified_at": "2026-08-27T23:49:23+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-27",
     "config_home": "~/.gemini",
@@ -314,6 +314,6 @@
       "windows/arm64",
       "windows/x86_64"
     ],
-    "verified_at": "2026-08-27T15:04:27+00:00"
+    "verified_at": "2026-08-27T23:49:23+00:00"
   }
 }
