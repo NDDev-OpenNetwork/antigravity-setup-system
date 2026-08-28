@@ -141,13 +141,15 @@
           "setting"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/settings"
+        "source": "https://antigravity.google/docs/settings",
+        "evidence": "page"
       },
       {
         "path": "antigravity-cli/keybindings.json",
         "kinds": [],
         "shape": "file",
         "source": "https://antigravity.google/docs/settings",
+        "evidence": "page",
         "note": "Owned and routing no kind, deliberately. The vendor documents it -- *\"custom keybindings at ~/.gemini/antigravity-cli/keybindings.json\"*, changed through `/keybindings` or by editing the file -- so it is a real surface and belongs inside what this provider owns and restores. But no component kind in the closed set describes a keymap: it is neither a `setting` in the permissions-and-posture sense the other rows carry, nor any of skill, agent, command, hook, mcp or plugin. Owned so a setup can carry one and a backup returns it; routed by nothing, because inventing a kind for it would be a promise to the consumer that the closed set cannot express. It does not exist until a person customises a shortcut, which is why no run of this product creates it."
       },
       {
@@ -155,6 +157,7 @@
         "kinds": [],
         "shape": "directory",
         "source": "https://antigravity.google/docs/cli/plugins/",
+        "evidence": "page",
         "note": "The page above says the CLI stages an installed plugin at ~/.gemini/antigravity-cli/plugins/<name>/. The product disagrees with its own page. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), in a contained HOME: `antigravity plugin install` on this provider's own nddev-builder plugin created ~/.gemini/config/plugins/nddev-builder and no antigravity-cli/plugins directory at all, and the string `antigravity-cli/plugins` does not appear anywhere in the binary -- while `~/.gemini/antigravity-cli/settings.json`, `hooks.json` and `cache/` all do. So the plugin kind routes to config/plugins and this path routes nothing. Still owned rather than dropped: published consumer corpus objects were compiled against a table naming this path, and narrowing a declaration the consumer matches by exact membership would refuse every one of them. The window closes when those versions are retired, not before."
       },
       {
@@ -164,6 +167,7 @@
         ],
         "shape": "directory",
         "source": "https://antigravity.google/docs/plugins",
+        "evidence": "page",
         "note": "Where the product's own installer puts a plugin, measured rather than read: `antigravity plugin install` against pinned 1.1.22 created exactly this path. The page agrees -- ~/.gemini/config/plugins/ is the global plugin directory -- and this provider has shipped nddev-builder here all along. The kind sat on the neighbouring row until the run said otherwise."
       },
       {
@@ -172,7 +176,8 @@
           "skill"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/skills"
+        "source": "https://antigravity.google/docs/skills",
+        "evidence": "page"
       },
       {
         "path": "config/agents",
@@ -181,6 +186,7 @@
         ],
         "shape": "directory",
         "source": "https://antigravity.google/docs/subagents/",
+        "evidence": "page",
         "note": "The citation read https://antigravity.google/docs/agents until 2026-08-28, which now answers 404. The route is unchanged and the page moved: subagents are Markdown with YAML frontmatter at config/agents/<name>.md or config/agents/<name>/agent.md. Recorded because a dead citation is a row nobody can source, and this one was found by reading it rather than by any check -- nothing here fetches a URL."
       },
       {
@@ -189,7 +195,8 @@
           "hook"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/hooks"
+        "source": "https://antigravity.google/docs/hooks",
+        "evidence": "page"
       },
       {
         "path": "config/mcp_config.json",
@@ -197,7 +204,8 @@
           "mcp"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/mcp"
+        "source": "https://antigravity.google/docs/mcp",
+        "evidence": "page"
       },
       {
         "path": "config/global_workflows",
@@ -206,6 +214,7 @@
         ],
         "shape": "directory",
         "source": "https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary",
+        "evidence": "bytes",
         "note": "Global workflows, as Markdown files, invoked as `/workflow-name` -- which is what makes them commands rather than a fourth kind of instruction. The binary carries `.gemini/config/global_workflows/<name>.md` as a path literal and the vendor describes the *+ Global* button that creates one *accessible across all your workspaces*.\n\nDeclared 2026-08-28. This declaration's own comment had said the product documents commands only at workspace scope, and a global workflow directory is the evidence against it. `config/workflows/` and `config/workflows.json` are the workspace tier and stay unowned -- this provider configures a home, not a checkout."
       }
     ],
@@ -381,5 +390,5 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:776d8fa0aca23e75454b65a9a1e5a3928f70ee44eb1ad64efb13b11cce5df428"
+  "setup_catalogue_digest": "sha256:b8bb53893cc40e1205d139b59228378f2e11a58ed0723387d91289c6569c5faf"
 }

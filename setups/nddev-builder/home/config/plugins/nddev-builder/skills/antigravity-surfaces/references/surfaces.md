@@ -18,17 +18,21 @@ Plain JSON per the vendor's settings page. No schema published, searched 2026-08
 
 ## Owned surfaces
 
-| path | kinds | shape | decided by |
-|---|---|---|---|
-| `antigravity-cli/settings.json` | setting | file | <https://antigravity.google/docs/settings> |
-| `antigravity-cli/keybindings.json` | *(routes no kind)* | file | <https://antigravity.google/docs/settings> |
-| `antigravity-cli/plugins` | *(routes no kind)* | directory | <https://antigravity.google/docs/cli/plugins/> |
-| `config/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> |
-| `config/skills` | skill | directory | <https://antigravity.google/docs/skills> |
-| `config/agents` | agent | directory | <https://antigravity.google/docs/subagents/> |
-| `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> |
-| `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> |
-| `config/global_workflows` | command | directory | <https://antigravity.google/docs/rules-workflows/> |
+| path | kinds | shape | decided by | exercised by |
+|---|---|---|---|---|
+| `antigravity-cli/settings.json` | setting | file | <https://antigravity.google/docs/settings> | *nothing — a page* |
+| `antigravity-cli/keybindings.json` | *(routes no kind)* | file | <https://antigravity.google/docs/settings> | *nothing — a page* |
+| `antigravity-cli/plugins` | *(routes no kind)* | directory | <https://antigravity.google/docs/cli/plugins/> | *nothing — a page* |
+| `config/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> | *nothing — a page* |
+| `config/skills` | skill | directory | <https://antigravity.google/docs/skills> | *nothing — a page* |
+| `config/agents` | agent | directory | <https://antigravity.google/docs/subagents/> | *nothing — a page* |
+| `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> | *nothing — a page* |
+| `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> | *nothing — a page* |
+| `config/global_workflows` | command | directory | <https://antigravity.google/docs/rules-workflows/> | read its bytes |
+
+**A citation is not a measurement.** `decided by` says where a row came from; `exercised by` says whether anybody made the product demonstrate it. Where a row records no method the answer is a page and nothing else, because absence of a record of measurement is not evidence of measurement.
+
+Here that is **0 run**, **1 read from the product's own bytes**, and **8 resting on a page alone**. The last number is the one worth acting on: a row in it is not wrong, it is untested, and the two are indistinguishable from here.
 
 A surface that routes no kind is owned deliberately: a backup captures
 it and a restore returns it, and no component is routed there because
