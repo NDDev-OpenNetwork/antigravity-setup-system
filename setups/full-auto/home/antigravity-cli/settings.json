@@ -1,4 +1,7 @@
 {
   "toolPermission": "always-proceed",
-  "enableTerminalSandbox": false
+  "enableTerminalSandbox": false,
+  "allowAgentAccessNonWorkspaceFiles": true,
+  "allowCascadeAccessGitignoreFiles": true,
+  "autoContinueOnMaxGeneratorInvocations": true
 }
