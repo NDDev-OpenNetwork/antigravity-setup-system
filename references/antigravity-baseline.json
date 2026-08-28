@@ -315,5 +315,6 @@
       "windows/x86_64"
     ],
     "verified_at": "2026-08-27T23:49:23+00:00"
-  }
+  },
+  "setup_catalogue_digest": "sha256:a1b10500891cad52f5842742156570e4742e4742d53b4e4b26aad8a8f3a25558"
 }
