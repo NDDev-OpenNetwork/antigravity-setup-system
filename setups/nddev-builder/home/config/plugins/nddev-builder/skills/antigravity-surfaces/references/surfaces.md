@@ -29,10 +29,11 @@ Plain JSON per the vendor's settings page. No schema published, searched 2026-08
 | `config/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> | read its bytes |
 | `config/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> | read its bytes |
 | `config/global_workflows` | command | directory | <https://antigravity.google/docs/rules-workflows/> | read its bytes |
+| `config/rules` | instruction | directory | measured from the pinned 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29 | read its bytes |
 
 **A citation is not a measurement.** `decided by` says where a row came from; `exercised by` says whether anybody made the product demonstrate it. Where a row records no method the answer is a page and nothing else, because absence of a record of measurement is not evidence of measurement.
 
-Here that is **0 run**, **5 read from the product's own bytes**, and **4 resting on a page alone**. The last number is the one worth acting on: a row in it is not wrong, it is untested, and the two are indistinguishable from here.
+Here that is **0 run**, **6 read from the product's own bytes**, and **4 resting on a page alone**. The last number is the one worth acting on: a row in it is not wrong, it is untested, and the two are indistinguishable from here.
 
 A surface that routes no kind is owned deliberately: a backup captures
 it and a restore returns it, and no component is routed there because
@@ -49,10 +50,10 @@ above -- writing the root into the path again would nest it twice.
 
 | path | routes | shape | decided by | exercised by |
 | --- | --- | --- | --- | --- |
-| `.agents/skills` | skill | directory | <https://antigravity.google/docs/skills> | *nothing — a page* |
-| `.agents/agents` | agent | directory | <https://antigravity.google/blog/introducing-custom-agents> | *nothing — a page* |
-| `.agents/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> | *nothing — a page* |
-| `.agents/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> | *nothing — a page* |
+| `.agents/skills` | skill | directory | <https://antigravity.google/docs/skills> | read its bytes |
+| `.agents/agents` | agent | directory | <https://antigravity.google/blog/introducing-custom-agents> | read its bytes |
+| `.agents/plugins` | plugin | directory | <https://antigravity.google/docs/plugins> | read its bytes |
+| `.agents/hooks.json` | hook | file | <https://antigravity.google/docs/hooks> | read its bytes |
 | `.agents/mcp_config.json` | mcp | file | <https://antigravity.google/docs/mcp> | *nothing — a page* |
 
 **Under a scope the namespace is the permission and the recorded

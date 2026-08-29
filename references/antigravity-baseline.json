@@ -46,6 +46,16 @@
       "version": "1.1.22",
       "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-arm/cli_linux_arm64.tar.gz",
       "sha512": "b37a718330eb5e270e1ca70135bf964a407ba626fbff7537ac58e094ea31bc623e6d216ef197188fe8b5c46e6f57aee64a3b7c9e23fc855cefee43fe434179d3"
+    },
+    "windows_amd64": {
+      "version": "1.1.22",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-x64/cli_windows_x64.exe",
+      "sha512": "8ef970162af92b48f2ba6ba927a0d46f67ad29f5d48693b07b2b4c6461c03cf4ad81dfe628b2976e53ad5e350379351ded5d2b7c0deec2ffd85703d546669fff"
+    },
+    "windows_arm64": {
+      "version": "1.1.22",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-arm/cli_windows_arm64.exe",
+      "sha512": "da501a3d8f2247fc1d5334ebb6277cc2d04cd5618416a1a439b54f2267815d8122b22a1571e3f3dd8ce697db92ed0692f367777034efdbfeebadacc70753df3c"
     }
   },
   "release_assets": {
@@ -130,7 +140,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-08-28T04:46:39+00:00",
+  "verified_at": "2026-08-29T08:29:50+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-27",
     "config_home": "~/.gemini",
@@ -150,7 +160,7 @@
         "shape": "file",
         "source": "https://antigravity.google/docs/settings",
         "evidence": "page",
-        "note": "Owned and routing no kind, deliberately. The vendor documents it -- *\"custom keybindings at ~/.gemini/antigravity-cli/keybindings.json\"*, changed through `/keybindings` or by editing the file -- so it is a real surface and belongs inside what this provider owns and restores. But no component kind in the closed set describes a keymap: it is neither a `setting` in the permissions-and-posture sense the other rows carry, nor any of skill, agent, command, hook, mcp or plugin. Owned so a setup can carry one and a backup returns it; routed by nothing, because inventing a kind for it would be a promise to the consumer that the closed set cannot express. It does not exist until a person customises a shortcut, which is why no run of this product creates it."
+        "note": "Owned and routing no kind, deliberately. The vendor documents it -- *\"custom keybindings at ~/.gemini/antigravity-cli/keybindings.json\"*, changed through `/keybindings` or by editing the file -- so it is a real surface and belongs inside what this provider owns and restores. But no component kind in the closed set describes a keymap: it is neither a `setting` in the permissions-and-posture sense the other rows carry, nor any of skill, agent, command, hook, mcp or plugin. Owned so a setup can carry one and a backup returns it; routed by nothing, because inventing a kind for it would be a promise to the consumer that the closed set cannot express. It does not exist until a person customises a shortcut, which is why no run of this product creates it.\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
       },
       {
         "path": "antigravity-cli/plugins",
@@ -158,7 +168,7 @@
         "shape": "directory",
         "source": "https://antigravity.google/docs/cli/plugins/",
         "evidence": "page",
-        "note": "The page above says the CLI stages an installed plugin at ~/.gemini/antigravity-cli/plugins/<name>/. The product disagrees with its own page. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), in a contained HOME: `antigravity plugin install` on this provider's own nddev-builder plugin created ~/.gemini/config/plugins/nddev-builder and no antigravity-cli/plugins directory at all, and the string `antigravity-cli/plugins` does not appear anywhere in the binary -- while `~/.gemini/antigravity-cli/settings.json`, `hooks.json` and `cache/` all do. So the plugin kind routes to config/plugins and this path routes nothing. Still owned rather than dropped: published consumer corpus objects were compiled against a table naming this path, and narrowing a declaration the consumer matches by exact membership would refuse every one of them. The window closes when those versions are retired, not before."
+        "note": "The page above says the CLI stages an installed plugin at ~/.gemini/antigravity-cli/plugins/<name>/. The product disagrees with its own page. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), in a contained HOME: `antigravity plugin install` on this provider's own nddev-builder plugin created ~/.gemini/config/plugins/nddev-builder and no antigravity-cli/plugins directory at all, and the string `antigravity-cli/plugins` does not appear anywhere in the binary -- while `~/.gemini/antigravity-cli/settings.json`, `hooks.json` and `cache/` all do. So the plugin kind routes to config/plugins and this path routes nothing. Still owned rather than dropped: published consumer corpus objects were compiled against a table naming this path, and narrowing a declaration the consumer matches by exact membership would refuse every one of them. The window closes when those versions are retired, not before.\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
       },
       {
         "path": "config/plugins",
@@ -168,7 +178,7 @@
         "shape": "directory",
         "source": "https://antigravity.google/docs/plugins",
         "evidence": "page",
-        "note": "Where the product's own installer puts a plugin, measured rather than read: `antigravity plugin install` against pinned 1.1.22 created exactly this path. The page agrees -- ~/.gemini/config/plugins/ is the global plugin directory -- and this provider has shipped nddev-builder here all along. The kind sat on the neighbouring row until the run said otherwise."
+        "note": "Where the product's own installer puts a plugin, measured rather than read: `antigravity plugin install` against pinned 1.1.22 created exactly this path. The page agrees -- ~/.gemini/config/plugins/ is the global plugin directory -- and this provider has shipped nddev-builder here all along. The kind sat on the neighbouring row until the run said otherwise.\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
       },
       {
         "path": "config/skills",
@@ -187,7 +197,7 @@
         "shape": "directory",
         "source": "https://antigravity.google/docs/subagents/",
         "evidence": "page",
-        "note": "The citation read https://antigravity.google/docs/agents until 2026-08-28, which now answers 404. The route is unchanged and the page moved: subagents are Markdown with YAML frontmatter at config/agents/<name>.md or config/agents/<name>/agent.md. Recorded because a dead citation is a row nobody can source, and this one was found by reading it rather than by any check -- nothing here fetches a URL."
+        "note": "The citation read https://antigravity.google/docs/agents until 2026-08-28, which now answers 404. The route is unchanged and the page moved: subagents are Markdown with YAML frontmatter at config/agents/<name>.md or config/agents/<name>/agent.md. Recorded because a dead citation is a row nobody can source, and this one was found by reading it rather than by any check -- nothing here fetches a URL.\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
       },
       {
         "path": "config/hooks.json",
@@ -216,6 +226,16 @@
         "source": "https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes",
         "note": "Global workflows, as Markdown files, invoked as `/workflow-name` -- which is what makes them commands rather than a fourth kind of instruction. The binary carries `.gemini/config/global_workflows/<name>.md` as a path literal and the vendor describes the *+ Global* button that creates one *accessible across all your workspaces*.\n\nDeclared 2026-08-28. This declaration's own comment had said the product documents commands only at workspace scope, and a global workflow directory is the evidence against it. `config/workflows/` and `config/workflows.json` are the workspace tier and stay unowned -- this provider configures a home, not a checkout."
+      },
+      {
+        "path": "config/rules",
+        "kinds": [
+          "instruction"
+        ],
+        "shape": "directory",
+        "source": "measured from the pinned 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29",
+        "evidence": "bytes",
+        "note": "**A customization element this declaration was missing, not a surface the product lacks.** The binary's embedded reference lists what exists *within any of the customization roots*: *\"1. Skills (Directories) … 2. **Rules** (Markdown Files): Location: `rules/` (relative to the customization root) or standalone `GEMINI.md`/`AGENTS.md` files … 3. Plugins (Directories) … 4. MCP Servers (`mcp_config.json`) and Hooks (`hooks.json`).\"* Four of those five were declared here and `rules/` was not.\n\nThe record said the opposite -- *the product documents instruction only at workspace scope* -- which was a negative taken from the pages that happened to be read. The same comment had already been wrong about `command`, corrected 2026-08-28 on `config/global_workflows`. Twice in one declaration, both times the evidence was in a binary this repository had already downloaded.\n\n**`AGENTS.md` is the product's own recommended shape**, from the same reference: *\"Placing a consolidated `AGENTS.md` (or `GEMINI.md`) file under `rules/` … is recommended over separate rule files.\"* The elided clause is the vendor's own example of one root; it is left out because a reader here would take an example path for a document these setups carry, and they carry it elsewhere.\n\n**Where the setups actually write it, and why not here.** They write a consolidated `AGENTS.md` under a `rules/` directory at the *plugin* customization root -- `config/plugins/{plugin_name}/rules/AGENTS.md`, named as a class because this note is carried into every setup and each names its own plugin. That is the same recommendation applied to a different one of the roots the reference lists, and the choice is argued in each `plugin.json`: a plugin's skills, rules, hooks and MCP servers are ingested together when it is enabled, and `config/plugins` is a surface that routes today. `config/rules` is owned and declared, and a setup writing there as well would load the same floor twice.\n\nSearched with a control: `AGENTS.md` appears ten times in the pinned bytes and `GEMINI.md` eight, while an invented `nddev-invented-instruction-file.md` appears zero -- so the search discriminates. `bytes` and not `ran`: starting this product needs a credential, and the credential-free subcommands report nothing about resolved rules.\n\n**Owned, declared, and waiting on the consumer's route.** The `instruction` kind is declared here. An earlier revision of this note said the opposite and gave a measurement for it -- *adding the kind was tried and antigravity went from 29 passing cases to REFUSED, 30 cases* -- and that measurement was our own instrument misreading the checker.\n\n`declared_route_is_compilable:instruction` carries `subject: consumer`, and the checker's `conforms` is computed over provider-subject cases alone, by an explicit decision documented in its source: a provider declaring a kind the compiler has no route for *\"has satisfied every obligation v3 places on it; the gap is ours, and calling it non-conformance would name the wrong party in the one field people read\"*. With the kind declared the checker answers `conforms: true` with zero provider-subject failures. `tools/conformance_report.py` was collecting every failed case regardless of subject, so it printed `REFUSED` over a provider the checker had just passed -- and this note then recorded that as a fact about the protocol, which is how a bad reading hardens into a record. Fixed, with a control: `python3 tools/conformance_report.py --self-check`.\n\nDeclaring the kind changes nothing a user sees while the consumer's `PROVIDER_RULES` has no `instruction` row for this harness: composition still refuses early with `native_surface_lost`, which is the honest place for it. What it does change is the ordering -- the provider is no longer on the critical path, so the route works the moment the consumer lands it, with no window in which an instruction composes and is refused late."
       }
     ],
     "declined": [
@@ -302,8 +322,8 @@
             ],
             "shape": "directory",
             "source": "https://antigravity.google/docs/skills",
-            "evidence": "page",
-            "note": "\"Create a directory named .agents/skills/ at your project root\"; the product still reads the legacy .agent/skills, which is not owned"
+            "evidence": "bytes",
+            "note": "\"Create a directory named .agents/skills/ at your project root\"; the product still reads the legacy .agent/skills, which is not owned\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/skills/{skill_name}/SKILL.md` as a path template, beside its reference's *\"customization root (e.g. `.agents/skills/`)\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/agents",
@@ -312,8 +332,8 @@
             ],
             "shape": "directory",
             "source": "https://antigravity.google/blog/introducing-custom-agents",
-            "evidence": "page",
-            "note": "\"place it inside that workspace's .agents/agents/ directory\""
+            "evidence": "bytes",
+            "note": "\"place it inside that workspace's .agents/agents/ directory\"\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/agents/{agent_name}/` as a path template.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/plugins",
@@ -322,7 +342,8 @@
             ],
             "shape": "directory",
             "source": "https://antigravity.google/docs/plugins",
-            "evidence": "page"
+            "evidence": "bytes",
+            "note": "\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: its own reference: *\"customization root (e.g. `.agents/plugins/`)\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/hooks.json",
@@ -331,8 +352,8 @@
             ],
             "shape": "file",
             "source": "https://antigravity.google/docs/hooks",
-            "evidence": "page",
-            "note": "\"a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)\""
+            "evidence": "bytes",
+            "note": "\"a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)\"\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: its own reference, and a changelog entry -- *\"Fixed workspace-local hooks defined in `<workspace>/.agents/hooks.json` not loading after trusting a folder\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/mcp_config.json",
@@ -342,7 +363,7 @@
             "shape": "file",
             "source": "https://antigravity.google/docs/mcp",
             "evidence": "page",
-            "note": "\"globally at ~/.gemini/config/mcp_config.json (or locally in your workspace under .agents/mcp_config.json)\""
+            "note": "\"globally at ~/.gemini/config/mcp_config.json (or locally in your workspace under .agents/mcp_config.json)\"\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
           }
         ],
         "declined": [
@@ -401,6 +422,18 @@
         "bytes": 54851982,
         "sha256": "sha256:d19eb95666b949c76b2dd51c4a7a7202d12e38f348e1512ed35251eac804dcb1",
         "member": "antigravity"
+      },
+      "windows/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-arm/cli_windows_arm64.exe",
+        "bytes": 176521368,
+        "sha256": "sha256:0ffbe6948262b82d2e2a95956b957d794cefeaefa7c1840ff12e93bd4d2f1e00",
+        "shape": "raw"
+      },
+      "windows/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-x64/cli_windows_x64.exe",
+        "bytes": 186767512,
+        "sha256": "sha256:059b96c1069206158d340ee2a8912894eca5002195e62b8cd281c26c01cd794e",
+        "shape": "raw"
       }
     },
     "version": "1.1.22",
@@ -410,5 +443,18 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:29d7ca0ec4ea09bcb72a3a91eb8709641a4affaf5e044c64d4442db79090ea2f"
+  "setup_catalogue_digest": "sha256:21b799d1084e096a17cbc7d05c5f31190e62c127329aad511b28e5ec7ed8c690",
+  "host_platform_scope": {
+    "supported_host_ids": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "resolved_by": "the product's own release manifest endpoint, one per platform",
+    "note": "**This block did not exist, and its absence is why two artifacts were missing for as long as this harness has been declared.** `transcribe_software.py` refuses a baseline that calls an operating system unsupported while carrying an artifact for it -- a check that examines a scope block, and this baseline had none, so it passed on four platforms without ever asking about the fifth and sixth. An absent instrument reads as a clean result.\n\nMeasured 2026-08-29. The vendor's own getting-started page gives three install routes -- `install.sh` for macOS and Linux, `install.ps1` and `install.cmd` for Windows -- and names `C:\\Users\\<username>\\AppData\\Local\\agy\\bin` as the Windows location. The PowerShell installer resolves a manifest per platform from the product's own updater service, and asking it directly for `windows_amd64` and `windows_arm64` returns two real artifacts.\n\n**The container differs from the other four, which is the second time this estate has met that.** Linux and macOS are `gzip-tar`; Windows is a bare `PE32+` executable, `raw`. Cursor was the first -- a ZIP among five gzip-tars. Both times a container read off the *product* would have been right four or five times and silently wrong on one platform. **The container is a property of an artifact, not of a product.**\n\n**And guessing the URL was measured to be the wrong method.** Six candidate Windows paths built from the existing four -- `windows-x64/cli_windows_x64.tar.gz` and the rest -- all returned 404, beside a known-good linux path returning 200 and an invented platform returning 404. The probe discriminated and the conclusion would still have been wrong: the artifacts exist under those directories with a `.exe` extension. Ask the product's own resolver, not the shape of its neighbours."
+  },
+  "second_pin_absent": {
+    "measured_at": "2026-08-29",
+    "note": "`software_update` and `rollback` cross two real releases, and this build pins one. The second slot fills by **rotation** rather than by choice: a vendor bump assigns `previous = current` and then sets `current`, so exactly one value moves per bump and the pair is always two consecutive real releases. `scripts/evidence.py::cross_two_releases` skips this harness and prints the reason, which is an absence of a second release rather than a failure.\n\nRecorded because a reader of this file otherwise cannot tell a gap from a fact. Four of the seven carry a second pin; these are the three that do not, and each for a different reason.\n\n**Cannot be seeded, and for a sharper reason than cursor's.** The product resolves releases through a manifest endpoint that serves only the *current* release per platform; there is no history route -- `/manifests/` answers 404, measured 2026-08-29. And an artifact URL carries a build identifier beside the version -- `1.1.22-5711547746615296` -- which is not derivable from a version string, so even a known prior version number would not yield a URL. Fills on the next bump."
+  }
 }

@@ -1,0 +1,5 @@
+{
+  "name": "nddev-baseline",
+  "description": "The NDDev working floor, as a native Antigravity plugin. A plugin rather than a loose file under the global `rules/`: the product's own reference says a plugin's skills, rules, hooks and MCP servers are automatically ingested when it is enabled, and `config/plugins` is a surface this provider owns and routes. `config/rules` is owned too and routes `instruction`, so owning it means it is managed whole: whatever you keep there is captured into a backup slot on install and this directory is left empty, because no setup here writes to it. A plugin's `rules/` is not, which is the other reason to deliver the floor from one.",
+  "version": "1.0.0"
+}

@@ -39,6 +39,27 @@ pub const ANTIGRAVITY: Harness = Harness {
     documented_config_home: "~/.gemini",
     // Empty on purpose: the product documents no override for its home. An
     // invented variable name would read as a fact and be one nothing honours.
+    //
+    // **Re-measured 2026-08-29, because this is a negative and a negative from
+    // a page is the weakest thing this estate records.** Every environment
+    // variable the pinned 1.1.22 binary names with a product prefix was
+    // enumerated -- `GEMINI_API_KEY`, `GEMINI_TTS_VOICE_REPLICATION`,
+    // `GEMINI_IOS_PRIMES`, `ANTIGRAVITY_SIDECAR_WEB_PORT`,
+    // `ANTIGRAVITY_PROJECT_ID`, `ANTIGRAVITY_LS_ADDRESS`,
+    // `ANTIGRAVITY_CSRF_TOKEN`, `ANTIGRAVITY_AGENTAPI_EXE`, `AGY_ADC_AUTH`,
+    // `AGY_CLI_DISABLE_LATEX`. Not one names a home or a configuration
+    // directory. Six plausible spellings were searched for by name and all
+    // answered zero, beside an invented control that also answered zero -- so
+    // the search discriminates by finding the ten that are there.
+    //
+    // `XDG_CONFIG_HOME` appears five times and is **not** evidence: its
+    // neighbours are Go runtime, SSH, gzip, protobuf and TOML strings, which is
+    // the vendored-dependency trap this estate already recorded for grok.
+    //
+    // This is why `launch` is the one command of the seven this harness does
+    // not declare: a launch could not point the product at the `--target` it
+    // was handed, and would start it against whatever home it picked for
+    // itself while reporting that it had honoured the target.
     config_home_env: "",
     // One home, one variable: nothing here is conditional.
     config_home_note: "",
@@ -64,6 +85,13 @@ pub const ANTIGRAVITY: Harness = Harness {
         // said this product documents commands only at workspace scope, and
         // this is the evidence against it.
         "config/global_workflows",
+        // Added 2026-08-29, and the comment below was wrong a second time.
+        // The product's own embedded documentation lists five customization
+        // *elements* available "within any of the customization roots" --
+        // skills, rules, plugins, MCP servers and hooks -- and this
+        // declaration carried four of them. `rules/` was the missing one, and
+        // it is the instruction surface.
+        "config/rules",
     ],
     // Gemini CLI's own, not this product's. Never read, never written, and
     // never copied into a backup slot: a backup of someone else's credentials
@@ -78,16 +106,47 @@ pub const ANTIGRAVITY: Harness = Harness {
     // refusal waiting to happen, so nothing is listed without evidence.
     foreign_homes: &[],
     permission_profiles: &["default"],
-    // No instruction: the product documents it only at workspace scope, under a
-    // project's `.agents/`, and this provider configures a home rather than a
-    // checkout. Declaring it would offer a route that resolves nowhere.
+    // **This comment said "no instruction" and "no command", and both were
+    // wrong.** It is kept as the shape rather than deleted: it read as a
+    // measured absence for weeks, and each half was a negative taken from what
+    // a page happened to discuss rather than from the product.
     //
-    // `Command` was in that sentence until 2026-08-28, and the sentence was
-    // wrong about it: `~/.gemini/config/global_workflows/` holds Markdown
-    // workflows invoked as `/workflow-name`, across all workspaces. The
-    // workspace tier -- `config/workflows/` and `config/workflows.json` --
-    // stays unowned for the reason the instruction half still gives.
+    // `Command` went first, on 2026-08-28: `~/.gemini/config/global_workflows/`
+    // holds Markdown workflows invoked as `/workflow-name`, across all
+    // workspaces.
+    //
+    // `Instruction` followed. The evidence was in the same binary the whole
+    // time: its embedded reference lists the customization *elements* --
+    // *"Within any of the customization roots above, you can define: 1. Skills
+    // … 2. **Rules** (Markdown Files): Location: `rules/` (relative to the
+    // customization root) or standalone `GEMINI.md`/`AGENTS.md` files … 3.
+    // Plugins … 4. MCP Servers and Hooks."* Four of those five were declared
+    // here and `config/rules` was not. Both the namespace and the kind are
+    // declared now.
+    //
+    // **The kind was reverted once on a misreading of our own tool, and the
+    // misreading is worth keeping.** `declared_route_is_compilable:instruction`
+    // fails while the consumer's `PROVIDER_RULES` has no `instruction` row for
+    // this harness -- but that case carries `subject: consumer`, and the
+    // checker's `conforms` is computed over provider-subject cases alone,
+    // deliberately: a provider declaring a kind the compiler cannot route
+    // *"has satisfied every obligation v3 places on it; the gap is ours, and
+    // calling it non-conformance would name the wrong party in the one field
+    // people read"*. `tools/conformance_report.py` was counting every failed
+    // case regardless of subject, printed **REFUSED, 30 cases**, and that
+    // number was written into a comment here and into the baseline as though
+    // it were a fact about the protocol. It was a fact about our reader.
+    //
+    // Declaring the kind is safe while the route is missing: composition
+    // refuses an antigravity instruction early with `native_surface_lost`,
+    // exactly as before. What it buys is the ordering -- the provider is off
+    // the critical path, so the route works the moment the consumer lands it,
+    // with no window where an instruction composes and is refused late.
+    //
+    // The workspace tier -- `config/workflows/` and `config/workflows.json` --
+    // stays unowned; that half of the old sentence is still true.
     component_kinds: &[
+        ComponentKind::Instruction,
         ComponentKind::Skill,
         ComponentKind::Agent,
         ComponentKind::Hook,
