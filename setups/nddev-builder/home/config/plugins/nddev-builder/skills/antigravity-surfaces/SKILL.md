@@ -44,14 +44,36 @@ Inside the same home, and **not** Antigravity's:
 None of these should be read, written, or copied into a backup. A backup holding
 someone else's credentials is a leak with a schedule.
 
-## One thing this product does not have
+## The global instruction, and what this section used to say
 
-- **No global instruction file.** Antigravity documents instructions only at
-  workspace scope, under a project's `.agents/`. There is no home-level
-  `AGENTS.md` to write, and writing one places a file the product never reads.
+- **`config/rules/` is the global instruction surface.** The product's own
+  embedded reference lists the customization elements available *within any of
+  the customization roots*, and `rules/` is the second of them: *"**Rules**
+  (Markdown Files): Location: `rules/` (relative to the customization root) or
+  standalone `GEMINI.md`/`AGENTS.md` files."* It recommends a consolidated
+  `AGENTS.md` under `rules/` over separate rule files. The `instruction` kind is
+  declared here and routes to it.
 
-If a task says "add an instruction" to a home here, the answer is that the home
-has nowhere for it. That is a fact about the product, not a gap to fill.
+- **A plugin's `rules/` is the other one, and it is what these setups use.** A
+  plugin's rules are ingested with its skills and hooks when it is enabled, on
+  one switch, and unlike `config/rules` it is not emptied when a setup installs.
+
+**Until 2026-08-29 this section was titled "One thing this product does not
+have" and said the opposite** — that instructions exist only at workspace scope,
+that there is no home-level `AGENTS.md` to write, and that writing one places a
+file the product never reads. It ended: *"That is a fact about the product, not
+a gap to fill."*
+
+Every part of that was wrong, and the last sentence is the reason it survived:
+it tells a reader the question is settled. The evidence was inside the artifact
+this repository already pins and had already downloaded — a reference the
+product ships with itself — and the claim had been taken from the vendor pages
+that happened to have been read. Twice more in the same declaration, `command`
+and `plugin` were corrected the same way and for the same reason.
+
+The lesson is not about this product. **A negative taken from the pages you
+happened to read is a claim, and writing "that is a fact, not a gap" is how a
+claim stops being re-examined.**
 
 **This section used to say the same about commands, and it was wrong.** The
 declaration was corrected on 2026-08-28 against the pinned 1.1.22 binary, which
