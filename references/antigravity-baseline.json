@@ -302,6 +302,7 @@
             ],
             "shape": "directory",
             "source": "https://antigravity.google/docs/skills",
+            "evidence": "page",
             "note": "\"Create a directory named .agents/skills/ at your project root\"; the product still reads the legacy .agent/skills, which is not owned"
           },
           {
@@ -311,6 +312,7 @@
             ],
             "shape": "directory",
             "source": "https://antigravity.google/blog/introducing-custom-agents",
+            "evidence": "page",
             "note": "\"place it inside that workspace's .agents/agents/ directory\""
           },
           {
@@ -319,7 +321,8 @@
               "plugin"
             ],
             "shape": "directory",
-            "source": "https://antigravity.google/docs/plugins"
+            "source": "https://antigravity.google/docs/plugins",
+            "evidence": "page"
           },
           {
             "path": ".agents/hooks.json",
@@ -328,6 +331,7 @@
             ],
             "shape": "file",
             "source": "https://antigravity.google/docs/hooks",
+            "evidence": "page",
             "note": "\"a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)\""
           },
           {
@@ -337,6 +341,7 @@
             ],
             "shape": "file",
             "source": "https://antigravity.google/docs/mcp",
+            "evidence": "page",
             "note": "\"globally at ~/.gemini/config/mcp_config.json (or locally in your workspace under .agents/mcp_config.json)\""
           }
         ],
@@ -405,5 +410,5 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:34ef35baed254d03cf35906c946c8553cd34f0dd5b2acee8fa73cb03b5a02698"
+  "setup_catalogue_digest": "sha256:29d7ca0ec4ea09bcb72a3a91eb8709641a4affaf5e044c64d4442db79090ea2f"
 }
