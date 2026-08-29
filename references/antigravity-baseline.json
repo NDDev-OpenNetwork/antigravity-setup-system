@@ -261,7 +261,7 @@
       },
       {
         "path": "antigravity-cli/hooks.json",
-        "reason": "A second hooks file, beside the owned config/hooks.json. Both appear as path literals in the pinned binary and the string appears as a path literal in the pinned 1.1.22 binary. Which one the product prefers when both exist is not documented and has not been measured, so nothing here owns it: a hook file this provider wrote and the product ignored would be a silently inert setup, and one it removed would be somebody else's configuration.",
+        "reason": "A second hooks file, beside the owned `config/hooks.json`. Both appear as path literals in the pinned 1.1.22 binary.\n\n**Which one the product means is documented, in its own release notes, and the earlier text here said it was not.** From the changelog embedded in the pinned artifact: *\"Fixed a bug where the `/hooks` command wrote configurations to `~/.gemini/antigravity-cli/hooks.json` instead of the shared `~/.gemini/config/hooks.json`, ensuring hooks remain synchronized between the TUI and the backend.\"* So `config/hooks.json` is the shared surface and this path is where a fixed defect used to write.\n\nStill declined rather than owned, and now for a stated reason instead of an absence: it is the output of a bug the vendor repaired, so a file here on a user's machine is residue from an older build rather than configuration this provider should manage. Owning it would have a restore put back a file the product stopped writing.\n\nCorrected 2026-08-29. The previous text read *\"which one the product prefers when both exist is not documented and has not been measured\"* — true when written, and false against a changelog that was inside the artifact this baseline already pins. Found because a user's issue about a different hooks path sent someone reading the same bytes again.",
         "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
       },
       {
@@ -443,7 +443,7 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:21b799d1084e096a17cbc7d05c5f31190e62c127329aad511b28e5ec7ed8c690",
+  "setup_catalogue_digest": "sha256:7c6fb4661e41f85fe4ab8120fe978d9def5fc897b8e65bd2a8e00bf98ee9ebd9",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",
