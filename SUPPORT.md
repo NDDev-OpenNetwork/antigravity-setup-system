@@ -176,6 +176,7 @@ Configuration home as the product documents it: `~/.gemini`.
 | `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
 | `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
 | `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256) |
+| `config/rules` | `instruction` | [source](measured from the pinned 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29) |
 
 A path routing no component kind is owned so a setup can carry it;
 nothing compiles a component to it.

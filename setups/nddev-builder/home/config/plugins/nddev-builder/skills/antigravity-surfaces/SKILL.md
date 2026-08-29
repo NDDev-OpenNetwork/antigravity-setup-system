@@ -106,6 +106,14 @@ stale against the declaration. This file is hand-written and can, which is why
 two of its paragraphs above now carry the date they were corrected.
 
 - **What this harness owns, declines, and why** — `references/surfaces.md`
+- **The configuration file itself -- its grammar, whether comments parse, and
+  whether what you write is the effective value**: read
+  `references/authoring-settings.md`.
+- **The instruction file, and which products read a neighbour's**: read
+  `references/authoring-instructions.md`.
+- **The second target this harness owns, and why a setup cannot carry a
+  component for it**: read `references/second-target.md`. Generated from the
+  baseline's scoped block.
 - **The commands, the invariants, and the software half** — `references/lifecycle.md`
 - **The gate, the render check, and the one rule** — `references/validation.md`
 - **Writing a skill** — `references/authoring-skills.md`

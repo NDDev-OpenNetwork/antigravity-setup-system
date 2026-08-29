@@ -51,6 +51,22 @@ pub(crate) const ARTIFACTS: &[Artifact] = &[
         shape: Shape::GzipTar,
         member: "antigravity",
     },
+    Artifact {
+        platform: "windows/arm64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-arm/cli_windows_arm64.exe",
+        bytes: 176_521_368,
+        sha256: "sha256:0ffbe6948262b82d2e2a95956b957d794cefeaefa7c1840ff12e93bd4d2f1e00",
+        shape: Shape::Raw,
+        member: "",
+    },
+    Artifact {
+        platform: "windows/x86_64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-x64/cli_windows_x64.exe",
+        bytes: 186_767_512,
+        sha256: "sha256:059b96c1069206158d340ee2a8912894eca5002195e62b8cd281c26c01cd794e",
+        shape: Shape::Raw,
+        member: "",
+    },
 ];
 
 /// Antigravity's program, and where its bytes come from.
