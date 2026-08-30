@@ -61,6 +61,12 @@ pub const ANTIGRAVITY: Harness = Harness {
     // was handed, and would start it against whatever home it picked for
     // itself while reporting that it had honoured the target.
     config_home_env: "",
+    // Not measured. The two artifacts this estate has read for this question are
+    // claude's, which carries `DISABLE_UPDATES`, and codex's, which carries no
+    // such literal. This product has been asked nothing, and an empty value here
+    // says the launch environment is untouched rather than that the product
+    // leaves the bytes alone.
+    updates_off_env: "",
     // One home, one variable: nothing here is conditional.
     config_home_note: "",
     control_directory: ".antigravity-setup-system",
