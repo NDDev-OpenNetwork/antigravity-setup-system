@@ -25,7 +25,7 @@ use std::process::ExitCode;
 
 mod software;
 
-use harness_runtime::{Harness, Scoped};
+use harness_runtime::{Harness, LaunchBinding, Scoped};
 use provider_v3::{ComponentKind, ProjectionKind, TargetScope};
 
 /// Everything specific to Antigravity CLI, verified against
@@ -61,6 +61,8 @@ pub const ANTIGRAVITY: Harness = Harness {
     // was handed, and would start it against whatever home it picked for
     // itself while reporting that it had honoured the target.
     config_home_env: "",
+    // No variable at all, which is why this build has never declared launch.
+    launch_binding: LaunchBinding::Undocumented,
     // Not measured. The two artifacts this estate has read for this question are
     // claude's, which carries `DISABLE_UPDATES`, and codex's, which carries no
     // such literal. This product has been asked nothing, and an empty value here
