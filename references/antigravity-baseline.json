@@ -152,7 +152,8 @@
         ],
         "shape": "file",
         "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
-        "evidence": "bytes"
+        "evidence": "bytes",
+        "note": "**The keys this estate's setups write, measured in the pinned artifact, 2026-08-30.** `toolPermission`, `enableTerminalSandbox`, `allowAgentAccessNonWorkspaceFiles`, `allowCascadeAccessGitignoreFiles`, `autoContinueOnMaxGeneratorInvocations` and `permissions.deny`. Read from cli_linux_x64.tar.gz at 1.1.22, downloaded and verified against this baseline's own sha256 before being unpacked and searched. Searched with a control: an invented `nddevInventedSettingKey` appears zero times in the same bytes. The last three are named by no cited page, so the artifact is their only source and it is now recorded where something can read it rather than only in a comment beside the value."
       },
       {
         "path": "antigravity-cli/keybindings.json",
@@ -446,7 +447,7 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:08cdec5de7b0fdffc0e7fc0ae942bd7507af69578f7645846aa8a14091269b8e",
+  "setup_catalogue_digest": "sha256:99324a3c139410140b3fd36e6b11127668083b0609ccb4f435a3e079d7a627b5",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",
