@@ -447,7 +447,7 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:63157f00128f74db03dfd50889458da3ee12d96b45bd690e064cd3a25849b542",
+  "setup_catalogue_digest": "sha256:039ce11deddad0459d55043390561a600c77b37021a4264ccd62eb5bcf26cf50",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",

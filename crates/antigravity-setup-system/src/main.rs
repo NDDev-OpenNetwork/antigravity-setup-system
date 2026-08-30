@@ -104,6 +104,10 @@ pub const ANTIGRAVITY: Harness = Harness {
     // Gemini CLI's own, not this product's. Never read, never written, and
     // never copied into a backup slot: a backup of someone else's credentials
     // is a leak with a schedule.
+    // Nothing measured. This product's alternate spellings, if it has
+    // any, have not been asked for -- empty here says nobody looked,
+    // not that the product reads one name.
+    shadowing_names: &[],
     never_touch: &[
         "settings.json",
         "oauth_creds.json",
