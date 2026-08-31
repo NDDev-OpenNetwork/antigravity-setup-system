@@ -297,12 +297,12 @@
       },
       {
         "path": "config/workflows",
-        "reason": "The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.",
+        "reason": "A second **global** workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.\n\n**This row said \"the workspace tier\" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about.",
         "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
       },
       {
         "path": "config/workflows.json",
-        "reason": "The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is.",
+        "reason": "The manifest beside that second global workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.\n\n**This row said \"the workspace tier\" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about.",
         "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
       },
       {
@@ -447,7 +447,55 @@
     ],
     "verified_at": "2026-08-28T04:46:39+00:00"
   },
-  "setup_catalogue_digest": "sha256:039ce11deddad0459d55043390561a600c77b37021a4264ccd62eb5bcf26cf50",
+  "previous_software_artifacts": {
+    "command": "agy",
+    "shape": "gzip-tar",
+    "platforms": {
+      "linux/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-arm/cli_linux_arm64.tar.gz",
+        "bytes": 52833725,
+        "sha256": "sha256:8626b97aec1ef96abdabd234c0b8259a2fdf2a3f3918c927641f8c821342d5e4",
+        "member": "antigravity"
+      },
+      "linux/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-x64/cli_linux_x64.tar.gz",
+        "bytes": 56329878,
+        "sha256": "sha256:4806a347119d36be6d8ab5cc3f03319bc6aa8407a8d9203de7976a42954cabde",
+        "member": "antigravity"
+      },
+      "macos/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-arm/cli_mac_arm64.tar.gz",
+        "bytes": 49955537,
+        "sha256": "sha256:2f187c5d2135cb4f7ecb178c25801a2b94e2aaa0e9f2dadacff84a68c66f5700",
+        "member": "antigravity"
+      },
+      "macos/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-x64/cli_mac_x64.tar.gz",
+        "bytes": 54784179,
+        "sha256": "sha256:d866d427f8cd9381ff826ee8a96cf248ccdbee08ac5cad1653ac775066a4ffca",
+        "member": "antigravity"
+      },
+      "windows/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/windows-arm/cli_windows_arm64.exe",
+        "bytes": 176290456,
+        "sha256": "sha256:fdfa0a40ae8cecd680b69db083853ad357f79ea188bfc9bf09e2540081c21a7e",
+        "shape": "raw"
+      },
+      "windows/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/windows-x64/cli_windows_x64.exe",
+        "bytes": 186524824,
+        "sha256": "sha256:2947e70d02cd2206b043566170439613be1723f0df3d417314a4ac2220ad9b26",
+        "shape": "raw"
+      }
+    },
+    "version": "1.1.21",
+    "unpublished": [
+      "windows/arm64",
+      "windows/x86_64"
+    ],
+    "verified_at": "2026-08-31T00:32:09+00:00"
+  },
+  "setup_catalogue_digest": "sha256:fdcb1338b818940601dd4d000a51e198ac3d9e70cb7c119044e1d38374c4e7a3",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",
@@ -457,8 +505,8 @@
     "resolved_by": "the product's own release manifest endpoint, one per platform",
     "note": "**This block did not exist, and its absence is why two artifacts were missing for as long as this harness has been declared.** `transcribe_software.py` refuses a baseline that calls an operating system unsupported while carrying an artifact for it -- a check that examines a scope block, and this baseline had none, so it passed on four platforms without ever asking about the fifth and sixth. An absent instrument reads as a clean result.\n\nMeasured 2026-08-29. The vendor's own getting-started page gives three install routes -- `install.sh` for macOS and Linux, `install.ps1` and `install.cmd` for Windows -- and names `C:\\Users\\<username>\\AppData\\Local\\agy\\bin` as the Windows location. The PowerShell installer resolves a manifest per platform from the product's own updater service, and asking it directly for `windows_amd64` and `windows_arm64` returns two real artifacts.\n\n**The container differs from the other four, which is the second time this estate has met that.** Linux and macOS are `gzip-tar`; Windows is a bare `PE32+` executable, `raw`. Cursor was the first -- a ZIP among five gzip-tars. Both times a container read off the *product* would have been right four or five times and silently wrong on one platform. **The container is a property of an artifact, not of a product.**\n\n**And guessing the URL was measured to be the wrong method.** Six candidate Windows paths built from the existing four -- `windows-x64/cli_windows_x64.tar.gz` and the rest -- all returned 404, beside a known-good linux path returning 200 and an invented platform returning 404. The probe discriminated and the conclusion would still have been wrong: the artifacts exist under those directories with a `.exe` extension. Ask the product's own resolver, not the shape of its neighbours."
   },
-  "second_pin_absent": {
-    "measured_at": "2026-08-29",
-    "note": "`software_update` and `rollback` cross two real releases, and this build pins one. The second slot fills by **rotation** rather than by choice: a vendor bump assigns `previous = current` and then sets `current`, so exactly one value moves per bump and the pair is always two consecutive real releases. `scripts/evidence.py::cross_two_releases` skips this harness and prints the reason, which is an absence of a second release rather than a failure.\n\nRecorded because a reader of this file otherwise cannot tell a gap from a fact. Four of the seven carry a second pin; these are the three that do not, and each for a different reason.\n\n**Cannot be seeded, and for a sharper reason than cursor's.** The product resolves releases through a manifest endpoint that serves only the *current* release per platform; there is no history route -- `/manifests/` answers 404, measured 2026-08-29. And an artifact URL carries a build identifier beside the version -- `1.1.22-5711547746615296` -- which is not derivable from a version string, so even a known prior version number would not yield a URL. Fills on the next bump."
+  "previous_pin_recovery": {
+    "measured_at": "2026-08-31",
+    "note": "The current-only vendor endpoint cannot list history, but the authoring repository had already measured the immediately preceding release before the pin moved: exact version, build identifier, four Unix URLs, lengths and digests. Re-reading that immutable record supplied the identifiers, and all six artifact URLs still answer; the two Windows bytes were downloaded and hashed now. This is recovered measurement, not a second independently moving pin, and the next ordinary refresh replaces it through the same outgoing-current rotation as every other harness. Windows remains listed as unpublished for both releases, so the provider still refuses software operations there."
   }
 }
