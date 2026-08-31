@@ -25,8 +25,6 @@ itself — is declared and does work. `plan` names the exact bytes offline,
 whoever holds the network fetches them, and `apply` verifies and installs
 with the network gone.
 
-It deliberately answers `unsupported_platform` for `windows/arm64`, `windows/x86_64`: bytes were measured, but the vendor's published manifest does not offer those product builds, so a direct URL is not promoted into a supported software channel.
-
 `launch` is not declared here.
 This product documents no environment variable for its configuration home, so launch cannot point it at the explicit target.
 

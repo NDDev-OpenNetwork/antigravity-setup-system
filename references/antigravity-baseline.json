@@ -140,7 +140,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-08-29T08:29:50+00:00",
+  "verified_at": "2026-08-31T02:45:03+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-27",
     "config_home": "~/.gemini",
@@ -441,11 +441,7 @@
       }
     },
     "version": "1.1.22",
-    "unpublished": [
-      "windows/arm64",
-      "windows/x86_64"
-    ],
-    "verified_at": "2026-08-28T04:46:39+00:00"
+    "verified_at": "2026-08-31T02:45:03+00:00"
   },
   "previous_software_artifacts": {
     "command": "agy",
@@ -489,10 +485,6 @@
       }
     },
     "version": "1.1.21",
-    "unpublished": [
-      "windows/arm64",
-      "windows/x86_64"
-    ],
     "verified_at": "2026-08-31T00:32:09+00:00"
   },
   "setup_catalogue_digest": "sha256:fdcb1338b818940601dd4d000a51e198ac3d9e70cb7c119044e1d38374c4e7a3",
@@ -507,6 +499,6 @@
   },
   "previous_pin_recovery": {
     "measured_at": "2026-08-31",
-    "note": "The current-only vendor endpoint cannot list history, but the authoring repository had already measured the immediately preceding release before the pin moved: exact version, build identifier, four Unix URLs, lengths and digests. Re-reading that immutable record supplied the identifiers, and all six artifact URLs still answer; the two Windows bytes were downloaded and hashed now. This is recovered measurement, not a second independently moving pin, and the next ordinary refresh replaces it through the same outgoing-current rotation as every other harness. Windows remains listed as unpublished for both releases, so the provider still refuses software operations there."
+    "note": "The current-only vendor endpoint cannot list history, but the authoring repository had already measured the immediately preceding release before the pin moved: exact version, build identifier, four Unix URLs, lengths and digests. Re-reading that immutable record supplied the identifiers, and all six artifact URLs still answer; the two Windows bytes were downloaded and hashed now. This is recovered measurement, not a second independently moving pin, and the next ordinary refresh replaces it through the same outgoing-current rotation as every other harness. The current and previous tables now publish all six platforms, so Windows participates in the same install, update, rollback and remove lifecycle rather than being refused by stale availability metadata."
   }
 }
