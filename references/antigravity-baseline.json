@@ -142,7 +142,7 @@
   },
   "verified_at": "2026-08-31T02:45:03+00:00",
   "native_surfaces": {
-    "verified_at": "2026-08-27",
+    "verified_at": "2026-08-31",
     "config_home": "~/.gemini",
     "surfaces": [
       {
@@ -397,7 +397,8 @@
     },
     "projection_basis": {
       "plugin": "config/plugins"
-    }
+    },
+    "configuration_schema_note": "**No machine-readable configuration schema is published, measured.** The only schema-looking url in the pinned `cli_linux_x64.tar.gz` for 1.1.22 is a link to a GitHub issue in a Go library. `\"$schema\"` appears 25 times in the artifact and every one is a key in an embedded document rather than a url a reader could fetch. Surveyed 2026-08-31 across all seven; three publish one and use it, cursor publishes one it must not name, and these three publish none."
   },
   "software_artifacts": {
     "command": "agy",
