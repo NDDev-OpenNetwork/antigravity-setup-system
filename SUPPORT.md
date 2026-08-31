@@ -25,11 +25,10 @@ itself — is declared and does work. `plan` names the exact bytes offline,
 whoever holds the network fetches them, and `apply` verifies and installs
 with the network gone.
 
+It deliberately answers `unsupported_platform` for `windows/arm64`, `windows/x86_64`: bytes were measured, but the vendor's published manifest does not offer those product builds, so a direct URL is not promoted into a supported software channel.
+
 `launch` is not declared here.
-This product documents no environment variable for its configuration home,
-so a launch could not point it at the `--target` every command here takes.
-It would start the product against whatever home the product picked for
-itself, while reporting that it had honoured the target.
+This product documents no environment variable for its configuration home, so launch cannot point it at the explicit target.
 
 A provider that advertised an operation it cannot perform would let a caller ask
 for something that cannot be honoured, which is worse than not offering it.
@@ -234,9 +233,13 @@ Corrected 2026-08-29. The previous text read *"which one the product prefers whe
 
 **`config/projects`** -- Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. ([source](measured from the pinned 1.1.22 binary; no vendor page names it))
 
-**`config/workflows`** -- The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is. ([source](measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256))
+**`config/workflows`** -- A second **global** workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.
 
-**`config/workflows.json`** -- The workspace tier of the workflow surface, named by the product's own embedded reference beside the global one this provider owns. Not owned: this provider configures a home, not a checkout. It was explained inside the `config/global_workflows` note until 2026-08-28, which is not where a reader looks before opening a file to find out what it is -- the declined block is. ([source](measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256))
+**This row said "the workspace tier" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about. ([source](measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256))
+
+**`config/workflows.json`** -- The manifest beside that second global workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.
+
+**This row said "the workspace tier" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about. ([source](measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256))
 
 **`managed-config`** -- Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.
 

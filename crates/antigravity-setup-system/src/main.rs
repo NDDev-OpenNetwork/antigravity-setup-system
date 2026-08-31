@@ -63,11 +63,17 @@ pub const ANTIGRAVITY: Harness = Harness {
     config_home_env: "",
     // No variable at all, which is why this build has never declared launch.
     launch_binding: LaunchBinding::Undocumented,
-    // Not measured. The two artifacts this estate has read for this question are
-    // claude's, which carries `DISABLE_UPDATES`, and codex's, which carries no
-    // such literal. This product has been asked nothing, and an empty value here
-    // says the launch environment is untouched rather than that the product
-    // leaves the bytes alone.
+    // **Asked, and there is none.** Measured 2026-08-31 against the pinned
+    // 1.1.22 artifact, its digest checked against the artifact table:
+    // 14 `ANTIGRAVITY_*` names appear in it, and not one of them
+    // carries `UPDATE` or `UPGRADE`. An invented name was searched in the
+    // same run and found zero times, so the search discriminates.
+    //
+    // Empty here used to mean nobody had looked, which reads the same as
+    // this and is a different statement. Three of the seven do carry one --
+    // claude's `DISABLE_UPDATES`, opencode's `OPENCODE_DISABLE_AUTOUPDATE`,
+    // grok's `GROK_DISABLE_AUTOUPDATER` -- so the absence is a property of
+    // this product rather than of the question.
     updates_off_env: "",
     // One home, one variable: nothing here is conditional.
     config_home_note: "",
@@ -108,6 +114,15 @@ pub const ANTIGRAVITY: Harness = Harness {
     // any, have not been asked for -- empty here says nobody looked,
     // not that the product reads one name.
     shadowing_names: &[],
+    // Owned, and nothing this build can install ever lands here: no
+    // component kind routes to them and no setup in this catalogue
+    // carries files there. So a posture selecting itself must not empty
+    // them -- every posture agrees there is nothing, which makes the
+    // emptiness a statement none of them made.
+    custody_namespaces: &[
+        "antigravity-cli/keybindings.json",
+        "antigravity-cli/plugins",
+    ],
     never_touch: &[
         "settings.json",
         "oauth_creds.json",
