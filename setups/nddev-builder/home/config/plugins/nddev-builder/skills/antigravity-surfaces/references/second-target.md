@@ -19,7 +19,7 @@ twice, which is a mistake this estate has made and shipped.
 
 "Create a directory named .agents/skills/ at your project root"; the product still reads the legacy .agent/skills, which is not owned
 
-**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/skills/{skill_name}/SKILL.md` as a path template, beside its reference's *"customization root (e.g. `.agents/skills/`)"*.
+**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/skills/{skill_name}/SKILL.md` as a path template, beside its reference's *"customization root (e.g. `.agents/skills/`)"*.
 
 **The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences.
 
@@ -27,13 +27,13 @@ twice, which is a mistake this estate has made and shipped.
 
 "place it inside that workspace's .agents/agents/ directory"
 
-**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/agents/{agent_name}/` as a path template.
+**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/agents/{agent_name}/` as a path template.
 
 **The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences.
 
 ### `.agents/plugins`, as measured
 
-**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: its own reference: *"customization root (e.g. `.agents/plugins/`)"*.
+**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: its own reference: *"customization root (e.g. `.agents/plugins/`)"*.
 
 **The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences.
 
@@ -41,7 +41,7 @@ twice, which is a mistake this estate has made and shipped.
 
 "a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)"
 
-**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: its own reference, and a changelog entry -- *"Fixed workspace-local hooks defined in `<workspace>/.agents/hooks.json` not loading after trusting a folder"*.
+**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: its own reference, and a changelog entry -- *"Fixed workspace-local hooks defined in `<workspace>/.agents/hooks.json` not loading after trusting a folder"*.
 
 **The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences.
 
