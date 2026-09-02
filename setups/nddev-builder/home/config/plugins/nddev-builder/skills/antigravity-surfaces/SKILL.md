@@ -76,7 +76,7 @@ happened to read is a claim, and writing "that is a fact, not a gap" is how a
 claim stops being re-examined.**
 
 **This section used to say the same about commands, and it was wrong.** The
-declaration was corrected on 2026-08-28 against the pinned 1.1.22 binary, which
+declaration was corrected on 2026-08-28 against the 1.1.22 binary, which
 carries `.gemini/config/global_workflows/<name>.md` as a path literal; the
 vendor documents a *+ Global* button that creates one *accessible across all
 your workspaces*. A global workflow is invoked as `/workflow-name`, which is

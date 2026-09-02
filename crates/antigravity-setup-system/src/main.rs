@@ -42,7 +42,7 @@ pub const ANTIGRAVITY: Harness = Harness {
     //
     // **Re-measured 2026-08-29, because this is a negative and a negative from
     // a page is the weakest thing this estate records.** Every environment
-    // variable the pinned 1.1.22 binary names with a product prefix was
+    // variable the 1.1.22 binary names with a product prefix was
     // enumerated -- `GEMINI_API_KEY`, `GEMINI_TTS_VOICE_REPLICATION`,
     // `GEMINI_IOS_PRIMES`, `ANTIGRAVITY_SIDECAR_WEB_PORT`,
     // `ANTIGRAVITY_PROJECT_ID`, `ANTIGRAVITY_LS_ADDRESS`,

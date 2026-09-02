@@ -2,8 +2,8 @@
   "schema_version": 3,
   "verified_version_ref": "build/version.json:antigravity_cli_tested",
   "release": {
-    "tag": "1.1.22",
-    "url": "https://github.com/google-antigravity/antigravity-cli/releases/tag/1.1.22"
+    "tag": "1.1.23",
+    "url": "https://github.com/google-antigravity/antigravity-cli/releases/tag/1.1.23"
   },
   "install_script": {
     "url": "https://antigravity.google/cli/install.sh",
@@ -16,7 +16,7 @@
   "software_install": {
     "mechanism": "official-antigravity-install-manifest",
     "managed_command": "bin/agy",
-    "version": "1.1.22",
+    "version": "1.1.23",
     "manifest_url_template": "https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/manifests/{platform}.json",
     "manifest_fields": [
       "version",
@@ -28,34 +28,34 @@
   },
   "platform_manifests": {
     "darwin_amd64": {
-      "version": "1.1.22",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/darwin-x64/cli_mac_x64.tar.gz",
-      "sha512": "fc2e178dd084fba19a7673a24c92a60b0cac3f87539bc7313f2f028b632cf93e08b497d973d64705b9591a5aed978126b7cfcb0a304220bfda18cf10615c3644"
+      "version": "1.1.23",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/darwin-x64/cli_mac_x64.tar.gz",
+      "sha512": "c5661a197f0ba2ab6eceb6f49a2ac392e8ea7aed785390915ca977b5f6b0c96ce9b17a0d5c4d88abc0fc62562d80fbf40ac9e3a882d530ae82eb2ea4d36bdbaa"
     },
     "darwin_arm64": {
-      "version": "1.1.22",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/darwin-arm/cli_mac_arm64.tar.gz",
-      "sha512": "a8121185bd1c3455410ad41e88e2030ea237d496b8e40ccde313bf611c0551840fddf450b45c8e1a2575d9863c990b3324f19eef0f479936df8bfc6e4e80d30b"
+      "version": "1.1.23",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/darwin-arm/cli_mac_arm64.tar.gz",
+      "sha512": "5096795d0d46efc07c12894d9245c239c2543cdb1244f131dbe5a4aaeb12af3170a2314514333df8b2dab0c29f909f6e55b80cf29250425a83fb946e4b9a2530"
     },
     "linux_amd64": {
-      "version": "1.1.22",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-x64/cli_linux_x64.tar.gz",
-      "sha512": "40225d4b1f009412e905f0a234ba3d51487038d1ad1b8fa19331c84be55610a01f5b0ad9916fb871151cc45456c6bc30cc0b1ea5dab6c0616bc8fb262bcdd7a9"
+      "version": "1.1.23",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/linux-x64/cli_linux_x64.tar.gz",
+      "sha512": "89257bbc755f4c97bdc018e5ee1280ba4285f3b6bc1e4a186c43790a7859d2d005816b5e22f7c85de3290e59f8bac30e87187e29cb93ce53bc5ea3e7dbc87445"
     },
     "linux_arm64": {
-      "version": "1.1.22",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-arm/cli_linux_arm64.tar.gz",
-      "sha512": "b37a718330eb5e270e1ca70135bf964a407ba626fbff7537ac58e094ea31bc623e6d216ef197188fe8b5c46e6f57aee64a3b7c9e23fc855cefee43fe434179d3"
+      "version": "1.1.23",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/linux-arm/cli_linux_arm64.tar.gz",
+      "sha512": "fe139434dda36241ce3d3bc9f7a986babbd7128cfab848346e04a2ac063620a96e4beb21618c4e0294d849bad9c6ad01c4eac8e61b4f0bc240cc751e1f3fbba7"
     },
     "windows_amd64": {
-      "version": "1.1.22",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-x64/cli_windows_x64.exe",
-      "sha512": "8ef970162af92b48f2ba6ba927a0d46f67ad29f5d48693b07b2b4c6461c03cf4ad81dfe628b2976e53ad5e350379351ded5d2b7c0deec2ffd85703d546669fff"
+      "version": "1.1.23",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/windows-x64/cli_windows_x64.exe",
+      "sha512": "bdd51ea5f01515ef3161a4109cb3bf7ce310e08dd78b9f4de353ecb9f7408564562abf0e158f3262fe0103bb2216ddd5d7bd11fe53fa39ea91fda53774835b70"
     },
     "windows_arm64": {
-      "version": "1.1.22",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/windows-arm/cli_windows_arm64.exe",
-      "sha512": "da501a3d8f2247fc1d5334ebb6277cc2d04cd5618416a1a439b54f2267815d8122b22a1571e3f3dd8ce697db92ed0692f367777034efdbfeebadacc70753df3c"
+      "version": "1.1.23",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/windows-arm/cli_windows_arm64.exe",
+      "sha512": "69ddab12dccbd647a4b821d085ff57865190674195a55b953ff8af42dd0e3687269b004e1aebc926522cfe2a76419beed59e364363a9831cd17a82fd6cddf044"
     }
   },
   "release_assets": {
@@ -140,7 +140,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-08-31T02:45:03+00:00",
+  "verified_at": "2026-09-02T00:43:48+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-31",
     "config_home": "~/.gemini",
@@ -151,7 +151,7 @@
           "setting"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes",
         "note": "**The keys this estate's setups write, measured in the pinned artifact, 2026-08-30.** `toolPermission`, `enableTerminalSandbox`, `allowAgentAccessNonWorkspaceFiles`, `allowCascadeAccessGitignoreFiles`, `autoContinueOnMaxGeneratorInvocations` and `permissions.deny`. Read from cli_linux_x64.tar.gz at 1.1.22, downloaded and verified against this baseline's own sha256 before being unpacked and searched. Searched with a control: an invented `nddevInventedSettingKey` appears zero times in the same bytes. The last three are named by no cited page, so the artifact is their only source and it is now recorded where something can read it rather than only in a comment beside the value."
       },
@@ -169,7 +169,7 @@
         "shape": "directory",
         "source": "https://antigravity.google/docs/cli/plugins/",
         "evidence": "page",
-        "note": "The page above says the CLI stages an installed plugin at ~/.gemini/antigravity-cli/plugins/<name>/. The product disagrees with its own page. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), in a contained HOME: `antigravity plugin install` on this provider's own nddev-builder plugin created ~/.gemini/config/plugins/nddev-builder and no antigravity-cli/plugins directory at all, and the string `antigravity-cli/plugins` does not appear anywhere in the binary -- while `~/.gemini/antigravity-cli/settings.json`, `hooks.json` and `cache/` all do. So the plugin kind routes to config/plugins and this path routes nothing. Still owned rather than dropped: published consumer corpus objects were compiled against a table naming this path, and narrowing a declaration the consumer matches by exact membership would refuse every one of them. The window closes when those versions are retired, not before.\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
+        "note": "The page above says the CLI stages an installed plugin at ~/.gemini/antigravity-cli/plugins/<name>/. The product disagrees with its own page. Measured against the 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), in a contained HOME: `antigravity plugin install` on this provider's own nddev-builder plugin created ~/.gemini/config/plugins/nddev-builder and no antigravity-cli/plugins directory at all, and the string `antigravity-cli/plugins` does not appear anywhere in the binary -- while `~/.gemini/antigravity-cli/settings.json`, `hooks.json` and `cache/` all do. So the plugin kind routes to config/plugins and this path routes nothing. Still owned rather than dropped: published consumer corpus objects were compiled against a table naming this path, and narrowing a declaration the consumer matches by exact membership would refuse every one of them. The window closes when those versions are retired, not before.\n\n**Searched in the product's own pinned bytes on 2026-08-29 and not found, which argues nothing either way.** Fixed-string, anchored to this product's configuration home -- the bare leaf name is in every one of these binaries and proves nothing, so only the anchored form counts. An invented path was searched in the same run and was also absent, so the search discriminates.\n\nThis row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep."
       },
       {
         "path": "config/plugins",
@@ -187,7 +187,7 @@
           "skill"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/skills; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/skills; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes"
       },
       {
@@ -206,7 +206,7 @@
           "hook"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes"
       },
       {
@@ -215,7 +215,7 @@
           "mcp"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes"
       },
       {
@@ -224,7 +224,7 @@
           "command"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/rules-workflows/; measured in the pinned 1.1.22 binary; confirmed against the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/rules-workflows/; measured in the 1.1.22 binary; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
         "evidence": "bytes",
         "note": "Global workflows, as Markdown files, invoked as `/workflow-name` -- which is what makes them commands rather than a fourth kind of instruction. The binary carries `.gemini/config/global_workflows/<name>.md` as a path literal and the vendor describes the *+ Global* button that creates one *accessible across all your workspaces*.\n\nDeclared 2026-08-28. This declaration's own comment had said the product documents commands only at workspace scope, and a global workflow directory is the evidence against it. `config/workflows/` and `config/workflows.json` are the workspace tier and stay unowned -- this provider configures a home, not a checkout."
       },
@@ -234,7 +234,7 @@
           "instruction"
         ],
         "shape": "directory",
-        "source": "measured from the pinned 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29",
+        "source": "measured from the 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29",
         "evidence": "bytes",
         "note": "**A customization element this declaration was missing, not a surface the product lacks.** The binary's embedded reference lists what exists *within any of the customization roots*: *\"1. Skills (Directories) … 2. **Rules** (Markdown Files): Location: `rules/` (relative to the customization root) or standalone `GEMINI.md`/`AGENTS.md` files … 3. Plugins (Directories) … 4. MCP Servers (`mcp_config.json`) and Hooks (`hooks.json`).\"* Four of those five were declared here and `rules/` was not.\n\nThe record said the opposite -- *the product documents instruction only at workspace scope* -- which was a negative taken from the pages that happened to be read. The same comment had already been wrong about `command`, corrected 2026-08-28 on `config/global_workflows`. Twice in one declaration, both times the evidence was in a binary this repository had already downloaded.\n\n**`AGENTS.md` is the product's own recommended shape**, from the same reference: *\"Placing a consolidated `AGENTS.md` (or `GEMINI.md`) file under `rules/` … is recommended over separate rule files.\"* The elided clause is the vendor's own example of one root; it is left out because a reader here would take an example path for a document these setups carry, and they carry it elsewhere.\n\n**Where the setups actually write it, and why not here.** They write a consolidated `AGENTS.md` under a `rules/` directory at the *plugin* customization root -- `config/plugins/{plugin_name}/rules/AGENTS.md`, named as a class because this note is carried into every setup and each names its own plugin. That is the same recommendation applied to a different one of the roots the reference lists, and the choice is argued in each `plugin.json`: a plugin's skills, rules, hooks and MCP servers are ingested together when it is enabled, and `config/plugins` is a surface that routes today. `config/rules` is owned and declared, and a setup writing there as well would load the same floor twice.\n\nSearched with a control: `AGENTS.md` appears ten times in the pinned bytes and `GEMINI.md` eight, while an invented `nddev-invented-instruction-file.md` appears zero -- so the search discriminates. `bytes` and not `ran`: starting this product needs a credential, and the credential-free subcommands report nothing about resolved rules.\n\n**Owned, declared, and waiting on the consumer's route.** The `instruction` kind is declared here. An earlier revision of this note said the opposite and gave a measurement for it -- *adding the kind was tried and antigravity went from 29 passing cases to REFUSED, 30 cases* -- and that measurement was our own instrument misreading the checker.\n\n`declared_route_is_compilable:instruction` carries `subject: consumer`, and the checker's `conforms` is computed over provider-subject cases alone, by an explicit decision documented in its source: a provider declaring a kind the compiler has no route for *\"has satisfied every obligation v3 places on it; the gap is ours, and calling it non-conformance would name the wrong party in the one field people read\"*. With the kind declared the checker answers `conforms: true` with zero provider-subject failures. `tools/conformance_report.py` was collecting every failed case regardless of subject, so it printed `REFUSED` over a provider the checker had just passed -- and this note then recorded that as a fact about the protocol, which is how a bad reading hardens into a record. Fixed, with a control: `python3 tools/conformance_report.py --self-check`.\n\nDeclaring the kind changes nothing a user sees while the consumer's `PROVIDER_RULES` has no `instruction` row for this harness: composition still refuses early with `native_surface_lost`, which is the honest place for it. What it does change is the ordering -- the provider is no longer on the critical path, so the route works the moment the consumer lands it, with no window in which an instruction composes and is refused late."
       }
@@ -253,62 +253,62 @@
       {
         "path": "antigravity-cli/builtin",
         "reason": "The product's own bundled skills and resources, including `builtin/skills` and a `.checksum`. Shipped with the program, replaced by an update, and never a person's to configure -- so never this provider's to own or restore.",
-        "source": "measured from a run of the pinned 1.1.22"
+        "source": "measured from a run of the 1.1.22"
       },
       {
         "path": "antigravity-cli/cache",
-        "reason": "The CLI's own cache, holding cache/projects.json. Runtime state with a lifetime the product owns -- the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never captured into a backup slot: a backup of a cache is a stale answer with a signature on it.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+        "reason": "The CLI's own cache, holding cache/projects.json. Runtime state with a lifetime the product owns -- the string appears as a path literal in the 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never captured into a backup slot: a backup of a cache is a stale answer with a signature on it.",
+        "source": "measured from the 1.1.22 binary; no vendor page names it"
       },
       {
         "path": "antigravity-cli/hooks.json",
-        "reason": "A second hooks file, beside the owned `config/hooks.json`. Both appear as path literals in the pinned 1.1.22 binary.\n\n**Which one the product means is documented, in its own release notes, and the earlier text here said it was not.** From the changelog embedded in the pinned artifact: *\"Fixed a bug where the `/hooks` command wrote configurations to `~/.gemini/antigravity-cli/hooks.json` instead of the shared `~/.gemini/config/hooks.json`, ensuring hooks remain synchronized between the TUI and the backend.\"* So `config/hooks.json` is the shared surface and this path is where a fixed defect used to write.\n\nStill declined rather than owned, and now for a stated reason instead of an absence: it is the output of a bug the vendor repaired, so a file here on a user's machine is residue from an older build rather than configuration this provider should manage. Owning it would have a restore put back a file the product stopped writing.\n\nCorrected 2026-08-29. The previous text read *\"which one the product prefers when both exist is not documented and has not been measured\"* — true when written, and false against a changelog that was inside the artifact this baseline already pins. Found because a user's issue about a different hooks path sent someone reading the same bytes again.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+        "reason": "A second hooks file, beside the owned `config/hooks.json`. Both appear as path literals in the 1.1.22 binary.\n\n**Which one the product means is documented, in its own release notes, and the earlier text here said it was not.** From the changelog embedded in the pinned artifact: *\"Fixed a bug where the `/hooks` command wrote configurations to `~/.gemini/antigravity-cli/hooks.json` instead of the shared `~/.gemini/config/hooks.json`, ensuring hooks remain synchronized between the TUI and the backend.\"* So `config/hooks.json` is the shared surface and this path is where a fixed defect used to write.\n\nStill declined rather than owned, and now for a stated reason instead of an absence: it is the output of a bug the vendor repaired, so a file here on a user's machine is residue from an older build rather than configuration this provider should manage. Owning it would have a restore put back a file the product stopped writing.\n\nCorrected 2026-08-29. The previous text read *\"which one the product prefers when both exist is not documented and has not been measured\"* — true when written, and false against a changelog that was inside the artifact this baseline already pins. Found because a user's issue about a different hooks path sent someone reading the same bytes again.",
+        "source": "measured from the 1.1.22 binary; no vendor page names it"
       },
       {
         "path": "antigravity-cli/runtime-state",
         "reason": "One row for a whole subtree, because listing eleven siblings would suggest each was weighed separately. A single run created `bin/`, `brain/`, `cache/`, `cli.log`, `conversations/`, `conversation_summaries.db` with its `-shm` and `-wal`, `crashes/`, `installation_id`, `jetski_state.pbtxt`, `knowledge/`, `last_check.timestamp`, `log/` and `updater/`. All are the product's own lifetime. None is configuration and none is ownable. The same run also wrote **outside the configuration home entirely** -- `~/.cache/ms-playwright-go`, under the user's cache directory. That has no row of its own because every recorded path here is relative to the target, and this one is relative to a root this provider never evaluates against; the guard that enforces it refused the row, correctly. It is recorded in this sentence instead, so a reader looking for everything the product writes does not stop at `~/.gemini`.",
-        "source": "measured from a run of the pinned 1.1.22"
+        "source": "measured from a run of the 1.1.22"
       },
       {
         "path": "antigravity/transcript.jsonl",
-        "reason": "The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+        "reason": "The conversation transcript, beside antigravity/artifacts. A person's session content, and the string appears as a path literal in the 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood. Never owned and never backed up, for the reason the never_touch list gives about a neighbour's credentials: copying it into a slot would put private text somewhere with a retention policy nobody chose.",
+        "source": "measured from the 1.1.22 binary; no vendor page names it"
       },
       {
         "path": "config/.migrated",
         "reason": "An empty marker the product writes beside its config. It records that a layout migration ran, which is the product's bookkeeping about its own history and never a projection surface.",
-        "source": "measured: created by a single run of the pinned 1.1.22 in a contained HOME"
+        "source": "measured: created by a single run of the 1.1.22 in a contained HOME"
       },
       {
         "path": "config/config.json",
         "reason": "The product's own user settings, created on first run: it held `{\"userSettings\": {\"remoteControlHostname\": \"<this machine's hostname>\"}}`. Distinct from the owned `antigravity-cli/settings.json`, which is where the documented posture keys live. Not owned: no vendor page names it, it carries machine identity rather than configuration a setup would choose, and owning it would put a hostname into every backup slot.",
-        "source": "measured: created by a single run of the pinned 1.1.22 in a contained HOME"
+        "source": "measured: created by a single run of the 1.1.22 in a contained HOME"
       },
       {
         "path": "config/import_manifest.json",
-        "reason": "Written by the product's own plugin installer. Measured against the pinned 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), verified before running and executed in a contained HOME so nothing of the owner's was touched: `antigravity plugin install` created this file beside config/plugins. It is the installer's bookkeeping about what it imported, not a projection surface, and owning it would let this provider's `remove` erase the product's record of plugins a person installed by hand.",
+        "reason": "Written by the product's own plugin installer. Measured against the 1.1.22 linux/x86_64 bytes (sha256:1e1a219a...), verified before running and executed in a contained HOME so nothing of the owner's was touched: `antigravity plugin install` created this file beside config/plugins. It is the installer's bookkeeping about what it imported, not a projection surface, and owning it would let this provider's `remove` erase the product's record of plugins a person installed by hand.",
         "source": "measured from the product; https://antigravity.google/docs/cli/plugins/"
       },
       {
         "path": "config/projects",
-        "reason": "Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the pinned 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood.",
-        "source": "measured from the pinned 1.1.22 binary; no vendor page names it"
+        "reason": "Per-project state the product keeps under its own home. Not configuration this provider projects, and the string appears as a path literal in the 1.1.22 binary; no vendor page names it and no run of this provider has made the product write it, so it is recorded as seen rather than as understood.",
+        "source": "measured from the 1.1.22 binary; no vendor page names it"
       },
       {
         "path": "config/workflows",
         "reason": "A second **global** workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.\n\n**This row said \"the workspace tier\" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about.",
-        "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
+        "source": "measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256"
       },
       {
         "path": "config/workflows.json",
         "reason": "The manifest beside that second global workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.\n\n**This row said \"the workspace tier\" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about.",
-        "source": "measured 2026-08-28 in the product's own embedded reference, read from the pinned 1.1.22 artifact whose bytes match this baseline's sha256"
+        "source": "measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256"
       },
       {
         "path": "managed-config",
-        "reason": "Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.\n\nMeasured 2026-08-29 against the pinned 1.1.22 binary, whose bytes match this baseline's own sha256. Searched for `/etc/<product>`, `%ProgramData%\\\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.\n\nIts settings-key registry names `enterprisePreferences`, and that is the closest thing to a managed layer here. It is not a file: it sits beside `userStatus`, `oauthTokenInfo` and `useAICredits` -- account state this product receives, not an administrator's policy on disk. Nothing this provider writes can be overridden by a file it does not own, because no such file is named.\n\nAbsence of a literal is not proof a path cannot exist. This row says what was searched.",
-        "source": "measured in the pinned 1.1.22 artifact"
+        "reason": "Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.\n\nMeasured 2026-08-29 against the 1.1.22 binary, whose bytes match this baseline's own sha256. Searched for `/etc/<product>`, `%ProgramData%\\\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.\n\nIts settings-key registry names `enterprisePreferences`, and that is the closest thing to a managed layer here. It is not a file: it sits beside `userStatus`, `oauthTokenInfo` and `useAICredits` -- account state this product receives, not an administrator's policy on disk. Nothing this provider writes can be overridden by a file it does not own, because no such file is named.\n\nAbsence of a literal is not proof a path cannot exist. This row says what was searched.",
+        "source": "measured in the 1.1.22 artifact"
       }
     ],
     "scoped": [
@@ -324,7 +324,7 @@
             "shape": "directory",
             "source": "https://antigravity.google/docs/skills",
             "evidence": "bytes",
-            "note": "\"Create a directory named .agents/skills/ at your project root\"; the product still reads the legacy .agent/skills, which is not owned\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/skills/{skill_name}/SKILL.md` as a path template, beside its reference's *\"customization root (e.g. `.agents/skills/`)\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
+            "note": "\"Create a directory named .agents/skills/ at your project root\"; the product still reads the legacy .agent/skills, which is not owned\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/skills/{skill_name}/SKILL.md` as a path template, beside its reference's *\"customization root (e.g. `.agents/skills/`)\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/agents",
@@ -334,7 +334,7 @@
             "shape": "directory",
             "source": "https://antigravity.google/blog/introducing-custom-agents",
             "evidence": "bytes",
-            "note": "\"place it inside that workspace's .agents/agents/ directory\"\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/agents/{agent_name}/` as a path template.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
+            "note": "\"place it inside that workspace's .agents/agents/ directory\"\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: `{workspace}/.agents/agents/{agent_name}/` as a path template.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/plugins",
@@ -344,7 +344,7 @@
             "shape": "directory",
             "source": "https://antigravity.google/docs/plugins",
             "evidence": "bytes",
-            "note": "\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: its own reference: *\"customization root (e.g. `.agents/plugins/`)\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
+            "note": "\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: its own reference: *\"customization root (e.g. `.agents/plugins/`)\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/hooks.json",
@@ -354,7 +354,7 @@
             "shape": "file",
             "source": "https://antigravity.google/docs/hooks",
             "evidence": "bytes",
-            "note": "\"a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)\"\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the pinned 1.1.22 artifact with the digest verified before reading: its own reference, and a changelog entry -- *\"Fixed workspace-local hooks defined in `<workspace>/.agents/hooks.json` not loading after trusting a folder\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
+            "note": "\"a hooks.json file located in your customization directory (e.g., .agents/ in your workspace or ~/.gemini/config/)\"\n\n**Promoted from `page` to `bytes` on 2026-08-29**, found in the 1.1.22 artifact with the digest verified before reading: its own reference, and a changelog entry -- *\"Fixed workspace-local hooks defined in `<workspace>/.agents/hooks.json` not loading after trusting a folder\"*.\n\n**The first search was wrong and nearly promoted two rows it should not have.** It used `grep` without `-F`, so the `.` in `.agents/skills` matched any character and `learning/gemini/agents/skills` counted as a hit -- as did `customizations/builtin/agents/agents.init` for the row below it. The control was absent in both runs and said nothing about it, because an invented string has no wildcard to exploit. **A control proves the search finds what is there; it does not prove the search is asking the right question.** Fixed-string matching is what separated the four real paths from two coincidences."
           },
           {
             "path": ".agents/mcp_config.json",
@@ -405,6 +405,50 @@
     "shape": "gzip-tar",
     "platforms": {
       "linux/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/linux-arm/cli_linux_arm64.tar.gz",
+        "bytes": 53075839,
+        "sha256": "sha256:cbf2299514468eb31b9ccce7b89a0a011dc6497894c199c06f6b771cc9848a67",
+        "member": "antigravity"
+      },
+      "linux/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/linux-x64/cli_linux_x64.tar.gz",
+        "bytes": 56593215,
+        "sha256": "sha256:379693509ca4d68d74f75def6c95996739aa6c1dc38b120c399035c108f1a39a",
+        "member": "antigravity"
+      },
+      "macos/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/darwin-arm/cli_mac_arm64.tar.gz",
+        "bytes": 50190322,
+        "sha256": "sha256:e0761b145648c7a90c3bdd636e3abdb87c46dfe5878bd377500e40e64ca203a4",
+        "member": "antigravity"
+      },
+      "macos/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/darwin-x64/cli_mac_x64.tar.gz",
+        "bytes": 55047005,
+        "sha256": "sha256:3d91b536ab9daf63f7e4d89cf6595a94b1393bc4da8c4c98d895377b43c024cb",
+        "member": "antigravity"
+      },
+      "windows/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/windows-arm/cli_windows_arm64.exe",
+        "bytes": 177012376,
+        "sha256": "sha256:519ed7e208adfae7dc07f62ea83623ae311cca02f7f64df5fd886336b25bc002",
+        "shape": "raw"
+      },
+      "windows/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.23-6260551186251776/windows-x64/cli_windows_x64.exe",
+        "bytes": 187312792,
+        "sha256": "sha256:bffa9c1227a517d0dbd7ddfc71a64bf6473c52fab95369cabe09ff42bd9b3b3e",
+        "shape": "raw"
+      }
+    },
+    "version": "1.1.23",
+    "verified_at": "2026-09-02T00:43:48+00:00"
+  },
+  "previous_software_artifacts": {
+    "command": "agy",
+    "shape": "gzip-tar",
+    "platforms": {
+      "linux/arm64": {
         "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.22-5711547746615296/linux-arm/cli_linux_arm64.tar.gz",
         "bytes": 52908254,
         "sha256": "sha256:a68925bc7336eb0b90de1e1aefd44d535f5487b7cf606a76fdb982207aef9a2e",
@@ -444,51 +488,7 @@
     "version": "1.1.22",
     "verified_at": "2026-08-31T02:45:03+00:00"
   },
-  "previous_software_artifacts": {
-    "command": "agy",
-    "shape": "gzip-tar",
-    "platforms": {
-      "linux/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-arm/cli_linux_arm64.tar.gz",
-        "bytes": 52833725,
-        "sha256": "sha256:8626b97aec1ef96abdabd234c0b8259a2fdf2a3f3918c927641f8c821342d5e4",
-        "member": "antigravity"
-      },
-      "linux/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/linux-x64/cli_linux_x64.tar.gz",
-        "bytes": 56329878,
-        "sha256": "sha256:4806a347119d36be6d8ab5cc3f03319bc6aa8407a8d9203de7976a42954cabde",
-        "member": "antigravity"
-      },
-      "macos/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-arm/cli_mac_arm64.tar.gz",
-        "bytes": 49955537,
-        "sha256": "sha256:2f187c5d2135cb4f7ecb178c25801a2b94e2aaa0e9f2dadacff84a68c66f5700",
-        "member": "antigravity"
-      },
-      "macos/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/darwin-x64/cli_mac_x64.tar.gz",
-        "bytes": 54784179,
-        "sha256": "sha256:d866d427f8cd9381ff826ee8a96cf248ccdbee08ac5cad1653ac775066a4ffca",
-        "member": "antigravity"
-      },
-      "windows/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/windows-arm/cli_windows_arm64.exe",
-        "bytes": 176290456,
-        "sha256": "sha256:fdfa0a40ae8cecd680b69db083853ad357f79ea188bfc9bf09e2540081c21a7e",
-        "shape": "raw"
-      },
-      "windows/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.21-6424454201475072/windows-x64/cli_windows_x64.exe",
-        "bytes": 186524824,
-        "sha256": "sha256:2947e70d02cd2206b043566170439613be1723f0df3d417314a4ac2220ad9b26",
-        "shape": "raw"
-      }
-    },
-    "version": "1.1.21",
-    "verified_at": "2026-08-31T00:32:09+00:00"
-  },
-  "setup_catalogue_digest": "sha256:fdcb1338b818940601dd4d000a51e198ac3d9e70cb7c119044e1d38374c4e7a3",
+  "setup_catalogue_digest": "sha256:8da5803d682e05196e7660af609441016741f47e3dd337e7bb036cb7c9ca318a",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",
