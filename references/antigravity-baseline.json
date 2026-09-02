@@ -501,5 +501,17 @@
   "previous_pin_recovery": {
     "measured_at": "2026-08-31",
     "note": "The current-only vendor endpoint cannot list history, but the authoring repository had already measured the immediately preceding release before the pin moved: exact version, build identifier, four Unix URLs, lengths and digests. Re-reading that immutable record supplied the identifiers, and all six artifact URLs still answer; the two Windows bytes were downloaded and hashed now. This is recovered measurement, not a second independently moving pin, and the next ordinary refresh replaces it through the same outgoing-current rotation as every other harness. The current and previous tables now publish all six platforms, so Windows participates in the same install, update, rollback and remove lifecycle rather than being refused by stale availability metadata."
+  },
+  "surface_presence": {
+    "measured_at": "2026-09-02",
+    "artifact": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.24-6130423206641664/linux-x64/cli_linux_x64.tar.gz",
+    "artifact_sha256": "sha256:cff1fb7ed735da72c35658645a4f916cf74f020d4cd30ab95ebe8c2a49a4d569",
+    "product_version": "1.1.24",
+    "declared_surfaces": 15,
+    "present": 15,
+    "absent": [],
+    "control": "zzq-invented-surface-nobody-ships",
+    "control_hits": 0,
+    "method": "Every namespace this harness declares, global and scoped, searched as a fixed string in the artifact the current pin names, digest verified before reading; both the declared path and its last segment counted, because a product that composes a path by joining segments never spells the whole of it. A count here is a lower bound and not a routing proof -- what it answers is whether a surface vanished from the product under a version bump, which five of the seven took on 2026-09-02. The invented control was searched in the same run and found nowhere, so the search discriminates."
   }
 }
