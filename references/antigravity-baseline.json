@@ -488,7 +488,7 @@
     "version": "1.1.24",
     "verified_at": "2026-09-02T09:19:07+00:00"
   },
-  "setup_catalogue_digest": "sha256:cb4a68d3a1f60ebdde6165183504229a61b4cde6a270fbbd9e22a4ca87fda575",
+  "setup_catalogue_digest": "sha256:f2c566175c155429146bc8bba4c4afc897ad6d6fe22932619c3bc1ffbfd4e8c0",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",

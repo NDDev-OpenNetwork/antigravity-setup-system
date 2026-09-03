@@ -54,6 +54,13 @@ twice, which is a mistake this estate has made and shipped.
 This row stays `page` because **a path built by joining a directory to a name at runtime never appears as a literal**, and that is the shape of every remaining one. Moving it off `page` needs the product run against a target and asked what it resolved, not a deeper grep.
 
 
+Considered under this scope and not owned:
+
+- **`.agents/commands`** — ai_stp#424 asks for a project-scoped command route. No Antigravity page names a commands directory at any scope: the slash commands the CLI documents are its own built-ins (/skills, /mcp, /agents), not user-authored files. Declared the day a vendor page names the path and not before -- a declared kind is a promise of a rollback.
+- **`.agents/AGENTS.md`** — ai_stp#425 asks for a project-scoped instruction route. No page names an instruction file under .agents/, and guessing one would have this provider claim to own a path the product never reads.
+- **`.agent/skills`** — The legacy spelling the product still reads for backward compatibility. Owning both would let one workspace hold two skill trees with the product reading one and this provider reporting the other; owning the documented default keeps the answer single.
+
+
 **A setup cannot carry one of these.** A setup is installed into one
 target and its payload is relative to that target, so a component
 for this scope is installed by the consumer against that root -- not
