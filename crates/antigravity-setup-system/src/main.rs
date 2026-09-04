@@ -159,10 +159,10 @@ pub const ANTIGRAVITY: Harness = Harness {
     // deliberately: a provider declaring a kind the compiler cannot route
     // *"has satisfied every obligation v3 places on it; the gap is ours, and
     // calling it non-conformance would name the wrong party in the one field
-    // people read"*. `tools/conformance_report.py` was counting every failed
-    // case regardless of subject, printed **REFUSED, 30 cases**, and that
-    // number was written into a comment here and into the baseline as though
-    // it were a fact about the protocol. It was a fact about our reader.
+    // people read"*. A summary that counted every failed case regardless of
+    // subject printed **REFUSED, 30 cases**, and that number was written into
+    // a comment here and into the baseline as though it were a fact about the
+    // protocol. It was a fact about our reader.
     //
     // Declaring the kind is safe while the route is missing: composition
     // refuses an antigravity instruction early with `native_surface_lost`,
