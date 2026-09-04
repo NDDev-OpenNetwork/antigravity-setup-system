@@ -14,7 +14,7 @@ set -eu
 
 REPO="NDDev-OpenNetwork/antigravity-setup-system"
 BINARY="antigravity-setup-system"
-VERSION="${1:-0.0.62}"
+VERSION="${1:-0.0.63}"
 PREFIX="${ANTIGRAVITY_INSTALL_DIR:-$HOME/.local/bin}"
 
 case "$(uname -s)" in
