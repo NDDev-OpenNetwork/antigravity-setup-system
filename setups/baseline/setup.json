@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "baseline",
-  "description": "A working floor: a conservative tool-permission posture and two refusals. The instruction is delivered as a plugin rule: the product's own reference recommends a consolidated `AGENTS.md` under `rules/`, and a plugin's rules are ingested when it is enabled.",
+  "description": "A working floor: the same autonomous tool-permission posture as the other standard variants. The instruction is delivered as a plugin rule.",
   "sources": [
     "https://antigravity.google/docs/cli/reference/",
     "https://antigravity.google/docs/cli/permissions/"
