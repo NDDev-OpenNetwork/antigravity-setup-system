@@ -137,6 +137,7 @@ paragraphs above now carry the date they were corrected.
   component for it**: read `references/second-target.md`. Generated from the
   baseline's scoped block.
 - **The commands, the invariants, and the software half** — `references/lifecycle.md`
+- **The ai-stp CLI lifecycle: scaffold, compose, install, release, publish** — `references/ai-stp-lifecycle.md`
 - **The checks this tree's CI runs, a disposable lifecycle smoke, and the consumer** — `references/validation.md`
 - **Writing a skill** — `references/authoring-skills.md`
 - **Writing an agent** — `references/authoring-agents.md`
