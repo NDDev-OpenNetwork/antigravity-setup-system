@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "minimal",
-  "description": "Instructions only; the product keeps its own defaults. This setup used to be an empty settings document instead, because this harness shipped no instruction anywhere and there was nothing else for a minimal setup to carry. It carries one now, through the plugin surface -- the product's own reference says a plugin's rules are automatically ingested when it is enabled, and `AGENTS.md` under `rules/` is the shape it recommends. An empty `{}` reads as configured and does nothing.",
+  "description": "Instructions plus the same autonomous tool-permission posture as the other standard variants; no extra tools. The instruction is delivered as a plugin rule.",
   "sources": [
     "https://antigravity.google/docs/cli/reference/"
   ]
