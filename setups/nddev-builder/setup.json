@@ -6,5 +6,22 @@
     "https://antigravity.google/docs/cli/reference/",
     "https://antigravity.google/docs/cli/permissions/",
     "https://antigravity.google/docs/plugins"
+  ],
+  "setup_stable_id": "setup_01M15EMQ6KFFYVYA57NCZETW63",
+  "setup_version": "1.4",
+  "setup_passport_digest": "sha256:d0439b9715aeb645df1841a0bf410a4249567a2e32733b4005934992c7faea25",
+  "component_refs": [
+    {
+      "stable_id": "component_01M15EMFYDXA08VAN4PDTAF5ZQ",
+      "version": "1.4",
+      "passport_digest": "sha256:10b6d9cf43cdefbb7621d601dbba6809aa709cea4ebbf838ce91ccfb5f91dff5",
+      "adaptation_id": "adaptation_5a5f9d263d7435de986ee0df4af7bc0d3fbb8900e9b2496ef794cc038b1899ed"
+    },
+    {
+      "stable_id": "component_01M15EMGG3X1Y96VRYGQ06YPD2",
+      "version": "1.5",
+      "passport_digest": "sha256:6b80f073d6c49825d2e3c67793e20b05b0f43ed2c20771e9d2ce5237debf27a3",
+      "adaptation_id": "adaptation_583f7d9026180336431602561a1a6a21146a2bc885ed0553e89072331ad8fafe"
+    }
   ]
 }
