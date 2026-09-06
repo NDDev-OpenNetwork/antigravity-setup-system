@@ -25,8 +25,11 @@ itself — is declared and does work. `plan` names the exact bytes offline,
 whoever holds the network fetches them, and `apply` verifies and installs
 with the network gone.
 
-`launch` is not declared here.
-This product documents no environment variable for its configuration home, so launch cannot point it at the explicit target.
+`launch` is declared. It starts the exact executable a software install
+placed under `--prefix`, never a name found on `PATH`. The product
+documents no configuration-home override, so launch is honest only when
+`--target` is the documented home; any other target is refused by name.
+Inventing an environment variable is not a repair.
 
 A provider that advertised an operation it cannot perform would let a caller ask
 for something that cannot be honoured, which is worse than not offering it.
