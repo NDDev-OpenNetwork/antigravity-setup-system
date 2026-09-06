@@ -16,7 +16,9 @@ instructions, skills, agents, commands, hooks, MCP entries, plugins and settings
 > exact bytes offline, whoever holds the network fetches them, and apply
 > verifies and installs with the network gone.
 >
-> `launch` is optional in the contract and is not declared here.
+> `launch` starts the exact executable that install placed, never a name
+> found on `PATH`, and only when `--target` is the documented home. There
+> is no environment override; an alternate root is refused by name.
 
 ## Using it
 

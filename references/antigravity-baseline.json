@@ -387,7 +387,7 @@
       }
     ],
     "config_home_env": "",
-    "config_home_env_note": "Empty on purpose. The product documents no variable for its configuration home, so a launch could not point it at the target every command here takes -- which is why this build installs software and does not declare `launch`.",
+    "config_home_env_note": "Empty on purpose. The product documents no variable for its configuration home. Launch is declared and is honest only when --target is ~/.gemini; an alternate root is refused by name. Inventing a variable is not a repair.",
     "configuration_format": {
       "file": "antigravity-cli/settings.json",
       "grammar": "json",

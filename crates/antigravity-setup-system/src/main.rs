@@ -56,13 +56,15 @@ pub const ANTIGRAVITY: Harness = Harness {
     // neighbours are Go runtime, SSH, gzip, protobuf and TOML strings, which is
     // the vendored-dependency trap this estate already recorded for grok.
     //
-    // This is why `launch` is the one command of the seven this harness does
-    // not declare: a launch could not point the product at the `--target` it
-    // was handed, and would start it against whatever home it picked for
-    // itself while reporting that it had honoured the target.
+    // Empty on purpose: the product documents no override. Launch is still
+    // declared, and is honest only when `--target` *is* `~/.gemini`. An
+    // alternate root is refused by name. Inventing `ANTIGRAVITY_*` would
+    // read as a fact and be one nothing honours.
     config_home_env: "",
-    // No variable at all, which is why this build has never declared launch.
-    launch_binding: LaunchBinding::Undocumented,
+    launch_binding: LaunchBinding::DocumentedHome {
+        how: "the product always reads ~/.gemini; re-measured 2026-08-29 against \
+              the 1.1.22 binary, which names no home-override variable",
+    },
     // **Asked, and there is none.** Measured 2026-08-31 against the pinned
     // 1.1.22 artifact, its digest checked against the artifact table:
     // 14 `ANTIGRAVITY_*` names appear in it, and not one of them
@@ -377,6 +379,25 @@ mod tests {
         assert_eq!(info.harness_id, "antigravity");
         assert_eq!(info.protocol_version, 3);
         assert!(info.supports_this_host());
+    }
+
+    #[test]
+    fn launch_is_declared_and_the_home_override_stays_empty() {
+        assert!(ANTIGRAVITY.config_home_env.is_empty());
+        assert!(ANTIGRAVITY.can_launch());
+        let info = ANTIGRAVITY.provider_info().unwrap();
+        assert!(
+            info.supported_commands
+                .iter()
+                .any(|command| command == "launch")
+        );
+        assert!(
+            matches!(
+                ANTIGRAVITY.launch_binding,
+                LaunchBinding::DocumentedHome { .. }
+            ),
+            "inventing a home-override variable is not how this product launches"
+        );
     }
 
     #[test]
