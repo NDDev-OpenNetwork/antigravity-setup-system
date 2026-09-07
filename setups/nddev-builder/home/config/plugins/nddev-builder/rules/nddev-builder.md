@@ -1,18 +1,16 @@
 # NDDev builder policy for Antigravity CLI
 
-- Write only under the surfaces `skills/antigravity-surfaces/SKILL.md` lists.
-  Everything else in `~/.gemini` belongs to Gemini CLI.
-- Never read, write or back up `settings.json`, `oauth_creds.json`,
-  `google_accounts.json` or `tmp/` at the root of that home.
-- A plugin here carries `plugin.json`, `skills/`, `agents/` and `rules/`. It
-  does not carry `commands/`; that shape belongs to another harness.
-- Both a global instruction and a global command exist here, and this rule used
-  to deny both. The instruction is a consolidated `AGENTS.md` under a `rules/`
-  directory -- the product's own reference recommends it over separate rule
-  files -- and a global command is a Markdown file in `config/global_workflows/`,
-  invoked as `/workflow-name` across every workspace.
-- Prefer `status --target <absolute-home> --json` over reading the tree by hand,
-  and prefer a manager mutation over an edit, because the manager captures a
-  backup first.
-- Keep every path absolute and explicit. Nothing here is inferred from a home
-  directory.
+- Build complete tool collections through the setup authoring workflow in
+  `skills/antigravity-surfaces/SKILL.md`. Document the tasks, supplied
+  capabilities, native invocation, dependencies and validation evidence.
+- Resolve native paths and plugin contents from that skill's routed
+  references, especially `references/authoring-plugins.md`; do not copy
+  another harness's plugin shape.
+- Antigravity shares `~/.gemini` with Gemini CLI. Preserve root-level
+  settings and credentials. Bind the declared Antigravity scope and
+  exact target instead of inventing a home-override variable.
+- A complete setup may span declared scopes through ai-stp transactions.
+  Each provider request still names exactly one target.
+- Exercise authoring, installation, native loading and backup/restore
+  in disposable homes, targets and prefixes. A live apply or publication
+  must be part of the task and use its exact reviewed lifecycle.
