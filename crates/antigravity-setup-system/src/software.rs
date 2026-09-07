@@ -20,6 +20,60 @@ use harness_runtime::{Artifact, Delivery, Previous, Shape, Software};
 pub(crate) const ARTIFACTS: &[Artifact] = &[
     Artifact {
         platform: "linux/arm64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.27-5211191891591168/linux-arm/cli_linux_arm64.tar.gz",
+        bytes: 53_241_342,
+        sha256: "sha256:97fc9fe5a6067406cd02cbe4ae6e362c9623a24d33bec486911246c17ceb6a94",
+        shape: Shape::GzipTar,
+        member: "antigravity",
+    },
+    Artifact {
+        platform: "linux/x86_64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.27-5211191891591168/linux-x64/cli_linux_x64.tar.gz",
+        bytes: 56_789_301,
+        sha256: "sha256:f874d4f6b8a73c2df660f580f25fb656fcb6e64adbfd746e6692e837fd9a20be",
+        shape: Shape::GzipTar,
+        member: "antigravity",
+    },
+    Artifact {
+        platform: "macos/arm64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.27-5211191891591168/darwin-arm/cli_mac_arm64.tar.gz",
+        bytes: 49_187_973,
+        sha256: "sha256:e901e5c8fd20ab4c21c01df306030079286d08e6d372cdb535d5ccc7a3f565f4",
+        shape: Shape::GzipTar,
+        member: "antigravity",
+    },
+    Artifact {
+        platform: "macos/x86_64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.27-5211191891591168/darwin-x64/cli_mac_x64.tar.gz",
+        bytes: 54_061_138,
+        sha256: "sha256:fe5f102bf65be5d478c68fc2f9c3f5b3c5cb2cc788105310b35698fd1af10192",
+        shape: Shape::GzipTar,
+        member: "antigravity",
+    },
+    Artifact {
+        platform: "windows/arm64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.27-5211191891591168/windows-arm/cli_windows_arm64.exe",
+        bytes: 179_063_448,
+        sha256: "sha256:88fa8c65d814f0b8dee779f6b97318131a2dbd255b9fc902c712e30b6cbef44f",
+        shape: Shape::Raw,
+        member: "",
+    },
+    Artifact {
+        platform: "windows/x86_64",
+        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.27-5211191891591168/windows-x64/cli_windows_x64.exe",
+        bytes: 189_485_208,
+        sha256: "sha256:d3bae6895069231c169f427c99527d1f556951e9c43488f45e8b040fbf3011ed",
+        shape: Shape::Raw,
+        member: "",
+    },
+];
+
+/// The artifacts 1.1.26 was published as, kept so
+/// `software_update` has a version to move from and `rollback` a tree to
+/// return to. Measured from bytes when it was the current pin.
+pub(crate) const PREVIOUS_ARTIFACTS: &[Artifact] = &[
+    Artifact {
+        platform: "linux/arm64",
         url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.26-5550154686791680/linux-arm/cli_linux_arm64.tar.gz",
         bytes: 53_148_160,
         sha256: "sha256:f595d2f1ae23001afffab9cb9012d054f0e8a02a1e848537f73239ae8d3fbd6d",
@@ -68,68 +122,14 @@ pub(crate) const ARTIFACTS: &[Artifact] = &[
     },
 ];
 
-/// The artifacts 1.1.25 was published as, kept so
-/// `software_update` has a version to move from and `rollback` a tree to
-/// return to. Measured from bytes when it was the current pin.
-pub(crate) const PREVIOUS_ARTIFACTS: &[Artifact] = &[
-    Artifact {
-        platform: "linux/arm64",
-        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.25-6680093607723008/linux-arm/cli_linux_arm64.tar.gz",
-        bytes: 53_226_078,
-        sha256: "sha256:063063128d62f7fa8ff8a01f9629744cb48ec1edcb2c57112d89a79fe48479f7",
-        shape: Shape::GzipTar,
-        member: "antigravity",
-    },
-    Artifact {
-        platform: "linux/x86_64",
-        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.25-6680093607723008/linux-x64/cli_linux_x64.tar.gz",
-        bytes: 56_770_237,
-        sha256: "sha256:45ab4a99884de17af76565a4ff8d9762d6e960067bd008fde9b050ec8fc9e421",
-        shape: Shape::GzipTar,
-        member: "antigravity",
-    },
-    Artifact {
-        platform: "macos/arm64",
-        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.25-6680093607723008/darwin-arm/cli_mac_arm64.tar.gz",
-        bytes: 50_349_479,
-        sha256: "sha256:8dab3e113726a3dfed69cbbf6757b4e491ae3b53aab0fdf17a56914d45281eff",
-        shape: Shape::GzipTar,
-        member: "antigravity",
-    },
-    Artifact {
-        platform: "macos/x86_64",
-        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.25-6680093607723008/darwin-x64/cli_mac_x64.tar.gz",
-        bytes: 55_217_782,
-        sha256: "sha256:e5c21bd67723c5a32e6c557e1406a219c769309e7c77746e2ed801c9bf496f66",
-        shape: Shape::GzipTar,
-        member: "antigravity",
-    },
-    Artifact {
-        platform: "windows/arm64",
-        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.25-6680093607723008/windows-arm/cli_windows_arm64.exe",
-        bytes: 178_392_728,
-        sha256: "sha256:b7e664057e80858e19c8f5fb8d64836cd2b1ccff7105e91ddedd30d908ebaf1a",
-        shape: Shape::Raw,
-        member: "",
-    },
-    Artifact {
-        platform: "windows/x86_64",
-        url: "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.1.25-6680093607723008/windows-x64/cli_windows_x64.exe",
-        bytes: 188_758_168,
-        sha256: "sha256:dbc665f942b59e56a0d3317aa01b93acc9521bdaa76277b922d82ef90eba2b3c",
-        shape: Shape::Raw,
-        member: "",
-    },
-];
-
 /// Antigravity's program, and where its bytes come from.
 pub(crate) const SOFTWARE: Software = Software {
-    version: "1.1.26",
+    version: "1.1.27",
     command: "agy",
     delivery: Delivery::Artifacts(ARTIFACTS),
     unsupported: &[],
     previous: Some(Previous {
-        version: "1.1.25",
+        version: "1.1.26",
         artifacts: PREVIOUS_ARTIFACTS,
     }),
 };

@@ -1,17 +1,15 @@
 ---
 name: antigravity-surfaces
-description: Find the right file before writing to an Antigravity CLI home. Use when adding or changing skills, agents, plugins, hooks, MCP servers, settings or keybindings under ~/.gemini, and whenever a path there is about to be written without being certain which product owns it.
+description: Create, improve or review a complete Antigravity CLI setup -- a native collection of tools. Use to select and author components, compose exact setups, explain capabilities, and validate native placement, installation and recovery.
 ---
 
-# Antigravity's surfaces, and the ones next to them
+# NDDev Builder
 
-Antigravity CLI is a **guest** in `~/.gemini`. Gemini CLI was there first and
-still owns files at the root of it. A write aimed one directory too high does
-not fail — it succeeds, and corrupts another product's configuration.
+Start with `references/ai-stp-lifecycle.md` to turn the user's tasks into a complete setup: inventory components, fill capability gaps, compose, evaluate and deliver a usable tool collection.
 
-That is the whole reason this skill exists. Everything below is read from
-`antigravity-baseline.json`, which records what the product's own documentation
-says.
+Read the native references below for this harness's formats and activation rules. Provider implementation changes use the additional provider checks; ordinary setup authoring needs no Rust checkout.
+
+Antigravity CLI shares `~/.gemini` with Gemini CLI. Preserve the neighbour's root settings and credentials; the native sections below identify the separate owned surfaces.
 
 ## What belongs to Antigravity
 
@@ -56,7 +54,7 @@ someone else's credentials is a leak with a schedule.
 
 - **A plugin's `rules/` is the other one, and it is what these setups use.** A
   plugin's rules are ingested with its skills and hooks when it is enabled, on
-  one switch, and unlike `config/rules` it is not emptied when a setup installs.
+  one switch, ordinary install and remove preserve unrecorded neighbouring files in both locations. Whole-namespace emptying is the separate `reset` operation.
 
 **Until 2026-08-29 this section was titled "One thing this product does not
 have" and said the opposite** — that instructions exist only at workspace scope,
@@ -133,8 +131,7 @@ paragraphs above now carry the date they were corrected.
   `references/authoring-settings.md`.
 - **The instruction file, and which products read a neighbour's**: read
   `references/authoring-instructions.md`.
-- **The second target this harness owns, and why a setup cannot carry a
-  component for it**: read `references/second-target.md`. Generated from the
+- **Additional roots this harness owns and how a setup coordinates them**: read `references/second-target.md`. Generated from the
   baseline's scoped block.
 - **The commands, the invariants, and the software half** — `references/lifecycle.md`
 - **The ai-stp CLI lifecycle: scaffold, compose, install, release, publish** — `references/ai-stp-lifecycle.md`
