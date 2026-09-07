@@ -25,7 +25,7 @@ use std::process::ExitCode;
 
 mod software;
 
-use harness_runtime::{Harness, LaunchBinding, Scoped};
+use harness_runtime::{Harness, LaunchBinding, PreservationSurface, Scoped};
 use provider_v3::{ComponentKind, ProjectionKind, TargetScope};
 
 /// Everything specific to Antigravity CLI, verified against
@@ -124,6 +124,29 @@ pub const ANTIGRAVITY: Harness = Harness {
     custody_namespaces: &[
         "antigravity-cli/keybindings.json",
         "antigravity-cli/plugins",
+    ],
+    preservation_surfaces: &[
+        PreservationSurface {
+            scope: None,
+            roots: &[
+                "config/config.json",
+                "config/import_manifest.json",
+                "config/workflows",
+                "config/workflows.json",
+                "antigravity-cli/hooks.json",
+            ],
+            excluded: &[
+                "settings.json",
+                "oauth_creds.json",
+                "google_accounts.json",
+                "tmp",
+            ],
+        },
+        PreservationSurface {
+            scope: Some(TargetScope::Project),
+            roots: &[".agent/skills"],
+            excluded: &[],
+        },
     ],
     never_touch: &[
         "settings.json",
