@@ -90,4 +90,4 @@ jobs:
           suffix=""
           [ "$RUNNER_OS" = "Windows" ] && suffix=".exe"
           exe="target/release/antigravity-setup-system$suffix"
-          "$py" scripts/evidence.py --binary "$exe" --harness antigravity --writes-absent "it declares no launch, so no product can be driven through this build at all" --probe-absent "it declares no launch, so no product can be driven at all"
+          "$py" scripts/evidence.py --binary "$exe" --harness antigravity --writes-absent "no credential-free command has been measured writing user configuration; launch itself is supported at the documented home" --probe-absent "launch is supported at the documented home; resolved configuration and capability invocation still require a measured native probe"
