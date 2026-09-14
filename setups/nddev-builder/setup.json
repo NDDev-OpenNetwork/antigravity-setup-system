@@ -3,9 +3,16 @@
   "id": "nddev-builder",
   "description": "Build complete native tool collections: select and author components, compose exact setups, document capabilities, and verify installation and recovery with ai-stp.",
   "sources": [
-    "https://antigravity.google/docs/cli/reference/",
     "https://antigravity.google/docs/cli/permissions/",
-    "https://antigravity.google/docs/plugins"
+    "https://antigravity.google/docs/cli/plugins/",
+    "https://antigravity.google/docs/cli/reference/",
+    "https://antigravity.google/docs/hooks",
+    "https://antigravity.google/docs/mcp",
+    "https://antigravity.google/docs/plugins",
+    "https://antigravity.google/docs/rules-workflows/",
+    "https://antigravity.google/docs/settings",
+    "https://antigravity.google/docs/skills",
+    "https://antigravity.google/docs/subagents/"
   ],
   "setup_stable_id": "setup_01M15EMQ6KFFYVYA57NCZETW63",
   "setup_version": "1.4",

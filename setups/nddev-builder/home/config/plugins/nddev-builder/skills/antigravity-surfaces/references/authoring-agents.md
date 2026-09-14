@@ -26,6 +26,8 @@ Generated from the vendor's own reference and the pinned binary. Do not edit: th
 
 - **The keys are camelCase**, like the harness whose subagents use `disallowedTools` and unlike every skill frontmatter in this estate. `commandExecutionPolicy` has no equivalent anywhere else here and defaults to `sandbox`, so an agent copied in from another product runs more contained than it did, not less.
 - The file may be `<name>.md` or `<name>/agent.md`. The directory form is what lets an agent carry files beside it.
+- Subagents start without the parent's conversation history. Choose `inherit`, an isolated Git worktree with `branch`, or shared directory storage with `share` according to whether the task edits overlapping files. Permission rules, file scopes and sandbox settings still inherit from the parent and approval requests bubble back to the main UI.
+- Validate every name in `tools`. The vendor documents a current failure mode where an unmapped or misspelled tool can hang the subagent instead of being rejected cleanly.
 - This row's citation was dead for a while: the vendor's `docs/agents` page answers 404 and the content moved to `docs/subagents`. Nothing in this repository fetches a URL, so a stale citation is found by reading it and in no other way.
 
 ## The same file on the other harnesses
