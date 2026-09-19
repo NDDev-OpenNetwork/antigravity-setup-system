@@ -18,6 +18,7 @@ Generated from the vendor's own reference and the pinned binary. Do not edit: th
 ## What bites
 
 - **There is a hard size limit: 12,000 characters per file**, for workflows and rules alike. It is the only such limit in this estate, and a long procedure that is fine everywhere else is refused here.
+- **The aggregate has its own budget.** Since 1.2.7 user and workspace rules share a dedicated 20,000-token customization budget; oversized rules are cut on newline boundaries and over-budget ones are listed by path and description, so a rule that fits per-file can still lose its place in context to a neighbour that arrived first.
 - The vendor's page documents the workspace location and does not name a global workflows directory in prose; the surface this provider owns was measured rather than quoted, and `surfaces` says so on the row.
 - Rules are the neighbouring mechanism and are not a component kind here: they activate manually by `@mention`, always, by model decision, or by glob, and they resolve `@filename` references to other files.
 

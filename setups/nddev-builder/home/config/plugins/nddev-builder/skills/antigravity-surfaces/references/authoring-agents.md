@@ -21,6 +21,9 @@ Generated from the vendor's own reference and the pinned binary. Do not edit: th
 | `commandExecutionPolicy` | no | `off`, `auto`, `eager` or `sandbox`. Default `sandbox`. |
 | `mcpServers` | no | MCP configurations for this agent. |
 | `skills` | no | Skill dependencies; `plugins` takes the same shape. |
+| `hidden` | no | Keep the agent out of pickers and lists. |
+| `inheritMcp` | no | MCP-server inheritance switch; the single-flag `inheritCustomizations` below is the newer form. |
+| `inheritCustomizations` | no | One switch deciding whether the agent adopts ambient skills, rules, plugins, subagents and MCP servers. Since 1.1.25 the default is inherit; before that, per-kind defaults silently disagreed. |
 
 ## What bites
 
@@ -28,6 +31,7 @@ Generated from the vendor's own reference and the pinned binary. Do not edit: th
 - The file may be `<name>.md` or `<name>/agent.md`. The directory form is what lets an agent carry files beside it.
 - Subagents start without the parent's conversation history. Choose `inherit`, an isolated Git worktree with `branch`, or shared directory storage with `share` according to whether the task edits overlapping files. Permission rules, file scopes and sandbox settings still inherit from the parent and approval requests bubble back to the main UI.
 - Validate every name in `tools`. The vendor documents a current failure mode where an unmapped or misspelled tool can hang the subagent instead of being rejected cleanly.
+- **`tools` is now also the way to reach retired built-ins.** The 1.2.7 changelog retires `find_by_name`, `grep_search` and `list_dir` from the default baseline while keeping them available to custom agents that list them explicitly -- so an empty `tools` gets fewer tools than the built-in agent does, not none.
 - This row's citation was dead for a while: the vendor's `docs/agents` page answers 404 and the content moved to `docs/subagents`. Nothing in this repository fetches a URL, so a stale citation is found by reading it and in no other way.
 
 ## The same file on the other harnesses
@@ -56,11 +60,16 @@ Generated from the same rows as the section above, for every harness in this est
 | `mode` | — | — | yes | — |
 | `temperature` | — | — | yes | — |
 | `top_p` | — | — | yes | — |
+| `steps` | — | — | yes | — |
+| `prompt` | — | — | yes | — |
+| `hidden` | — | — | yes | yes |
 | `permission` | — | — | yes | — |
 | `disable` | — | — | yes | — |
 | `mainAgent` | — | — | — | yes |
 | `subagent` | — | — | — | yes |
 | `commandExecutionPolicy` | — | — | — | yes |
+| `inheritMcp` | — | — | — | yes |
+| `inheritCustomizations` | — | — | — | yes |
 
 **The part that does not, and says nothing when it does not**: a field absent from a column is not rejected there -- it is read past. Nothing warns, no run fails, and the component behaves differently with the same bytes. Where the field was carrying a restriction, the restriction is simply gone. Check the column before relying on one.
 
