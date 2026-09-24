@@ -488,7 +488,7 @@
     "version": "1.2.4",
     "verified_at": "2026-09-16T13:23:17+00:00"
   },
-  "setup_catalogue_digest": "sha256:90e9158ca931dcb30eb3c0f86ca03b81711cd48af072eeb80e4a709771ded042",
+  "setup_catalogue_digest": "sha256:6ad52f5d06555944aed7084e9f86f6169d27b578ddad3aa8df59c6500bdfc6b0",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",
@@ -513,5 +513,22 @@
     "control": "zzq-invented-surface-nobody-ships",
     "control_hits": 0,
     "method": "Every namespace this harness declares, global and scoped, searched as a fixed string in the artifact the current pin names, digest verified before reading; both the declared path and its last segment counted, because a product that composes a path by joining segments never spells the whole of it. A count here is a lower bound and not a routing proof -- what it answers is whether a surface vanished from the product under a version bump, which five of the seven took on 2026-09-02. The invented control was searched in the same run and found nowhere, so the search discriminates."
+  },
+  "setting_compatibility": {
+    "measured_at": "2026-09-24",
+    "product_version": "1.2.10",
+    "platform": "linux/x86_64",
+    "binary_sha256": "sha256:aea7ed8df1e79b716c0ccd14c7d8086db75b14da535ffb7febdec9a488deff67",
+    "method": "Interactive Herdr session with gpt-oss-120b-medium; provider installs an isolated setup, then a fresh agy process without permission overrides opens /config.",
+    "control": {
+      "allowAgentAccessNonWorkspaceFiles": true,
+      "observed_non_workspace_access": "off"
+    },
+    "treatment": {
+      "allowAgentAccessNonWorkspaceFiles": true,
+      "allowNonWorkspaceAccess": true,
+      "observed_non_workspace_access": "on"
+    },
+    "scope": "The current key is added alongside the historical key. This does not move the software artifact pin or claim other platforms were run."
   }
 }
