@@ -30,7 +30,7 @@ jobs:
     name: rust
     permissions:
       contents: read
-    uses: NDDev-OpenNetwork/ci-workflows/.github/workflows/rust-ci.yml@26749820fad5bde1f1726636af5b04d329ed2fe5 # 0.1.20
+    uses: NDDev-OpenNetwork/ci-workflows/.github/workflows/rust-ci.yml@9f100310e1cdda6e387353671b3a57e6f5897098 # 0.1.21
     with:
       toolchain: '1.98.0'
       # The three-OS matrix is the evidence ADR-0113 asks for, and standard
