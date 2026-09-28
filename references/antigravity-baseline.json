@@ -140,7 +140,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-09-27T07:43:00+00:00",
+  "verified_at": "2026-09-28T07:08:32+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-31",
     "config_home": "~/.gemini",
@@ -442,7 +442,7 @@
       }
     },
     "version": "1.2.12",
-    "verified_at": "2026-09-27T07:43:00+00:00"
+    "verified_at": "2026-09-28T07:08:32+00:00"
   },
   "previous_software_artifacts": {
     "command": "agy",
