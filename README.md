@@ -24,15 +24,15 @@ instructions, skills, agents, commands, hooks, MCP entries, plugins and settings
 
 ```bash
 antigravity-setup-system list
-antigravity-setup-system install baseline    --target ~/.tool-config
-antigravity-setup-system status              --target ~/.tool-config
-antigravity-setup-system select full-auto    --target ~/.tool-config
-antigravity-setup-system diff                --target ~/.tool-config
-antigravity-setup-system reinstall           --target ~/.tool-config
-antigravity-setup-system backups             --target ~/.tool-config
-antigravity-setup-system hold --backup slot-000000000001 --reason "before the experiment" --target ~/.tool-config
-antigravity-setup-system restore --backup slot-000000000001 --target ~/.tool-config
-antigravity-setup-system remove              --target ~/.tool-config
+antigravity-setup-system install baseline    --target ~/.gemini
+antigravity-setup-system status              --target ~/.gemini
+antigravity-setup-system select full-auto    --target ~/.gemini
+antigravity-setup-system diff                --target ~/.gemini
+antigravity-setup-system reinstall           --target ~/.gemini
+antigravity-setup-system backups             --target ~/.gemini
+antigravity-setup-system hold --backup slot-000000000001 --reason "before the experiment" --target ~/.gemini
+antigravity-setup-system restore --backup slot-000000000001 --target ~/.gemini
+antigravity-setup-system remove              --target ~/.gemini
 ```
 
 Every command takes an explicit `--target`. There is no default and no fallback
@@ -47,8 +47,8 @@ seven setup systems, expressed in each product's own format:
 
 | | |
 | --- | --- |
-| `baseline` | a working floor: instructions plus a conservative configuration |
-| `minimal` | the product's own defaults, and the state a restore proves it can reach |
+| `baseline` | a working floor: instructions plus the shared autonomous posture |
+| `minimal` | instructions plus the shared autonomous posture, and nothing else |
 | `full-auto` | nothing asked and nothing sandboxed, in this product's own keys |
 | `nddev-builder` | the full-auto posture plus the product-native NDDev authoring toolkit |
 
