@@ -151,9 +151,9 @@
           "setting"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin",
         "evidence": "bytes",
-        "note": "**The keys this estate's setups write, measured in the pinned artifact, 2026-08-30.** `toolPermission`, `enableTerminalSandbox`, `allowAgentAccessNonWorkspaceFiles`, `allowCascadeAccessGitignoreFiles`, `autoContinueOnMaxGeneratorInvocations` and `permissions.deny`. Read from cli_linux_x64.tar.gz at 1.1.22, downloaded and verified against this baseline's own sha256 before being unpacked and searched. Searched with a control: an invented `nddevInventedSettingKey` appears zero times in the same bytes. The last three are named by no cited page, so the artifact is their only source and it is now recorded where something can read it rather than only in a comment beside the value."
+        "note": "**The keys this estate's setups write, measured in the pinned artifact, 2026-08-30.** `toolPermission`, `enableTerminalSandbox`, `allowAgentAccessNonWorkspaceFiles`, `allowCascadeAccessGitignoreFiles`, `autoContinueOnMaxGeneratorInvocations` and `permissions.deny`. Read from cli_linux_x64.tar.gz at 1.1.22, downloaded and verified against this baseline's own sha256 at that pin before being unpacked and searched. Searched with a control: an invented `nddevInventedSettingKey` appears zero times in the same bytes. The last three are named by no cited page, so the artifact is their only source and it is now recorded where something can read it rather than only in a comment beside the value."
       },
       {
         "path": "antigravity-cli/keybindings.json",
@@ -187,7 +187,7 @@
           "skill"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/skills; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/skills; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin",
         "evidence": "bytes"
       },
       {
@@ -206,7 +206,7 @@
           "hook"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/hooks; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin",
         "evidence": "bytes"
       },
       {
@@ -215,7 +215,7 @@
           "mcp"
         ],
         "shape": "file",
-        "source": "https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/mcp; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin",
         "evidence": "bytes"
       },
       {
@@ -224,7 +224,7 @@
           "command"
         ],
         "shape": "directory",
-        "source": "https://antigravity.google/docs/rules-workflows/; measured in the 1.1.22 binary; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256",
+        "source": "https://antigravity.google/docs/rules-workflows/; measured in the 1.1.22 binary; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin",
         "evidence": "bytes",
         "note": "Global workflows, as Markdown files, invoked as `/workflow-name` -- which is what makes them commands rather than a fourth kind of instruction. The binary carries `.gemini/config/global_workflows/<name>.md` as a path literal and the vendor describes the *+ Global* button that creates one *accessible across all your workspaces*.\n\nDeclared 2026-08-28. This declaration's own comment had said the product documents commands only at workspace scope, and a global workflow directory is the evidence against it. `config/workflows/` and `config/workflows.json` are the workspace tier and stay unowned -- this provider configures a home, not a checkout."
       },
@@ -298,16 +298,16 @@
       {
         "path": "config/workflows",
         "reason": "A second **global** workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.\n\n**This row said \"the workspace tier\" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about.",
-        "source": "measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256"
+        "source": "measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin"
       },
       {
         "path": "config/workflows.json",
         "reason": "The manifest beside that second global workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.\n\n**This row said \"the workspace tier\" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about.",
-        "source": "measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256"
+        "source": "measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin"
       },
       {
         "path": "managed-config",
-        "reason": "Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.\n\nMeasured 2026-08-29 against the 1.1.22 binary, whose bytes match this baseline's own sha256. Searched for `/etc/<product>`, `%ProgramData%\\\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.\n\nIts settings-key registry names `enterprisePreferences`, and that is the closest thing to a managed layer here. It is not a file: it sits beside `userStatus`, `oauthTokenInfo` and `useAICredits` -- account state this product receives, not an administrator's policy on disk. Nothing this provider writes can be overridden by a file it does not own, because no such file is named.\n\nAbsence of a literal is not proof a path cannot exist. This row says what was searched.",
+        "reason": "Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.\n\nMeasured 2026-08-29 against the 1.1.22 binary, whose bytes matched this baseline's own sha256 at that pin. Searched for `/etc/<product>`, `%ProgramData%\\\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.\n\nIts settings-key registry names `enterprisePreferences`, and that is the closest thing to a managed layer here. It is not a file: it sits beside `userStatus`, `oauthTokenInfo` and `useAICredits` -- account state this product receives, not an administrator's policy on disk. Nothing this provider writes can be overridden by a file it does not own, because no such file is named.\n\nAbsence of a literal is not proof a path cannot exist. This row says what was searched.",
         "source": "measured in the 1.1.22 artifact"
       }
     ],
@@ -488,7 +488,7 @@
     "version": "1.2.11",
     "verified_at": "2026-09-25T11:50:04+00:00"
   },
-  "setup_catalogue_digest": "sha256:683deaefdd6d1ea4b7eb8c778007b94181da452b3f8b13764d9f4e2357b5f8a2",
+  "setup_catalogue_digest": "sha256:efbf48ba7c86bf885673b2455d25b79997537c736c2e41f8422609c90922aa6b",
   "host_platform_scope": {
     "supported_host_ids": [
       "linux",

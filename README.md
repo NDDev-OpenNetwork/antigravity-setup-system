@@ -74,7 +74,7 @@ Point `ANTIGRAVITY_SETUP_SYSTEM_SETUP_CATALOG` at a directory to use setups of y
 | --- | --- |
 | Product | Antigravity CLI (Google) |
 | Documented configuration home | `~/.gemini` |
-| Environment override | `` |
+| Environment override | none documented |
 | Configuration lifecycle | owned |
 | Program lifecycle | owned |
 
@@ -139,8 +139,9 @@ powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
 Each fetches the release artifact for this platform, checks it against the
-release's own `SHA256SUMS`, and places it at a predictable path: `~/.local/bin`
-on Linux and macOS, `%LOCALAPPDATA%\Programs` on Windows. Neither needs
+release's own `SHA256SUMS`, and places it at a predictable path:
+`~/.local/bin/antigravity-setup-system` on Linux and macOS,
+`%LOCALAPPDATA%\Programs\antigravity-setup-system\antigravity-setup-system.exe` on Windows. Neither needs
 privilege and neither registers anything anywhere.
 
 Somewhere else instead:
