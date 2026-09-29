@@ -23,7 +23,7 @@ Antigravity CLI shares `~/.gemini` with Gemini CLI. Preserve the neighbour's roo
 | Agents | `~/.gemini/config/agents/` | `.agents/agents/` |
 | Hooks | `~/.gemini/config/hooks.json` | `.agents/hooks.json` |
 | MCP servers | `~/.gemini/config/mcp_config.json` | `.agents/mcp_config.json` |
-| Workflows | `~/.gemini/config/global_workflows/` | `.agents/rules/` |
+| Workflows | `~/.gemini/config/global_workflows/` | `.agents/workflows/` |
 
 Two plugin roots, and they are not interchangeable. `antigravity-cli/plugins/`
 is where the CLI puts what it installs; `config/plugins/` is where something

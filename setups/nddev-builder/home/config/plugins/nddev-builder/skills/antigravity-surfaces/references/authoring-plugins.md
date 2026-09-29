@@ -17,7 +17,7 @@ Generated from the vendor's own reference and the pinned binary. Do not edit: th
 
 ## What bites
 
-- **A plugin here is a bundle and runs no code of its own**, like the manifest-shaped one elsewhere in this estate and unlike the two that are executable modules. Beside `plugin.json` it may carry `mcp_config.json`, `hooks.json`, `skills/`, `agents/` and `rules/` -- the same files, in the same shapes, as the loose ones.
+- **A plugin here is a bundle and runs no code of its own**, like the manifest-shaped one elsewhere in this estate and unlike the two that are executable modules. Beside `plugin.json` it may carry `mcp_config.json`, `hooks.json`, `skills/` and `rules/` -- the same files, in the same shapes, as the loose ones.
 - The current page's schema requires `name`, allows optional `description`, and says additional properties are rejected. The 1.2.2 product is looser: `agy plugin validate` rejects a missing `name` but accepts an invented extra key, and the schema URL shown on the page returned 404 when checked. Treat `name` as the native minimum, use only fields the product demonstrably consumes, and validate with the installed CLI rather than relying on editor schema completion. Without `plugin.json` the directory is not a plugin.
 - **The filename was checked against the product, not taken from the page alone**, after the same claim for another harness here turned out to be a third-party invention. The pinned artifact names `plugin.json` and never `plugin-index.json`. Two harnesses in this estate use that filename and one of the two nests it under a dot-directory, so read the row rather than remembering it.
 

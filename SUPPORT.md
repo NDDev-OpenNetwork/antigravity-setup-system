@@ -46,7 +46,7 @@ in a JSON file it owns it strips the keys it added rather than taking the
 file. Anything under those paths this build never wrote stays. Emptying every
 owned namespace is a separate, explicitly named operation: `reset`.
 
-No credential-free command is measured writing this product's home -- the dated measurement lives in `references/` and the absence is recorded, not assumed. The receipt discipline is the same for whatever arrives later: a file this provider wrote is captured into a slot before the next `install`, withdrawn by `remove`, and returned byte for byte by `restore`.
+No credential-free command is measured writing a surface this provider owns through `--target` -- no credential-free command has been measured writing user configuration; launch itself is supported at the documented home. The receipt discipline is the same for whatever arrives later: a file this provider wrote is captured into a slot before the next `install`, withdrawn by `remove`, and returned byte for byte by `restore`.
 
 So: point `--target` at a home you are willing to have managed. `backups
 --target <dir>` names every earlier state and which setup each preceded, and
@@ -162,25 +162,29 @@ Configuration home as the product documents it: `~/.gemini`.
 
 | Path | Component kinds routed here | Decided by |
 | --- | --- | --- |
-| `antigravity-cli/settings.json` | `setting` | [source](https://antigravity.google/docs/settings) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256 |
+| `antigravity-cli/settings.json` | `setting` | [source](https://antigravity.google/docs/settings) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin |
 | `antigravity-cli/keybindings.json` | -- | [source](https://antigravity.google/docs/settings) |
 | `antigravity-cli/plugins` | -- | [source](https://antigravity.google/docs/cli/plugins/) |
 | `config/plugins` | `plugin` | [source](https://antigravity.google/docs/plugins) |
-| `config/skills` | `skill` | [source](https://antigravity.google/docs/skills) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256 |
+| `config/skills` | `skill` | [source](https://antigravity.google/docs/skills) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin |
 | `config/agents` | `agent` | [source](https://antigravity.google/docs/subagents/) |
-| `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256 |
-| `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256 |
-| `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/) -- measured in the 1.1.22 binary; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256 |
+| `config/hooks.json` | `hook` | [source](https://antigravity.google/docs/hooks) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin |
+| `config/mcp_config.json` | `mcp` | [source](https://antigravity.google/docs/mcp) -- confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin |
+| `config/global_workflows` | `command` | [source](https://antigravity.google/docs/rules-workflows/) -- measured in the 1.1.22 binary; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin |
 | `config/rules` | `instruction` | measured from the 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29 |
 
-A path routing no component kind is owned so a setup can carry it;
-nothing compiles a component to it.
+A custody row like `antigravity-cli/keybindings.json`, `antigravity-cli/plugins` routes no component kind because no setup
+can ever fill it: it is owned so a backup captures it and `remove`
+withdraws it, and so a posture switch does not empty it.
 
 ### A second target: `target_scope: project`
 
-Rooted at `.agents`, which is not the configuration home
-above. A consumer reaches it by naming the scope on the request, and
-every path below is relative to that root.
+This scope's target is the workspace root rather than the
+configuration home above; the scope record names its anchor
+`.agents`. A consumer reaches it by naming the scope on
+the request, and every path below is relative to the workspace
+root -- where the product owns a directory there, that directory
+is part of the path.
 
 | Path | Component kinds routed here | Decided by |
 | --- | --- | --- |
@@ -231,15 +235,15 @@ Corrected 2026-08-29. The previous text read *"which one the product prefers whe
 
 **`config/workflows`** -- A second **global** workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.
 
-**This row said "the workspace tier" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about. (measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256)
+**This row said "the workspace tier" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about. (measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin)
 
 **`config/workflows.json`** -- The manifest beside that second global workflow root, beside the owned `config/global_workflows`. Both are named as sources in the product's own embedded migration reference, which converts workflows into skills and tabulates them under scope `Global`: `~/.gemini/config/global_workflows/<name>.md` and `~/.gemini/config/workflows/<name>.md`, both targeting `~/.gemini/config/skills/<name>/SKILL.md`. The workspace tier is a different set of rows -- `<workspace>/.agents/workflows/<name>.md` and its siblings.
 
-**This row said "the workspace tier" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about. (measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes match this baseline's sha256)
+**This row said "the workspace tier" until 2026-08-31, and declined it on the ground that this provider configures a home rather than a checkout.** That argument is sound and is about a different path: this one is inside the home. The decline is right for another reason -- nothing here writes a workflow, the product is migrating the form away, and owning it would empty a person's un-migrated workflows on a posture switch, which is the shape `custody_namespaces` exists to stop. A true decline on a false reason survives every check, because nothing compares a reason with the thing it is about. (measured 2026-08-28 in the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin)
 
 **`managed-config`** -- Not a path in the target, and recorded because **there is no such path** -- the same measured absence as pi's, made against a very different artifact.
 
-Measured 2026-08-29 against the 1.1.22 binary, whose bytes match this baseline's own sha256. Searched for `/etc/<product>`, `%ProgramData%\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.
+Measured 2026-08-29 against the 1.1.22 binary, whose bytes matched this baseline's own sha256 at that pin. Searched for `/etc/<product>`, `%ProgramData%\\<product>` and `/Library/Application Support/<product>` literals. The `/etc/` hits this binary does carry are `ssl`, `pki`, `ssh`, `passwd`, `shadow`, `hosts`, `resolv.conf` and `sudoers` -- the Go standard library and the embedded browser stack, not this product's configuration. **A grep that counted those as a managed policy would have invented one**, which is why the search is recorded with what it found and not only with its conclusion.
 
 Its settings-key registry names `enterprisePreferences`, and that is the closest thing to a managed layer here. It is not a file: it sits beside `userStatus`, `oauthTokenInfo` and `useAICredits` -- account state this product receives, not an administrator's policy on disk. Nothing this provider writes can be overridden by a file it does not own, because no such file is named.
 

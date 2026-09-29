@@ -195,8 +195,9 @@ pub const ANTIGRAVITY: Harness = Harness {
     // the critical path, so the route works the moment the consumer lands it,
     // with no window where an instruction composes and is refused late.
     //
-    // The workspace tier -- `config/workflows/` and `config/workflows.json` --
-    // stays unowned; that half of the old sentence is still true.
+    // The second global workflow root -- `config/workflows/` and
+    // `config/workflows.json` -- stays unowned; that half of the old sentence
+    // is still true. The workspace tier is `.agents/workflows/`.
     component_kinds: &[
         ComponentKind::Instruction,
         ComponentKind::Skill,

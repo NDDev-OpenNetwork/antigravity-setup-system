@@ -89,7 +89,7 @@ and ownership are unchanged.
 
 ## [0.0.78] - 2026-09-27
 
-Antigravity CLI now declares `detach_instruction_region`, the second half of
+`detach_instruction_region` joins the protocol for the products that declare an instruction surface; Antigravity CLI declares none and refuses the operation -- the original text of this entry said otherwise (corrected 2026-09-29), the second half of
 the instruction-region lifecycle: it removes only the marked
 `:::begin-ai-stp`/`:::end-ai-stp` section, keeps every byte outside the
 markers — including YAML frontmatter the product owns — deletes a file that

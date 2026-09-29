@@ -43,10 +43,12 @@ surfaces makes a consumer's route ambiguous, and the guard in
 
 ## A second target: `target_scope: project`
 
-Rooted at `.agents`, which is **not** this product's configuration
-home. A consumer reaches it by naming the scope on the request, and
-every path below is relative to that root rather than to the home
-above -- writing the root into the path again would nest it twice.
+This scope's target is the workspace root (the record names
+its anchor `.agents`), which is **not** this product's
+configuration home. A consumer reaches it by naming the scope
+on the request, and every path below is relative to the
+workspace root -- a product-owned directory stays part of the
+path.
 
 | path | routes | shape | decided by | exercised by |
 | --- | --- | --- | --- | --- |

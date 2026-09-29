@@ -1,12 +1,13 @@
-# The second target this harness owns
+# The scoped target this harness owns
 
 ## `target_scope: project`, rooted at `.agents`
 
-**`.agents` is not this product's configuration home.** It is a
-different target, reached by a consumer naming the scope on the
-request, and every path below is relative to that root rather than
-to the home -- writing the root into the path again would nest it
-twice, which is a mistake this estate has made and shipped.
+**This scope's target is the workspace root** (the record names
+its anchor `.agents`), not this product's configuration home.
+It is a different target, reached by a consumer naming the
+scope on the request, and every path below is relative to the
+workspace root -- a product-owned directory stays part of the
+path.
 
 | path | routes | decided by | exercised by |
 |---|---|---|---|
