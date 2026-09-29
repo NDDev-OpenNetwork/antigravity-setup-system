@@ -8,7 +8,7 @@
 [CmdletBinding()]
 param(
   [string]$Version = "0.0.81",
-  [string]$InstallDir = "$env:LOCALAPPDATA\Programs\antigravity-setup-system"
+  [string]$InstallDir = $(if ($env:ANTIGRAVITY_INSTALL_DIR) { $env:ANTIGRAVITY_INSTALL_DIR } else { "$env:LOCALAPPDATA\Programs\antigravity-setup-system" })
 )
 $ErrorActionPreference = "Stop"
 
