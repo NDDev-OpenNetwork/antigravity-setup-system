@@ -2,8 +2,8 @@
   "schema_version": 3,
   "verified_version_ref": "build/version.json:antigravity_cli_tested",
   "release": {
-    "tag": "1.2.13",
-    "url": "https://github.com/google-antigravity/antigravity-cli/releases/tag/1.2.13"
+    "tag": "1.2.14",
+    "url": "https://github.com/google-antigravity/antigravity-cli/releases/tag/1.2.14"
   },
   "install_script": {
     "url": "https://antigravity.google/cli/install.sh",
@@ -16,7 +16,7 @@
   "software_install": {
     "mechanism": "official-antigravity-install-manifest",
     "managed_command": "bin/agy",
-    "version": "1.2.13",
+    "version": "1.2.14",
     "manifest_url_template": "https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/manifests/{platform}.json",
     "manifest_fields": [
       "version",
@@ -28,34 +28,34 @@
   },
   "platform_manifests": {
     "darwin_amd64": {
-      "version": "1.2.13",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/darwin-x64/cli_mac_x64.tar.gz",
-      "sha512": "bf1fb2d80ba5dee34aa25ff4c8588b809363dcfe4cfce90b8490c89cff8dcb3488996203c2cc740293068db88e73af65a82da7dacbdd7c2b12a2c03da29dfc4f"
+      "version": "1.2.14",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/darwin-x64/cli_mac_x64.tar.gz",
+      "sha512": "91b695493415ea75186b86b87fd6213d580489098bb62a837d281215a0b4c0d4ae3044135bff084d901bbb5254aefc21c2ed4713f57dea2442c6aa2891e118cb"
     },
     "darwin_arm64": {
-      "version": "1.2.13",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/darwin-arm/cli_mac_arm64.tar.gz",
-      "sha512": "b36641b6d6e734da0907bc02a8d35c4a093a46bdec60b6f39ebccc6976fc3f80ae357211c1cf0373f9cae722f1a64aac77ff19f5fb485c9c97a7f2afcfcb7131"
+      "version": "1.2.14",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/darwin-arm/cli_mac_arm64.tar.gz",
+      "sha512": "953afacb5f7cdebe68f02efa6c7322450fb3ecf0cf4bcc65747d3af15e8973ba58df22c41e8151c72c6e82d26a8c3c3ca4d696ec314feb39ad83be34f548a854"
     },
     "linux_amd64": {
-      "version": "1.2.13",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/linux-x64/cli_linux_x64.tar.gz",
-      "sha512": "7a10134a69c575dc11bdc721322344e9db3bf2c9d890f2d40ff0bffda93d39b6ef1c7c486f491d1ddf08b123deef375c7bbe46b62cd3fbc3cc956b1a3bd22956"
+      "version": "1.2.14",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/linux-x64/cli_linux_x64.tar.gz",
+      "sha512": "fd771dfc74ddd07b61c8b0a6fd7a238f53a3a098a51052583a01d97ab84ee60db741ce5f041e87a9da3c1a9aabe95b053113374437df1e231773552781edaf09"
     },
     "linux_arm64": {
-      "version": "1.2.13",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/linux-arm/cli_linux_arm64.tar.gz",
-      "sha512": "a26463715b58b787ef24d377138351b725e980c3dec417faa60ad991c8e676f67c6c83b7158d2ef95569a87ba79d0ef2eb781b6d53ac2dbf991f5443f7a46573"
+      "version": "1.2.14",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/linux-arm/cli_linux_arm64.tar.gz",
+      "sha512": "d96a67d6952a8ec1da16c8b6515f1393ed0260658cf104d9b57b8d13c92c591322ed5e08a62894842be81888116da0f5f80def7971c913d1f462300103426954"
     },
     "windows_amd64": {
-      "version": "1.2.13",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/windows-x64/cli_windows_x64.exe",
-      "sha512": "8256013ff3ffbfec14157e1f25541c303b33d091ed05a645d02267b23c6f4615d8ffa1068cce2c7687f2fe216375f5d72642b43a2c73f3c90bd0c3d49e443187"
+      "version": "1.2.14",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/windows-x64/cli_windows_x64.exe",
+      "sha512": "908fcd591144c6df86506d7c135a486a2e4f4f606e09a9bcc5eb9bf943e385c06c94e0a218f29d8c5ba26db1406ee3a7aa2d08aa8685dadc37fe0fceda2fcf6f"
     },
     "windows_arm64": {
-      "version": "1.2.13",
-      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/windows-arm/cli_windows_arm64.exe",
-      "sha512": "a7ded065b37d98a7fe8052d1a5fe0144c3e416c5d44929dca9ba6b03ceffa2ff542e828777b6c42a895e249cdca656b5141731b705b4d15b967c9dfcfba8fb7c"
+      "version": "1.2.14",
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/windows-arm/cli_windows_arm64.exe",
+      "sha512": "360dba3cd5dcf230eec553cd4baf12e7bad31f04e5ae7a489255a6993a0d76baaf50b110225849f552e3eda02466ce798cb05b70866c2d1e4bfe234b5837f38d"
     }
   },
   "release_assets": {
@@ -140,7 +140,7 @@
     "documented_selectors_ref": "profiles/<profile-id>/settings.json",
     "profile_payload_owner": "profiles/"
   },
-  "verified_at": "2026-09-29T21:26:00+00:00",
+  "verified_at": "2026-09-30T07:08:39+00:00",
   "native_surfaces": {
     "verified_at": "2026-08-31",
     "config_home": "~/.gemini",
@@ -153,7 +153,7 @@
         "shape": "file",
         "source": "https://antigravity.google/docs/settings; confirmed against the product's own embedded reference, read from the 1.1.22 artifact whose bytes matched this baseline's sha256 at that pin",
         "evidence": "bytes",
-        "note": "**The keys this estate's setups write, measured in the pinned artifact, 2026-08-30.** `toolPermission`, `enableTerminalSandbox`, `allowNonWorkspaceAccess`, `allowAgentAccessNonWorkspaceFiles`, `allowCascadeAccessGitignoreFiles` and `autoContinueOnMaxGeneratorInvocations` -- six keys across `baseline`, `full-auto` and `nddev-builder`; `minimal` writes the first two only. This enumeration named `permissions.deny` and omitted `allowNonWorkspaceAccess` until 2026-09-30, when the shipped payloads were counted instead of remembered: no setup writes `permissions.deny`, and `allowNonWorkspaceAccess` is the fourth `populatePermissionConfig` input the `full-auto` description already cites -- re-verified 2026-09-30 in the pinned 1.2.13 artifact (sha256 `b0f195d3\u2026`), where it appears eight times. Read from cli_linux_x64.tar.gz at 1.1.22, downloaded and verified against this baseline's own sha256 at that pin before being unpacked and searched. Searched with a control: an invented `nddevInventedSettingKey` appears zero times in the same bytes. The last three are named by no cited page, so the artifact is their only source and it is now recorded where something can read it rather than only in a comment beside the value."
+        "note": "**The keys this estate's setups write, measured in the pinned artifact, 2026-08-30.** `toolPermission`, `enableTerminalSandbox`, `allowNonWorkspaceAccess`, `allowAgentAccessNonWorkspaceFiles`, `allowCascadeAccessGitignoreFiles` and `autoContinueOnMaxGeneratorInvocations` -- six keys across `baseline`, `full-auto` and `nddev-builder`; `minimal` writes the first two only. This enumeration named `permissions.deny` and omitted `allowNonWorkspaceAccess` until 2026-09-30, when the shipped payloads were counted instead of remembered: no setup writes `permissions.deny`, and `allowNonWorkspaceAccess` is the fourth `populatePermissionConfig` input the `full-auto` description already cites -- re-verified 2026-09-30 in the 1.2.13 artifact (sha256 `b0f195d3…`), where it appears eight times. Read from cli_linux_x64.tar.gz at 1.1.22, downloaded and verified against this baseline's own sha256 at that pin before being unpacked and searched. Searched with a control: an invented `nddevInventedSettingKey` appears zero times in the same bytes. The last three are named by no cited page, so the artifact is their only source and it is now recorded where something can read it rather than only in a comment beside the value."
       },
       {
         "path": "antigravity-cli/keybindings.json",
@@ -236,7 +236,7 @@
         "shape": "directory",
         "source": "measured from the 1.1.22 artifact's own embedded reference, digest verified before reading, 2026-08-29",
         "evidence": "bytes",
-        "note": "**A customization element this declaration was missing, not a surface the product lacks.** The binary's embedded reference lists what exists *within any of the customization roots*: *\"1. Skills (Directories) \u2026 2. **Rules** (Markdown Files): Location: `rules/` (relative to the customization root) or standalone `GEMINI.md`/`AGENTS.md` files \u2026 3. Plugins (Directories) \u2026 4. MCP Servers (`mcp_config.json`) and Hooks (`hooks.json`).\"* Four of those five were declared here and `rules/` was not.\n\nThe record said the opposite -- *the product documents instruction only at workspace scope* -- which was a negative taken from the pages that happened to be read. The same comment had already been wrong about `command`, corrected 2026-08-28 on `config/global_workflows`. Twice in one declaration, both times the evidence was in a binary this repository had already downloaded.\n\n**`AGENTS.md` is the product's own recommended shape**, from the same reference: *\"Placing a consolidated `AGENTS.md` (or `GEMINI.md`) file under `rules/` \u2026 is recommended over separate rule files.\"* The elided clause is the vendor's own example of one root; it is left out because a reader here would take an example path for a document these setups carry, and they carry it elsewhere.\n\n**Where the setups actually write it, and why not here.** They write a consolidated `AGENTS.md` under a `rules/` directory at the *plugin* customization root -- `config/plugins/{plugin_name}/rules/AGENTS.md`, named as a class because this note is carried into every setup and each names its own plugin. That is the same recommendation applied to a different one of the roots the reference lists, and the choice is argued in each `plugin.json`: a plugin's skills, rules, hooks and MCP servers are ingested together when it is enabled, and `config/plugins` is a surface that routes today. `config/rules` is owned and declared, and a setup writing there as well would load the same floor twice.\n\nSearched with a control: `AGENTS.md` appears ten times in the pinned bytes and `GEMINI.md` eight, while an invented `nddev-invented-instruction-file.md` appears zero -- so the search discriminates. `bytes` and not `ran`: starting this product needs a credential, and the credential-free subcommands report nothing about resolved rules.\n\n**Owned, declared, and waiting on the consumer's route.** The `instruction` kind is declared here. An earlier revision of this note said the opposite and gave a measurement for it -- *adding the kind was tried and antigravity went from 29 passing cases to REFUSED, 30 cases* -- and that measurement was our own instrument misreading the checker.\n\n`declared_route_is_compilable:instruction` carries `subject: consumer`, and the checker's `conforms` is computed over provider-subject cases alone, by an explicit decision documented in its source: a provider declaring a kind the compiler has no route for *\"has satisfied every obligation v3 places on it; the gap is ours, and calling it non-conformance would name the wrong party in the one field people read\"*. With the kind declared the checker answers `conforms: true` with zero provider-subject failures. A summary that counted every failed case regardless of subject printed REFUSED over a provider the checker had just passed -- and this note then recorded that as a fact about the protocol, which is how a bad reading hardens into a record. Fixed, with a control that plants the same mis-count.\n\nDeclaring the kind changes nothing a user sees while the consumer's `PROVIDER_RULES` has no `instruction` row for this harness: composition still refuses early with `native_surface_lost`, which is the honest place for it. What it does change is the ordering -- the provider is no longer on the critical path, so the route works the moment the consumer lands it, with no window in which an instruction composes and is refused late."
+        "note": "**A customization element this declaration was missing, not a surface the product lacks.** The binary's embedded reference lists what exists *within any of the customization roots*: *\"1. Skills (Directories) … 2. **Rules** (Markdown Files): Location: `rules/` (relative to the customization root) or standalone `GEMINI.md`/`AGENTS.md` files … 3. Plugins (Directories) … 4. MCP Servers (`mcp_config.json`) and Hooks (`hooks.json`).\"* Four of those five were declared here and `rules/` was not.\n\nThe record said the opposite -- *the product documents instruction only at workspace scope* -- which was a negative taken from the pages that happened to be read. The same comment had already been wrong about `command`, corrected 2026-08-28 on `config/global_workflows`. Twice in one declaration, both times the evidence was in a binary this repository had already downloaded.\n\n**`AGENTS.md` is the product's own recommended shape**, from the same reference: *\"Placing a consolidated `AGENTS.md` (or `GEMINI.md`) file under `rules/` … is recommended over separate rule files.\"* The elided clause is the vendor's own example of one root; it is left out because a reader here would take an example path for a document these setups carry, and they carry it elsewhere.\n\n**Where the setups actually write it, and why not here.** They write a consolidated `AGENTS.md` under a `rules/` directory at the *plugin* customization root -- `config/plugins/{plugin_name}/rules/AGENTS.md`, named as a class because this note is carried into every setup and each names its own plugin. That is the same recommendation applied to a different one of the roots the reference lists, and the choice is argued in each `plugin.json`: a plugin's skills, rules, hooks and MCP servers are ingested together when it is enabled, and `config/plugins` is a surface that routes today. `config/rules` is owned and declared, and a setup writing there as well would load the same floor twice.\n\nSearched with a control: `AGENTS.md` appears ten times in the pinned bytes and `GEMINI.md` eight, while an invented `nddev-invented-instruction-file.md` appears zero -- so the search discriminates. `bytes` and not `ran`: starting this product needs a credential, and the credential-free subcommands report nothing about resolved rules.\n\n**Owned, declared, and waiting on the consumer's route.** The `instruction` kind is declared here. An earlier revision of this note said the opposite and gave a measurement for it -- *adding the kind was tried and antigravity went from 29 passing cases to REFUSED, 30 cases* -- and that measurement was our own instrument misreading the checker.\n\n`declared_route_is_compilable:instruction` carries `subject: consumer`, and the checker's `conforms` is computed over provider-subject cases alone, by an explicit decision documented in its source: a provider declaring a kind the compiler has no route for *\"has satisfied every obligation v3 places on it; the gap is ours, and calling it non-conformance would name the wrong party in the one field people read\"*. With the kind declared the checker answers `conforms: true` with zero provider-subject failures. A summary that counted every failed case regardless of subject printed REFUSED over a provider the checker had just passed -- and this note then recorded that as a fact about the protocol, which is how a bad reading hardens into a record. Fixed, with a control that plants the same mis-count.\n\nDeclaring the kind changes nothing a user sees while the consumer's `PROVIDER_RULES` has no `instruction` row for this harness: composition still refuses early with `native_surface_lost`, which is the honest place for it. What it does change is the ordering -- the provider is no longer on the critical path, so the route works the moment the consumer lands it, with no window in which an instruction composes and is refused late."
       }
     ],
     "declined": [
@@ -262,7 +262,7 @@
       },
       {
         "path": "antigravity-cli/hooks.json",
-        "reason": "A second hooks file, beside the owned `config/hooks.json`. Both appear as path literals in the 1.1.22 binary.\n\n**Which one the product means is documented, in its own release notes, and the earlier text here said it was not.** From the changelog embedded in the pinned artifact: *\"Fixed a bug where the `/hooks` command wrote configurations to `~/.gemini/antigravity-cli/hooks.json` instead of the shared `~/.gemini/config/hooks.json`, ensuring hooks remain synchronized between the TUI and the backend.\"* So `config/hooks.json` is the shared surface and this path is where a fixed defect used to write.\n\nStill declined rather than owned, and now for a stated reason instead of an absence: it is the output of a bug the vendor repaired, so a file here on a user's machine is residue from an older build rather than configuration this provider should manage. Owning it would have a restore put back a file the product stopped writing.\n\nCorrected 2026-08-29. The previous text read *\"which one the product prefers when both exist is not documented and has not been measured\"* \u2014 true when written, and false against a changelog that was inside the artifact this baseline already pins. Found because a user's issue about a different hooks path sent someone reading the same bytes again.",
+        "reason": "A second hooks file, beside the owned `config/hooks.json`. Both appear as path literals in the 1.1.22 binary.\n\n**Which one the product means is documented, in its own release notes, and the earlier text here said it was not.** From the changelog embedded in the pinned artifact: *\"Fixed a bug where the `/hooks` command wrote configurations to `~/.gemini/antigravity-cli/hooks.json` instead of the shared `~/.gemini/config/hooks.json`, ensuring hooks remain synchronized between the TUI and the backend.\"* So `config/hooks.json` is the shared surface and this path is where a fixed defect used to write.\n\nStill declined rather than owned, and now for a stated reason instead of an absence: it is the output of a bug the vendor repaired, so a file here on a user's machine is residue from an older build rather than configuration this provider should manage. Owning it would have a restore put back a file the product stopped writing.\n\nCorrected 2026-08-29. The previous text read *\"which one the product prefers when both exist is not documented and has not been measured\"* — true when written, and false against a changelog that was inside the artifact this baseline already pins. Found because a user's issue about a different hooks path sent someone reading the same bytes again.",
         "source": "measured from the 1.1.22 binary; no vendor page names it"
       },
       {
@@ -405,6 +405,50 @@
     "shape": "gzip-tar",
     "platforms": {
       "linux/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/linux-arm/cli_linux_arm64.tar.gz",
+        "bytes": 57229161,
+        "sha256": "sha256:3b40c3baab245b43a41007c1db64df51f5f162b6059fcc4a4504731f2689d301",
+        "member": "antigravity"
+      },
+      "linux/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/linux-x64/cli_linux_x64.tar.gz",
+        "bytes": 60882033,
+        "sha256": "sha256:68cf4d221cb62e0289245439d3d37f599bdc8e0c4e1e3dae03f326463a0c26dc",
+        "member": "antigravity"
+      },
+      "macos/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/darwin-arm/cli_mac_arm64.tar.gz",
+        "bytes": 53444121,
+        "sha256": "sha256:468edcc454b6bb1c321d8d42591a16ace4d1a1d628a4f1ce95ad236c9ee4cc19",
+        "member": "antigravity"
+      },
+      "macos/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/darwin-x64/cli_mac_x64.tar.gz",
+        "bytes": 58558502,
+        "sha256": "sha256:39364cc24e7b2b05a4a0138c60d5d5da39df9fb76dedc9e3f4b74a168512fcd6",
+        "member": "antigravity"
+      },
+      "windows/arm64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/windows-arm/cli_windows_arm64.exe",
+        "bytes": 189929112,
+        "sha256": "sha256:bd52ec70f66306b4e5d5f56ea554087d1d3706cbd51f2cfa4654931b456f0889",
+        "shape": "raw"
+      },
+      "windows/x86_64": {
+        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.14-4571742832820224/windows-x64/cli_windows_x64.exe",
+        "bytes": 200623256,
+        "sha256": "sha256:07f7ed55654b7066886c7390d3f5e245dbe4ede425c005909342cfc90333f2f8",
+        "shape": "raw"
+      }
+    },
+    "version": "1.2.14",
+    "verified_at": "2026-09-30T07:08:39+00:00"
+  },
+  "previous_software_artifacts": {
+    "command": "agy",
+    "shape": "gzip-tar",
+    "platforms": {
+      "linux/arm64": {
         "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.13-6662628811079680/linux-arm/cli_linux_arm64.tar.gz",
         "bytes": 57076937,
         "sha256": "sha256:43bf59be5895475f8a32d4f94f1241f665986ea41a3622579e03b74e1b63dcfb",
@@ -443,50 +487,6 @@
     },
     "version": "1.2.13",
     "verified_at": "2026-09-29T21:26:00+00:00"
-  },
-  "previous_software_artifacts": {
-    "command": "agy",
-    "shape": "gzip-tar",
-    "platforms": {
-      "linux/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.12-5784551402897408/linux-arm/cli_linux_arm64.tar.gz",
-        "bytes": 56929944,
-        "sha256": "sha256:bd338c9d19ab963d9d2bc027e4e797b470ea84bae02080e4fde4555357ea9444",
-        "member": "antigravity"
-      },
-      "linux/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.12-5784551402897408/linux-x64/cli_linux_x64.tar.gz",
-        "bytes": 60578633,
-        "sha256": "sha256:26c7c4c661d6c9beda734fcf305031056a6ea46e697c4533e8151179724e2950",
-        "member": "antigravity"
-      },
-      "macos/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.12-5784551402897408/darwin-arm/cli_mac_arm64.tar.gz",
-        "bytes": 53201184,
-        "sha256": "sha256:076a1f0a1874a2843862af9d0eeae751775a84e736e35a84de0dd268069c28cb",
-        "member": "antigravity"
-      },
-      "macos/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.12-5784551402897408/darwin-x64/cli_mac_x64.tar.gz",
-        "bytes": 58293346,
-        "sha256": "sha256:1e2f8ed29c05051c61015041d82a50bd95f754c19c8cc7fa8fe35b9f66c9a075",
-        "member": "antigravity"
-      },
-      "windows/arm64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.12-5784551402897408/windows-arm/cli_windows_arm64.exe",
-        "bytes": 189504152,
-        "sha256": "sha256:3668f51b4af138adff14bd01091588d21718056a5920c290c82eccaa8653cb39",
-        "shape": "raw"
-      },
-      "windows/x86_64": {
-        "url": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.2.12-5784551402897408/windows-x64/cli_windows_x64.exe",
-        "bytes": 200066200,
-        "sha256": "sha256:e137ee4f362b5b2f2c37141d4d1d1c12298f6b42873ca6867c618a5b945421df",
-        "shape": "raw"
-      }
-    },
-    "version": "1.2.12",
-    "verified_at": "2026-09-28T14:28:42+00:00"
   },
   "setup_catalogue_digest": "sha256:189d6ac515fb76c846e837c27a161e98aafde2c5a7f56d84fb59436ff5e2d70e",
   "host_platform_scope": {
