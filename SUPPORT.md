@@ -46,7 +46,7 @@ in a JSON file it owns it strips the keys it added rather than taking the
 file. Anything under those paths this build never wrote stays. Emptying every
 owned namespace is a separate, explicitly named operation: `reset`.
 
-No credential-free command is measured writing a surface this provider owns through `--target` -- no credential-free command has been measured writing user configuration; launch itself is supported at the documented home. The receipt discipline is the same for whatever arrives later: a file this provider wrote is captured into a slot before the next `install`, withdrawn by `remove`, and returned byte for byte by `restore`.
+No credential-free command is measured writing a surface this provider owns through `--target` -- launch itself is supported at the documented home. The receipt discipline is the same for whatever arrives later: a file this provider wrote is captured into a slot before the next `install`, withdrawn by `remove`, and returned byte for byte by `restore`.
 
 So: point `--target` at a home you are willing to have managed. `backups
 --target <dir>` names every earlier state and which setup each preceded, and
@@ -65,7 +65,7 @@ newer. `scoped_projection_profiles` (`ADR-0125`) is the field this applies to,
 and it is omitted entirely when empty -- so a build that declares no scope
 satisfies an older checker by accident, and a build that declares one does not.
 
-Two versions, two different answers, both measured:
+Three versions, three different answers, all measured:
 
 | checker | result |
 | --- | --- |

@@ -54,7 +54,9 @@ someone else's credentials is a leak with a schedule.
 
 - **A plugin's `rules/` is the other one, and it is what these setups use.** A
   plugin's rules are ingested with its skills and hooks when it is enabled, on
-  one switch, ordinary install and remove preserve unrecorded neighbouring files in both locations. Whole-namespace emptying is the separate `reset` operation.
+  one switch. Ordinary install and remove preserve unrecorded neighbouring
+  files in both locations. Whole-namespace emptying is the separate `reset`
+  operation.
 
 **Until 2026-08-29 this section was titled "One thing this product does not
 have" and said the opposite** — that instructions exist only at workspace scope,
