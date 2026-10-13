@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "description": "Where Antigravity CLI's configuration lives, and whose files sit beside it.",
   "author": {
-    "name": "NDDev"
+    "name": "NDDev",
+    "email": "danil@nddev.ai"
   },
-  "homepage": "https://github.com/NDDev-OpenNetwork/antigravity-setup-system",
-  "repository": "https://github.com/NDDev-OpenNetwork/antigravity-setup-system",
+  "homepage": "https://github.com/NDDev-Technocracy-OpenNetwork/antigravity-setup-system",
+  "repository": "https://github.com/NDDev-Technocracy-OpenNetwork/antigravity-setup-system",
   "skills": "./skills",
   "rules": "./rules"
 }
