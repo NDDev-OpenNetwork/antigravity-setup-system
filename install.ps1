@@ -12,7 +12,7 @@ param(
 )
 $ErrorActionPreference = "Stop"
 
-$repo   = "NDDev-Technocracy-OpenNetwork/antigravity-setup-system"
+$repo   = "NDDev-Technocracy-Archive/antigravity-setup-system"
 $binary = "antigravity-setup-system"
 $arch   = switch ($env:PROCESSOR_ARCHITECTURE) {
   "AMD64" { "x86_64" }
